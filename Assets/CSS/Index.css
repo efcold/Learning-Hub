@@ -1,0 +1,83 @@
+body {
+    background-color: #CCCEE4; 
+}
+
+.learn-to-code  {
+    text-align: center; 
+    margin-top: 25px; 
+    margin-bottom: 0px; 
+}
+.create-learning-path  {
+    text-align: center; 
+    margin-top: 0px; 
+    margin-bottom: 20px;
+}
+.learn-to-code,
+.create-learning-path {
+    font-family: 'Palaquin Dark', sans-serif; 
+    font-weight: 700; 
+    text-align: center; 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 20px;
+}
+
+.card {
+    background-color: #ADB3ED;
+    border-radius: 30px;
+    padding: 25px;
+    margin: 25px 50px;
+    width: calc(25% - 10px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 100%; 
+    }
+}
+
+.learn-button {
+    background-color: #CCCEE4; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 25px;
+}
+
+.learn-button:hover {
+    background-color: #B3B3D9; 
+}
+
+.path {
+    background-color: #ADB3ED; 
+    border: none;
+    border-radius: 25px; 
+    padding: 10px 200px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; 
+    margin: 0 auto; 
+    margin-bottom: 15px; 
+}
+
+
+.path:hover {
+    background-color: #3D437D; 
+    color:white;
+}

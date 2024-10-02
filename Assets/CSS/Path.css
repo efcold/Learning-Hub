@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #CCCEE4; 
+}
+
+
+
+.card-container {
+    text-align: center;
+    position: relative;
+}
+
+.Learning-Path {
+    margin-bottom: 20px; 
+}
+
+.path-card {
+    background-color: #ADB3ED;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 120%;
+    max-width: 705px;
+    display: inline-block; 
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+.card-title {
+    text-align: left;
+    font-size: 20px; 
+    margin: 0 0 10px 0; 
+}
+.card-des {
+    text-align: left;
+    font-size: 10px;
+    margin: 0 0 10px 0; 
+}
+
+.progress-container {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 30px;
+    background-color: #3D437D;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.language-row {
+    text-align: left;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+}
+
+.btn-1 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3D437D; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -40px; 
+    right: 25%; 
+}
+
+.btn-1:hover {
+    background-color: #68b3aa;
+}
