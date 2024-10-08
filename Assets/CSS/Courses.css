@@ -1,3 +1,132 @@
 body {
-    background-color: #CCCEE4; 
+    background-color: #CCCEE4;
+}
+
+.course-container {
+    display: flex; 
+}
+
+.ass-card {
+    flex-grow: 1;
+    height: auto;
+    min-height: 80vh;
+    max-height: 100%;  
+    margin: 20px; /* Unified margin for all sides */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #ADB3ED;
+    overflow: hidden; 
+}
+
+.assessment-card {
+    background-color: #adb3ed;
+    padding: 30px; /* Inner spacing */
+    border-radius: 15px;
+}
+
+.choices {
+    margin: 20px; /* Unified margin for all sides */
+    display: flex; /* Enable flexbox */
+    flex-direction: row; /* Align items horizontally */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.choice-card {
+    background-color: #ffffff; /* Default background */
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
+    flex: 1; /* Allows cards to grow equally */
+    min-width: 150px; /* Set a minimum width for each card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+.choice-card:hover {
+    background-color: #f0f0f0;
+}
+
+
+.choice-card.selected {
+    background-color: #cce5ff; /* Change to light blue when selected */
+}
+
+.button-container {
+    display: flex; /* Enable flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    margin-top: 20px; /* Optional: Add space above the button */
+}
+
+.ass-submit-button,
+.back-question-button,
+.re-take-button,
+.all-submit-button,
+.path-submit-button,
+.learn-submit-button,
+.next-module,
+.next-question-button{ /* Use a comma to separate selectors */
+    margin: 20px; /* You can keep this or remove it if you only want right alignment */
+    padding: 10px 20px;
+    background-color: #464b87;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ass-submit-button:hover,
+.back-question-button,
+.all-submit-button,
+.path-submit-button,
+.learn-submit-button,
+.re-take-button,
+.next-question-button:hover { /* Again, use a comma for hover states */
+    background-color: #383f7a;
+}
+
+.next-module {
+    background-color: #464b87;
+    margin: 20px 0 20px auto; /* Pushes the button to the right */
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.quiz-options {
+    margin: 20px; /* Unified margin for all sides */
+    display: flex; /* Enable flexbox */
+    flex-direction: row; /* Align items horizontally */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.quiz-card {
+    background-color: #ffffff; /* Default background */
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
+    flex: 1; /* Allows cards to grow equally */
+    min-width: 150px; /* Set a minimum width for each card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+.quiz-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background-color: white;
+    color: #383f7a;
+}
+
+.selected-answer-container {
+    margin-top: 20px;
+}
+
+.selected-answer-card {
+    padding: 15px;
+    border: 2px solid #007bff; /* Border color to match the highlight */
+    background-color: #e7f1ff; /* Light background for the answer card */
+    border-radius: 8px;
+    text-align: center;
 }

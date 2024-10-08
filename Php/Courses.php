@@ -10,15 +10,19 @@ include 'HomeIncludes/Header.php';
     <link rel="stylesheet" href="/Assets/CSS/Courses.css">
 </head>
 <main>
-<div class="container"> 
+<div class="course-container"> 
     <?php
     include 'HomeIncludes/Sidebar.php';
     ?>
-     <div class="card">
+     <div class="ass-card">
         <div class="main-content" id="main-content">
         </div>
     </div>
 </div>
 </main>
+<?php
+include 'HomeIncludes/Footer.php';
+?>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/Assets/JS/Courses.js"></script>
+</html>

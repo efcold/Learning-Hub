@@ -2,31 +2,33 @@ body {
     background-color: #CCCEE4; 
 }
 
-.learn-to-code  {
+.heading-learn-to-code {
     text-align: center; 
     margin-top: 25px; 
     margin-bottom: 0px; 
 }
-.create-learning-path  {
+
+.heading-create-learning-path {
     text-align: center; 
     margin-top: 0px; 
     margin-bottom: 20px;
 }
-.learn-to-code,
-.create-learning-path {
+
+.heading-learn-to-code,
+.heading-create-learning-path {
     font-family: 'Palaquin Dark', sans-serif; 
     font-weight: 700; 
     text-align: center; 
 }
 
-.card-container {
+.card-container-courses {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
     padding: 20px;
 }
 
-.card {
+.card-course {
     background-color: #ADB3ED;
     border-radius: 30px;
     padding: 25px;
@@ -37,34 +39,32 @@ body {
     box-sizing: border-box; 
 }
 
-
 @media (max-width: 768px) {
-    .card {
+    .card-course {
         width: calc(50% - 20px); 
     }
 }
 
 @media (max-width: 400px) {
-    .card {
+    .card-course {
         width: 100%; 
     }
 }
 
-.learn-button {
+.button-learn-more {
     background-color: #CCCEE4; 
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 10px 25px;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-radius: 25px;
 }
 
-.learn-button:hover {
+.button-learn-more:hover {
     background-color: #B3B3D9; 
 }
 
-.path {
+.button-learning-path {
     background-color: #ADB3ED; 
     border: none;
     border-radius: 25px; 
@@ -76,8 +76,7 @@ body {
     margin-bottom: 15px; 
 }
 
-
-.path:hover {
+.button-learning-path:hover {
     background-color: #3D437D; 
-    color:white;
+    color: white;
 }

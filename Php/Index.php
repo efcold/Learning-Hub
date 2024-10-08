@@ -36,23 +36,30 @@ $urls = [
     <title>Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Palaquin+Dark:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Assets/CSS/index.css"> 
+
 </head>
-
-
+<body>
+<?php
+include 'HomeIncludes/H-Sidebar.php';
+?>
 <main>
-<h1 class="learn-to-code">LEARN TO CODE</h1>
-    <div class="card-container">
+    <h1 class="heading-learn-to-code">LEARN TO CODE</h1>
+    <div class="card-container-courses">
         <?php for ($i = 0; $i < count($titles); $i++): ?>
-            <div class="card">
+            <div class="card-course">
                 <h3><?php echo $titles[$i]; ?></h3>
                 <p><?php echo $descriptions[$i]; ?></p>
-                <button class="learn-button" onclick="location.href='<?php echo $urls[$i]; ?>';">Learn</button>
+                <button class="button-learn-more" onclick="location.href='<?php echo $urls[$i]; ?>';">Learn</button>
             </div>
         <?php endfor; ?>
     </div>
         
-    <h1 class="create-learning-path">CREATE A LEARNING PATH</h1>
-    <button class="path" onclick="location.href='LearningPath.php';">I want to be a Frontend Developer</button>
-    <button class="path">I want to be a Backedn Developer</button>
-    <button class="path">I want to be a Full Stack Developer</button>
+    <h1 class="heading-create-learning-path">CREATE A LEARNING PATH</h1>
+    <button class="button-learning-path" onclick="location.href='LearningPath.php';">I want to be a Frontend Developer</button>
+    <button class="button-learning-path">I want to be a Backend Developer</button>
+    <button class="button-learning-path">I want to be a Full Stack Developer</button>
 </main>
+        </body>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/Assets/JS/H-Sidebar.js"></script>
