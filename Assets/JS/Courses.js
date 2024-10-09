@@ -783,22 +783,21 @@ const selectedAnswers = [];
 const moduleQuizAnswers = {};
 
 function selectQuizAnswer(module, answer) {
-    moduleQuizAnswers[module] = answer; // Store the selected answer for the module
+    moduleQuizAnswers[module] = answer; 
 
     const quizOptions = document.querySelectorAll(`#quiz${module} .quiz-card`);
     quizOptions.forEach(card => {
-        card.classList.remove('selected'); // Remove 'selected' class from all cards
+        card.classList.remove('selected');
     });
 
     const selectedCard = Array.from(quizOptions).find(card => card.textContent.trim() === answer);
     if (selectedCard) {
-        selectedCard.classList.add('selected'); // Add 'selected' class to the clicked card
+        selectedCard.classList.add('selected'); 
     }
 
-    // Display the selected answer in a new card
+
     displaySelectedAnswer(module, answer);
 
-    // Check if the answer is correct
     if (correctAnswers[module] === answer) {
         score++;
     }
@@ -820,10 +819,9 @@ function displayQuiz(quizKey) {
     mainContent.innerHTML = quizzes[quizKey];
     addNextModuleEventListener();
 
-    // Add a class to the next button for validation
     const nextButton = mainContent.querySelector('.next-module');
     nextButton.classList.add('quiz-next-button');
-    nextButton.setAttribute('data-module', quizKey.replace('quiz', '')); // Pass the module number
+    nextButton.setAttribute('data-module', quizKey.replace('quiz', '')); 
 }
 
 function displayAssessment() {
@@ -892,18 +890,15 @@ function prevQuestion() {
 }
 
 function showSummary() {
-    // Store the selected answer for the current question
+
     selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
 
-    // Get the result message container
     const resultMessage = document.getElementById('result-message');
 
-    // Generate module results
     const moduleResults = Object.entries(moduleQuizAnswers).map(([module, answer]) => 
         `<div class="module-result"><strong>Module ${module}:</strong> Your answer: ${answer}</div>`
     ).join('');
 
-    // Generate detailed result content for each question
     const resultContent = assessmentQuestions.map((question, index) => `
         <div class="question-result">
             <p class="question-text"><strong>${question.question}</strong></p>
@@ -911,7 +906,6 @@ function showSummary() {
         </div>
     `).join('');
 
-    // Update the result message content
     resultMessage.innerHTML = `
         <h2>Your Selected Answers:</h2>
         <div class="module-results">${moduleResults}</div>
@@ -922,9 +916,8 @@ function showSummary() {
         </div>
     `;
 
-    // Clear previous content and append the result message
     const mainContent = document.getElementById('main-content');
-    mainContent.innerHTML = ''; // Clear previous content
+    mainContent.innerHTML = '';
     mainContent.appendChild(resultMessage);
 }
 
@@ -938,9 +931,9 @@ function resetAssessment() {
 
 function submitAssessment() {
     selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
-    let totalCorrect = 0; // Track total correct answers
+    let totalCorrect = 0; 
     const moduleResults = Object.entries(moduleQuizAnswers).map(([module, answer], index) => {
-        const isCorrect = correctAnswers[module] === answer; // Check if the answer is correct
+        const isCorrect = correctAnswers[module] === answer; 
         if (isCorrect) {
             totalCorrect++;
         }
@@ -953,16 +946,13 @@ function submitAssessment() {
     `;
 }).join('');
 
-    // Results for each question
     const resultContent = assessmentQuestions.map((question, index) => {
         const isCorrect = question.correctAnswer === selectedAnswers[index];
-        
-        // Increment the count of correct answers
+
         if (isCorrect) {
             totalCorrect++;
         }
-        
-        // Create a styled result for each question
+
         return `
             <div class="question-result ${isCorrect ? 'correct' : 'incorrect'}">
                 <p class="question-text"><strong>Question ${index + 1}: ${question.question}</strong></p>
@@ -972,7 +962,7 @@ function submitAssessment() {
         `;
     }).join('');
     
-    // Append resultContent to main message
+
     const mainMessage = `
         <div class="result-container">
             ${resultContent}
@@ -981,22 +971,21 @@ function submitAssessment() {
     `;
     
 
-    // Calculate score percentage
     const scorePercentage = (totalCorrect / assessmentQuestions.length) * 100;
 
-    // Create a container for the chart
+
     const chartContainer = document.createElement('div');
     chartContainer.className = "chart-canvas-container";
 
-    // Create canvas element for the chart
+
     const canvas = document.createElement('canvas');
     canvas.id = "chart";
     canvas.height = 150;
 
-    // Append the canvas to the chart container
+
     chartContainer.appendChild(canvas);
 
-    // Create result message with chart at the top
+
     const resultMessage = `
         <div class="chart-container">
             <div class="text-container">
@@ -1018,7 +1007,6 @@ function submitAssessment() {
     const mainContent = document.getElementById('main-content');
     mainContent.innerHTML = resultMessage;
 
-    // Initialize the chart
     const layout = ["Correct", "Wrong"];
     const score = [totalCorrect, assessmentQuestions.length - totalCorrect]; // Use dynamic values
     const barColors = ["#4b9b74", "#dd5555"];
@@ -1043,18 +1031,18 @@ function submitAssessment() {
         }
     });
 
-    // Add event listeners for buttons
+
     const learningPathBtn = document.querySelector('.all-submit-button');
     const nextCourseBtn = document.querySelector('.learn-submit-button');
 
     learningPathBtn.addEventListener("click", function() {
         alert("Navigating to Learning Path...");
-        // Add your navigation logic here
+
     });
 
     nextCourseBtn.addEventListener("click", function() {
         alert("Proceeding to the Next Course...");
-        // Add your navigation logic here
+
     });
 }
 
@@ -1087,39 +1075,35 @@ function addNextModuleEventListener() {
             const nextContent = this.getAttribute('data-next');
             const mainContent = document.getElementById('main-content');
 
-            // Check if the current content is a quiz and if an answer has been selected
             if (this.classList.contains('quiz-next-button')) {
                 const currentModule = parseInt(this.getAttribute('data-module'));
                 if (!moduleQuizAnswers[currentModule]) {
                     alert("Please pick an answer before proceeding to the next module.");
-                    return; // Stop further execution
+                    return;
                 }
             }
 
-            // Check if the next content is a module or assessment and display it accordingly
             if (categoryContent[nextContent]) {
                 mainContent.innerHTML = categoryContent[nextContent];
                 addNextModuleEventListener();
-                updateActiveSidebarItem(nextContent); // Update the active sidebar item
+                updateActiveSidebarItem(nextContent); 
             } else if (nextContent === 'assessment') {
                 displayAssessment();
-                updateActiveSidebarItem('content11'); // Set the 'Assessment' sidebar item as active
+                updateActiveSidebarItem('content11'); 
             } else if (quizzes[nextContent]) {
                 displayQuiz(nextContent);
-                updateActiveSidebarItem(nextContent); // Update the active sidebar item for quiz
+                updateActiveSidebarItem(nextContent); 
             }
         });
     });
 }
 
-// Function to update the active state of the sidebar item
+
 function updateActiveSidebarItem(contentId) {
     const sidebarItems = document.querySelectorAll('.sidebar-item');
 
-    // Remove active class from all sidebar items
     sidebarItems.forEach(item => item.classList.remove('active'));
 
-    // Find and add active class to the sidebar item that matches the contentId
     const activeSidebarItem = document.querySelector(`.sidebar-item[data-content="${contentId}"]`);
     if (activeSidebarItem) {
         activeSidebarItem.classList.add('active');

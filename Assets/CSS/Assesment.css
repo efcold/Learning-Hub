@@ -13,12 +13,12 @@ body {
 
 .assm-card {
     background-color: #ADB3ED;
-    position: relative; /* Needed for positioning the button */
-    padding: 15px; /* Space inside the card */
-    border: 1px solid #ddd; /* Card border */
-    border-radius: 8px; /* Rounded corners */
-    margin-bottom: 20px; /* Space between cards */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+    position: relative; 
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .assm-card-headers {
@@ -33,11 +33,11 @@ body {
 }
 
 .assm-progress-bar-container {
-    width: 60%; /* Adjust width as needed */
-    height: 8px; /* Height of the container */
-    background-color: #e0e0e0; /* Background color of the container */
-    border-radius: 5px; /* Rounded corners for the container */
-    margin: 20px auto; /* Centers the container horizontally */
+    width: 60%; 
+    height: 8px; 
+    background-color: #e0e0e0; 
+    border-radius: 5px;
+    margin: 20px auto; 
 }
 
 .assm-progress-bar {
@@ -59,29 +59,29 @@ body {
 
 }
 .assm-details-list {
-    margin-top: 10px; /* Space between the header and the details */
+    margin-top: 10px; 
 }
 
 .assm-detail-item {
     display: flex;
-    align-items: center; /* Align icon and text */
-    margin-bottom: 8px; /* Space between detail items */
+    align-items: center; 
+    margin-bottom: 8px; 
 }
 
 .assm-donut-icon {
     width: 20px;
     height: 20px;
-    border-radius: 50%; /* Makes it circular */
-    margin-right: 10px; /* Space between icon and text */
+    border-radius: 50%; 
+    margin-right: 10px;
 }
 .assm-button-container {
-    position: absolute; /* Position the button container absolutely */
-    bottom: 15px; /* Distance from the bottom */
-    right: 15px; /* Distance from the right */
+    position: absolute; 
+    bottom: 15px; 
+    right: 15px;
 }
 
 .assm-action-button {
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #007bff; 
     color: white;
     border: none;
     padding: 8px 12px;
@@ -90,5 +90,5 @@ body {
 }
 
 .assm-action-button:hover {
-    background-color: #0056b3; /* Darker shade for hover */
+    background-color: #0056b3; 
 }

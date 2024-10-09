@@ -17,7 +17,6 @@ include 'HomeIncludes/H-Sidebar.php';
 <div class="assm-card-container">
     <h1>Assessment Summary</h1>
     <?php 
-    // Define different titles and multiple details for the cards
     $cards = [
         "HTML" => [
             "HTML is the standard markup language for creating web pages.",
@@ -57,8 +56,8 @@ include 'HomeIncludes/H-Sidebar.php';
         ]
     ];
 
-    // Define the course for which the donut should be red
-    $redDonutCourse = "CSS"; // Change this to the desired course
+
+    $redDonutCourse = "CSS"; 
 
     foreach ($cards as $title => $details): ?>
         <div class="assm-card">

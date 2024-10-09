@@ -28,36 +28,36 @@ body {
 
 .assessment-card {
     background-color: #adb3ed;
-    padding: 20px; /* Inner spacing */
+    padding: 20px; 
     border-radius: 15px;
 }
 .assessment-card p {
-    background-color: #ffffff; /* Default background */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
-    flex: 1; /* Allows cards to grow equally */
-    min-width: 150px; /* Set a minimum width for each card */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    transition: background-color 0.3s, border 0.3s; 
+    flex: 1; 
+    min-width: 150px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 .choices {
-    margin: 20px; /* Unified margin for all sides */
-    display: flex; /* Enable flexbox */
-    flex-direction: row; /* Align items horizontally */
-    gap: 20px; /* Space between cards */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
+    margin: 20px;
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
 .choice-card {
-    background-color: #ffffff; /* Default background */
+    background-color: #ffffff; 
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
-    flex: 1; /* Allows cards to grow equally */
-    min-width: 150px; /* Set a minimum width for each card */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    transition: background-color 0.3s, border 0.3s; 
+    flex: 1; 
+    min-width: 150px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .choice-card:hover {
@@ -66,13 +66,13 @@ body {
 
 
 .choice-card.selected {
-    background-color: #cce5ff; /* Change to light blue when selected */
+    background-color: #cce5ff; 
 }
 
 .button-container {
-    display: flex; /* Enable flexbox */
-    justify-content: flex-end; /* Align items to the right */
-    margin-top: 20px; /* Optional: Add space above the button */
+    display: flex; 
+    justify-content: flex-end; 
+    margin-top: 20px; 
 }
 
 .ass-submit-button,
@@ -82,8 +82,8 @@ body {
 .path-submit-button,
 .learn-submit-button,
 .next-module,
-.next-question-button{ /* Use a comma to separate selectors */
-    margin: 20px; /* You can keep this or remove it if you only want right alignment */
+.next-question-button{ 
+    margin: 20px; 
     padding: 10px 20px;
     background-color: #464b87;
     color: white;
@@ -98,13 +98,13 @@ body {
 .path-submit-button,
 .learn-submit-button,
 .re-take-button,
-.next-question-button:hover { /* Again, use a comma for hover states */
+.next-question-button:hover { 
     background-color: #383f7a;
 }
 
 .next-module {
     background-color: #464b87;
-    margin: 20px 0 20px auto; /* Pushes the button to the right */
+    margin: 20px 0 20px auto; 
     padding: 10px 20px;
     color: white;
     border: none;
@@ -112,26 +112,26 @@ body {
     cursor: pointer;
 }
 .quiz-options {
-    margin: 20px; /* Unified margin for all sides */
-    display: flex; /* Enable flexbox */
-    flex-direction: row; /* Align items horizontally */
-    gap: 20px; /* Space between cards */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
+    margin: 20px; 
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
 .quiz-card {
-    background-color: #ffffff; /* Default background */
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
-    flex: 1; /* Allows cards to grow equally */
-    min-width: 150px; /* Set a minimum width for each card */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    transition: background-color 0.3s, border 0.3s; 
+    flex: 1; 
+    min-width: 150px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .quiz-card:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
     background-color: white;
     color: #383f7a;
 }
@@ -142,8 +142,8 @@ body {
 
 .selected-answer-card {
     padding: 15px;
-    border: 2px solid #007bff; /* Border color to match the highlight */
-    background-color: #e7f1ff; /* Light background for the answer card */
+    border: 2px solid #007bff; 
+    background-color: #e7f1ff; 
     border-radius: 8px;
     text-align: center;
 }
@@ -155,33 +155,32 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Container for the chart and text */
 .chart-container {
     background-color: #ADB3ED;
     border-radius: 15px;
-    padding: 39px; /* Adjust padding */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Align items in a row */
-    align-items: flex-start; /* Align items to the top */
+    padding: 39px; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: flex-start; 
 }
 
-/* Text container styles */
+
 .text-container {
-    width: 50%; /* Take up half the space */
-    padding-right: 20px; /* Add space between text and chart */
+    width: 50%; 
+    padding-right: 20px; 
 }
 
-/* Heading styles */
+
 .chart-heading {
     font-size: 32px;
 }
 
-/* Score text styles */
+
 .score-text {
     font-size: 26px;
 }
 
-/* Score percentage styles */
+
 .score-percentage {
     text-align: left;
     font-size: 44px;
@@ -189,24 +188,24 @@ body {
     font-weight: bold;
 }
 
-/* Tutorial text styles */
+
 .tutorial-text {
     margin: 0;
 }
 
-/* Chart container styles */
+
 .chart-canvas-container {
-    width: 50%; /* Take up half the space for the chart */
+    width: 50%; 
     max-height: 300px;
     display: flex;
 }
 .buttons {
     display: flex;
-    justify-content: flex-end; /* Aligns items to the right end */
-    margin-top: 20px; /* Adds some spacing above the buttons */
+    justify-content: flex-end; 
+    margin-top: 20px; 
 }
 
-/* Button styles */
+
 .button {
     border-radius: 15px;
     padding: 13px 30px;
@@ -231,7 +230,7 @@ body {
 .result-container {
     margin-top: 20px;
     padding: 20px;
-    background-color: #F0F4FF; /* Light background for the results */
+    background-color: #F0F4FF; 
     border-radius: 10px;
 }
 
@@ -242,11 +241,11 @@ body {
 }
 
 .correct {
-    background-color: #DFFFD6; /* Light green for correct answers */
+    background-color: #DFFFD6; 
 }
 
 .incorrect {
-    background-color: #FFD6D6; /* Light red for incorrect answers */
+    background-color: #FFD6D6; 
 }
 
 .question-text {
@@ -260,18 +259,18 @@ body {
 }
 
 .correct-answer {
-    color: #4b9b74; /* Color for correct answers */
+    color: #4b9b74; 
     font-weight: bold;
 }
 
 .wrong-answer {
-    color: #dd5555; /* Color for wrong answers */
+    color: #dd5555; 
     font-weight: bold;
 }
 .module-results {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #F0F4FF; /* Light background for module results */
+    background-color: #F0F4FF; 
     border-radius: 10px;
 }
 
@@ -287,7 +286,7 @@ body {
 .question-result {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #E6E9FF; /* Light background for question results */
+    background-color: #E6E9FF; 
     border-radius: 8px;
 }
 
@@ -302,7 +301,7 @@ body {
 }
 
 .selected-answer {
-    color: #3a447b; /* Color for selected answer */
+    color: #3a447b; 
     font-weight: bold;
 }
 
@@ -318,9 +317,9 @@ body {
 }
 
 .all-submit-button {
-    background-color: #4b9b74; /* Different color for submit button */
+    background-color: #4b9b74; 
 }
 
 .re-take-button {
-    background-color: #3a447b; /* Different color for retake button */
+    background-color: #3a447b; 
 }

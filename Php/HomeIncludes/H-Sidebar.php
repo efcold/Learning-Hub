@@ -2,7 +2,6 @@
 <div class="sidebar">
         <hr class="line">
 
-        <!-- Projects Section -->
         <div class="title"><img src="/Assets/Images/Sidebar/project.png" alt="project Icon">PROJECTS</div>
 
         <div class="add">
@@ -17,7 +16,6 @@
 
         <hr class="line">
 
-        <!-- Learning Sections -->
         <ul class="others">
             <li><a href="/Php/Index.php">Courses</a></li>
             <li><a href="/Php/Assessment.php">Assessments</a></li>
