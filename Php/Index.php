@@ -20,7 +20,7 @@ $descriptions = [
 ];
 
 $urls = [
-    "Courses.php",
+    "/Php/Courses/HTMLCourse.php",
     "Courses.php",
     "Courses.php",
     "Courses.php",
@@ -60,6 +60,8 @@ include 'HomeIncludes/H-Sidebar.php';
     <button class="button-learning-path">I want to be a Full Stack Developer</button>
 </main>
         </body>
-
+        <?php
+include 'HomeIncludes/Footer.php';
+?>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/Assets/JS/H-Sidebar.js"></script>

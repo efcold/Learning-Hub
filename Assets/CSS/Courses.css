@@ -3,15 +3,23 @@ body {
 }
 
 .course-container {
-    display: flex; 
+    display:flex; 
+    margin-left: 50px;
+    padding-left: 100px;
 }
 
 .ass-card {
-    flex-grow: 1;
     height: auto;
     min-height: 80vh;
     max-height: 100%;  
-    margin: 20px; /* Unified margin for all sides */
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 70px;
+    margin-left:150px;
+    margin-bottom: 35px;
+    width: 100%;
+    max-width: 150vh;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     background-color: #ADB3ED;
@@ -20,10 +28,19 @@ body {
 
 .assessment-card {
     background-color: #adb3ed;
-    padding: 30px; /* Inner spacing */
+    padding: 20px; /* Inner spacing */
     border-radius: 15px;
 }
-
+.assessment-card p {
+    background-color: #ffffff; /* Default background */
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
+    flex: 1; /* Allows cards to grow equally */
+    min-width: 150px; /* Set a minimum width for each card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
 .choices {
     margin: 20px; /* Unified margin for all sides */
     display: flex; /* Enable flexbox */
@@ -129,4 +146,181 @@ body {
     background-color: #e7f1ff; /* Light background for the answer card */
     border-radius: 8px;
     text-align: center;
+}
+
+body {
+    background-color: #D9D9D9;
+    margin: 0;
+    padding: 10px 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Container for the chart and text */
+.chart-container {
+    background-color: #ADB3ED;
+    border-radius: 15px;
+    padding: 39px; /* Adjust padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Align items in a row */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Text container styles */
+.text-container {
+    width: 50%; /* Take up half the space */
+    padding-right: 20px; /* Add space between text and chart */
+}
+
+/* Heading styles */
+.chart-heading {
+    font-size: 32px;
+}
+
+/* Score text styles */
+.score-text {
+    font-size: 26px;
+}
+
+/* Score percentage styles */
+.score-percentage {
+    text-align: left;
+    font-size: 44px;
+    color: #4b9b74;
+    font-weight: bold;
+}
+
+/* Tutorial text styles */
+.tutorial-text {
+    margin: 0;
+}
+
+/* Chart container styles */
+.chart-canvas-container {
+    width: 50%; /* Take up half the space for the chart */
+    max-height: 300px;
+    display: flex;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right end */
+    margin-top: 20px; /* Adds some spacing above the buttons */
+}
+
+/* Button styles */
+.button {
+    border-radius: 15px;
+    padding: 13px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.learning-path-btn {
+    background-color: #ADB3ED;
+    color: #3a447b;
+    border: 2px solid #3a447b;
+}
+
+.next-course-btn {
+    background-color: #3a447b;
+    color: #D9D9D9;
+    border: none;
+    font-weight: bold;
+}
+.result-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F0F4FF; /* Light background for the results */
+    border-radius: 10px;
+}
+
+.question-result {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.correct {
+    background-color: #DFFFD6; /* Light green for correct answers */
+}
+
+.incorrect {
+    background-color: #FFD6D6; /* Light red for incorrect answers */
+}
+
+.question-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.answer-text {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.correct-answer {
+    color: #4b9b74; /* Color for correct answers */
+    font-weight: bold;
+}
+
+.wrong-answer {
+    color: #dd5555; /* Color for wrong answers */
+    font-weight: bold;
+}
+.module-results {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #F0F4FF; /* Light background for module results */
+    border-radius: 10px;
+}
+
+.module-result {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.question-results {
+    margin-top: 20px;
+}
+
+.question-result {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #E6E9FF; /* Light background for question results */
+    border-radius: 8px;
+}
+
+.question-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.answer-text {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.selected-answer {
+    color: #3a447b; /* Color for selected answer */
+    font-weight: bold;
+}
+
+
+.button {
+    background-color: #3a447b;
+    color: #D9D9D9;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.all-submit-button {
+    background-color: #4b9b74; /* Different color for submit button */
+}
+
+.re-take-button {
+    background-color: #3a447b; /* Different color for retake button */
 }

@@ -19,9 +19,9 @@
 
         <!-- Learning Sections -->
         <ul class="others">
-            <li><a href="">Courses</a></li>
-            <li><a href="">Assessments</a></li>
-            <li><a href="">Learning Path</a></li>
+            <li><a href="/Php/Index.php">Courses</a></li>
+            <li><a href="/Php/Assessment.php">Assessments</a></li>
+            <li><a href="/Php/LearningPath.php">Learning Path</a></li>
         </ul>
     </div>
 

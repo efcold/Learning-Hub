@@ -2,11 +2,15 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #CCCEE4; 
+    margin-right: 0;
+    margin-left: 0;
 }
 
 
 
 .card-container {
+    margin-top: 80px;
+    margin-bottom: 80px;
     text-align: center;
     position: relative;
 }
@@ -47,10 +51,12 @@ body {
 }
 
 .progress-bar {
+    text-align:center;
     height: 30px;
     background-color: #3D437D;
     width: 0;
     transition: width 0.3s ease;
+    color: white;
 }
 
 .language-row {

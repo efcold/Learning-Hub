@@ -3,13 +3,11 @@
     padding: 20px;
     text-align: center;
     flex-shrink: 0; 
-    outline: none;
-    user-select: none;
-    position: relative;
     width: 100%;
+    position: relative; /* Changed from fixed to relative */
     bottom: 0;
+    margin-top: 100px;
 }
-
 .socials{
     margin-bottom: 20px;
 }

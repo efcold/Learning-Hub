@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin:0;
+}
+
+.assm-card-container {
+    margin: 60px 200px 100px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.assm-card {
+    background-color: #ADB3ED;
+    position: relative; /* Needed for positioning the button */
+    padding: 15px; /* Space inside the card */
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+}
+
+.assm-card-headers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assm-card-titles {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.assm-progress-bar-container {
+    width: 60%; /* Adjust width as needed */
+    height: 8px; /* Height of the container */
+    background-color: #e0e0e0; /* Background color of the container */
+    border-radius: 5px; /* Rounded corners for the container */
+    margin: 20px auto; /* Centers the container horizontally */
+}
+
+.assm-progress-bar {
+    height: 100%;
+    background-color: #4B9C75;
+    border-radius: 5px;
+}
+
+.assm-dropdown-icon {
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.assm-card-details {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+
+}
+.assm-details-list {
+    margin-top: 10px; /* Space between the header and the details */
+}
+
+.assm-detail-item {
+    display: flex;
+    align-items: center; /* Align icon and text */
+    margin-bottom: 8px; /* Space between detail items */
+}
+
+.assm-donut-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Makes it circular */
+    margin-right: 10px; /* Space between icon and text */
+}
+.assm-button-container {
+    position: absolute; /* Position the button container absolutely */
+    bottom: 15px; /* Distance from the bottom */
+    right: 15px; /* Distance from the right */
+}
+
+.assm-action-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.assm-action-button:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+}
