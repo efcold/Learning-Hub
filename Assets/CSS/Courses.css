@@ -1,11 +1,18 @@
+::-webkit-scrollbar {
+    display: none; /* Hides the scroll bar */
+}
+
+html, body {
+    overflow: -moz-scrollbars-none; /* For older versions of Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For modern versions of Firefox */
+}
 body {
     background-color: #CCCEE4;
 }
 
 .course-container {
     display:flex; 
-    margin-left: 50px;
-    padding-left: 100px;
 }
 
 .ass-card {
@@ -15,9 +22,10 @@ body {
     padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    margin-top: 70px;
-    margin-left:150px;
+    margin-top: 100px;
+    margin-left: 40px;
     margin-bottom: 35px;
+    margin-right: 0 !important; /* Ensure no right margin is applied */
     width: 100%;
     max-width: 150vh;
     border-radius: 8px; 
@@ -26,9 +34,9 @@ body {
     overflow: hidden; 
 }
 
+
 .assessment-card {
     background-color: #adb3ed;
-    padding: 20px; 
     border-radius: 15px;
 }
 .assessment-card p {

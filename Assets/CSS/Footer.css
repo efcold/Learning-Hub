@@ -2,21 +2,22 @@
     background: linear-gradient(0deg, #3D437D 0%, #171D35 100%);
     padding: 20px;
     text-align: center;
-    flex-shrink: 0; 
-    width: 100%;
+    width: 100%; /* Ensures footer takes the full width of the viewport */
+    max-width: 100%; /* Prevents footer from exceeding the viewport width */
     position: relative; 
     bottom: 0;
-    margin-top: 100px;
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
-.socials{
+
+.socials {
     margin-bottom: 20px;
 }
 
 .socials a {
     text-decoration: none;
-    margin: 0px 20px;
-   
+    margin: 0 20px; /* Maintain horizontal margin for social links */
 }
+
 .socials a img {
     width: 30px; 
     height: 30px;
@@ -27,7 +28,7 @@
     transform: scale(1.1);
 }
 
-.footer ul :hover{
+.footer ul:hover {
     color: var(--hover);
 }
 

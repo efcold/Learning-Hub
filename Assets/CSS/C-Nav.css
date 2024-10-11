@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.c-nav {
+    
+    height: 20px;
+    margin-top:50px;
+    background-color: #333;
+    overflow: hidden;
+    position:fixed;
+
+}
+
+.c-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    align-items: center; /* Vertically center the items */
+    height: 100%; /* Ensure the ul takes the full height of .c-nav */
+}
+
+.c-nav li {
+    flex: 1; /* Make all list items equal width */
+    text-align: center; /* Center the text within each list item */
+}
+.c-nav a {
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items within the link */
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+.c-nav a:hover {
+    background-color: #575757; /* Darker background on hover */
+}
+
+.c-nav .active a {
+    background-color: #3D437D; /* Active link background color */
+}
+
+.c-nav-icon {
+    margin-right: 5px; /* Space between the icon and text */
+    font-size: 1.0rem; /* Adjust icon size */
+    vertical-align: middle; /* Align icons vertically with text */
+}

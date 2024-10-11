@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/Assets/CSS/H-Sidebar.css"> 
-<div class="sidebar">
+<div class="H-sidebar">
         <hr class="line">
 
         <div class="title"><img src="/Assets/Images/Sidebar/project.png" alt="project Icon">PROJECTS</div>
@@ -23,3 +23,5 @@
         </ul>
     </div>
 
+
+    <script src="/Assets/JS/H-Sidebar.js"></script>

@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+    display: none; /* Hides the scroll bar */
+}
+
+html, body {
+    overflow: -moz-scrollbars-none; /* For older versions of Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For modern versions of Firefox */
+}
 :root {
     --bar: #3D437D;
     --bg: #C2C5D2;
@@ -20,9 +29,11 @@ body {
 }
 
 header {
+    overflow: hidden; 
     background-color: #3D437D;
     color: white;
     padding: 20px 10px;
+    max-width: 100%; /* Prevents the header from exceeding the viewport width */
 }
 
 nav {
@@ -35,6 +46,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 1000;
     outline: none;
     user-select: none;

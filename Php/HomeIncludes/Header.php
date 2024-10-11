@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/Assets/CSS/Header.css">
+    <link rel="stylesheet" href="/Assets/CSS/C-Nav.css">
          <nav>
         <ul>
             <div class="group1">
@@ -31,11 +33,53 @@
                 <li><a href="#" class="message"><img src="/Assets/Images/Nav/message.png" alt="Message" id="message"></a></li>
             </div>
         </ul>
-    </nav>     
+    </nav> 
+
+    <nav class="c-nav" id="conditional-nav" style="display: none;">
+    <ul>
+    <li>
+        <a href="/Php/Courses/HTMLCourse.php" class="nav-item active">
+            <i class="fab fa-html5 c-nav-icon"></i> HTML
+        </a>
+    </li>
+    <li>
+        <a href="/Php/Courses/CSSCourse.php" class="nav-item">
+            <i class="fab fa-css3-alt c-nav-icon"></i> CSS
+        </a>
+    </li>
+    <li>
+        <a href="#" class="nav-item">
+            <i class="fab fa-js-square c-nav-icon"></i> JAVASCRIPT
+        </a>
+    </li>
+    <li>
+    <a href="#" class="nav-item">
+            <i class="fab fa-php c-nav-icon"></i> PHP
+        </a>
+    </li>
+    <li>
+        <a href="#" class="nav-item">
+            <i class="fas fa-gem c-nav-icon"></i> RUBY
+        </a>
+    </li>
+    <li>
+    <a href="#" class="nav-item">
+            <i class="fab fa-react c-nav-icon"></i> REACT
+        </a>
+    </li>
+</ul>
+
+</nav>
+
 </head>
 <body>
 
         <main>
         </main>
+        <script>
+    // Pass the PHP variable to JavaScript
+    var showConditionalNav = <?php echo json_encode(isset($showConditionalNav) && $showConditionalNav); ?>;
+</script>
     </body>
     <script src="/Assets/JS/Includes.js"></script>
+    <script src="/Assets/JS/C-Nav.js"></script>

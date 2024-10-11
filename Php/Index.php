@@ -1,4 +1,5 @@
 <?php
+
 include 'HomeIncludes/Header.php';
 
 $titles = [
@@ -13,19 +14,28 @@ $titles = [
 $descriptions = [
     "Learn the structure of web pages using HTML.",
     "Style your web pages with CSS for a polished look.",
-    "Understand the fundamentals of JavaScript programming.",
+    "Understand the fundamentals of JavaScript.",
     "Get started with PHP and server-side scripting.",
-    "Explore the basics of Python programming.",
+    "Explore the basics of Ruby",
     "Build interactive UIs using React."
 ];
 
 $urls = [
     "/Php/Courses/HTMLCourse.php",
-    "Courses.php",
+    "/Php/Courses/CSSCourse.php",
     "Courses.php",
     "Courses.php",
     "Courses.php",
     "Courses.php"
+];
+
+$images = [
+    "/Assets/Images/Index/HTML.png",
+    "/Assets/Images/Index/CSS.png",
+    "/Assets/Images/Index/JS.png",
+    "/Assets/Images/Index/PHP.png",
+    "/Assets/Images/",
+    "/Assets/Images/"
 ];
 ?>
 <!DOCTYPE html>
@@ -33,7 +43,7 @@ $urls = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Learning Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Palaquin+Dark:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Assets/CSS/index.css"> 
 
@@ -43,13 +53,15 @@ $urls = [
 include 'HomeIncludes/H-Sidebar.php';
 ?>
 <main>
-    <h1 class="heading-learn-to-code">LEARN TO CODE</h1>
+    <h1 class="heading-learn-to-code">Learn how to code with DevSphere</h1>
     <div class="card-container-courses">
         <?php for ($i = 0; $i < count($titles); $i++): ?>
             <div class="card-course">
                 <h3><?php echo $titles[$i]; ?></h3>
+                <!-- Display image below the title -->
+                <img src="<?php echo $images[$i]; ?>" alt="<?php echo $titles[$i]; ?> Image" class="course-image">
                 <p><?php echo $descriptions[$i]; ?></p>
-                <button class="button-learn-more" onclick="location.href='<?php echo $urls[$i]; ?>';">Learn</button>
+                <button class="button-learn-more" onclick="location.href='<?php echo $urls[$i]; ?>?course=<?php echo urlencode($titles[$i]); ?>';">Learn</button>
             </div>
         <?php endfor; ?>
     </div>
@@ -59,9 +71,9 @@ include 'HomeIncludes/H-Sidebar.php';
     <button class="button-learning-path">I want to be a Backend Developer</button>
     <button class="button-learning-path">I want to be a Full Stack Developer</button>
 </main>
-        </body>
-        <?php
+<?php
 include 'HomeIncludes/Footer.php';
 ?>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/Assets/JS/H-Sidebar.js"></script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,7 +1,23 @@
-
+const Logo={
+    src: "/Assets/Images/Index/CSS-W.png",
+    alt: "Course Logo"
+}
+const categoryTitle = {
+    content1: { icon: 'fas fa-home', title: 'Introduction to CSS1' },
+    content2: { icon: 'fas fa-code', title: 'CSS Syntax' },
+    content3: { icon: 'fas fa-tag', title: 'CSS Selectors' },
+    content4: { icon: 'fas fa-heading', title: 'How To Add CSS' },
+    content5: { icon: 'fas fa-paragraph', title: 'CSS Comments' },
+    content6: { icon: 'fas fa-paint-brush', title: 'Colors' },
+    content7: { icon: 'fas fa-font', title: 'Background Color' },
+    content8: { icon: 'fas fa-quote-right', title: 'HTML Quotation and Citation' },
+    content9: { icon: 'fas fa-file-alt', title: 'HTML Comments' },
+    content10: { icon: 'fas fa-file-alt', title: 'HTML Div' },
+    content11: { icon: 'fas fa-check-circle', title: 'Assessment' },
+}
 const categoryContent = {
     content1: `
-    <h1>Introduction to HTML</h1>
+    <h1>Introduction to CSS</h1>
     <h2>Module 1</h2>
     <p>What is HTML?</p>
     <p>HTML (HyperText Markup Language) is the standard markup language for building web pages. It describes the structure of a web page using a collection of elements. These elements provide the browser with instructions on how to display the text, naming different sections such as headings, paragraphs, links, and more.</p>
@@ -892,7 +908,7 @@ function prevQuestion() {
 function showSummary() {
 
     selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
-
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const resultMessage = document.getElementById('result-message');
 
     const moduleResults = Object.entries(moduleQuizAnswers).map(([module, answer]) => 
@@ -930,6 +946,7 @@ function resetAssessment() {
 }
 
 function submitAssessment() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
     let totalCorrect = 0; 
     const moduleResults = Object.entries(moduleQuizAnswers).map(([module, answer], index) => {
@@ -1069,6 +1086,7 @@ function setDefaultContent() {
     addNextModuleEventListener();
 }
 
+
 function addNextModuleEventListener() {
     document.querySelectorAll('.next-module').forEach(button => {
         button.addEventListener('click', function () {
@@ -1085,13 +1103,16 @@ function addNextModuleEventListener() {
 
             if (categoryContent[nextContent]) {
                 mainContent.innerHTML = categoryContent[nextContent];
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
                 addNextModuleEventListener();
                 updateActiveSidebarItem(nextContent); 
             } else if (nextContent === 'assessment') {
                 displayAssessment();
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
                 updateActiveSidebarItem('content11'); 
             } else if (quizzes[nextContent]) {
                 displayQuiz(nextContent);
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
                 updateActiveSidebarItem(nextContent); 
             }
         });
