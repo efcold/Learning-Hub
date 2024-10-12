@@ -17,524 +17,376 @@ const categoryTitle = {
 };
 const categoryContent = {
     content1: `
-    <h1>Introduction to CSS</h1>
+    <div>
+    <h1>CSS - Cascading Style Sheets</h1>
     <h2>Module 1</h2>
-    <p>What is HTML?</p>
-    <p>HTML (HyperText Markup Language) is the standard markup language for building web pages. It describes the structure of a web page using a collection of elements. These elements provide the browser with instructions on how to display the text, naming different sections such as headings, paragraphs, links, and more.</p>
-    <p><strong>Example:</strong></p>
-    <pre>
-    <img src="/Assets/Images/Courses/C-HTML/Structure.png" alt="HTML Structure Example" style="max-width:50%; height:auto;">
+    <hr>
 
-    &lt;!DOCTYPE html&gt; — This line tells the web browser that this document is an HTML5 document.
+    <div class="definition">
+        <p>What is CSS?</p>
+        <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen, paper, or in other media, saving a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.</p>
+    </div>
 
-    &lt;html&gt; — This tag starts the HTML document. Everything inside this tag is part of the HTML code.
+    <hr>
 
-    &lt;head&gt; — This tag contains information about the web page that is not displayed directly on the page like its title.
+    <div class="css-demo">
+        <h2>CSS Demo - One HTML Page with Multiple Styles</h2>
+        <p>Here we will show one HTML page displayed with four different stylesheets. Click on the images below to see the different styles:</p>
 
-    &lt;title&gt;Page Title&lt;/title&gt; — Sets the title that shows in the browser tab.
+        <div class="stylesheets">
+            <p>Stylesheet 1</p>
+            <img src="/Assets/Images/Courses/C-CSS/S1.png" alt="Stylesheet 1" style="max-width: 40%; height: auto;">
+            <p>Stylesheet 2</p>
+            <img src="/Assets/Images/Courses/C-CSS/S2.png" alt="Stylesheet 2" style="max-width: 40%; height: auto;">
+            <p>Stylesheet 3</p>
+            <img src="/Assets/Images/Courses/C-CSS/S3.png" alt="Stylesheet 3" style="max-width: 40%; height: auto;">
+            <p>Stylesheet 4</p>
+            <img src="/Assets/Images/Courses/C-CSS/S4.png" alt="Stylesheet 4" style="max-width: 40%; height: auto;">
+            <p>No Stylesheet </p>
+            <img src="/Assets/Images/Courses/C-CSS/NO-S.png" alt="No Stylesheet" style="max-width: 40%; height: auto;">
+        </div>
 
-    &lt;/head&gt; — Ends the head section.
+        <h3>Multiple Stylesheets</h3>
+        <p>When different stylesheets are applied to the same HTML page, each one changes the appearance in unique ways:</p>
+        <ul>
+            <li><strong>Stylesheet 1:</strong> Might apply a light color scheme, simple font, and a centered layout, giving the page a clean and minimal look.</li>
+            <li><strong>Stylesheet 2:</strong> Could use bold typography, vibrant colors, and possibly a different layout or alignment, giving a more modern and dynamic feel.</li>
+            <li><strong>Stylesheet 3:</strong> Might focus on spacing, adding more margins and padding between elements, or changing the overall structure (e.g., moving elements around the page).</li>
+            <li><strong>Stylesheet 4:</strong> A dark theme, with darker background colors, light text, and additional visual effects like shadows or hover effects.</li>
+        </ul>
 
-    &lt;body&gt; — Starts the visible part of the web page.
+        <h3>No Stylesheet</h3>
+        <p>If no stylesheet is used, the page will appear using the browser's default styling, which includes:</p>
+        <ul>
+            <li>Standard fonts</li>
+            <li>Black text on a white background</li>
+            <li>Default spacing and layout</li>
+            <li>Basic blue, underlined links</li>
+            <li>No customizations for colors, fonts, or layout</li>
+        </ul>
+        <p>The page will look plain and unformatted, showing only the raw content without visual design.</p>
+    </div>
 
-    &lt;h1&gt;Heading&lt;/h1&gt; — This creates a main heading on the page. It’s usually the biggest text and is important for understanding the content.
+    <hr>
 
-    &lt;p&gt;Paragraph&lt;/p&gt; — This creates a paragraph of text. It’s used for regular content.
-
-    &lt;/body&gt; — This tag closes the body section of the web page.
-
-    &lt;/html&gt; — This tag closes the HTML document. It signals the end of the HTML code.
-    </pre>
-    <p><strong>HTML Element</strong></p>
-    <p>An HTML element is a basic building block of an HTML document. It consists of a start tag, content, and an end tag. For example, in the element &lt;p&gt;Paragraph&lt;/p&gt;:</p>
-    <ul>
-        <li>&lt;p&gt; is the start tag, indicating the beginning of a paragraph.</li>
-        <li>Paragraph is the content.</li>
-        <li>&lt;/p&gt; is the end tag, marking the end of the paragraph.</li>
-    </ul>
-    <p><strong>Note:</strong> Some HTML elements have no content (like the &lt;br&gt; element). These elements are called empty elements. Empty elements do not have an end tag!</p>
-    
-    <h2>Creating Your First Web Page with Notepad or TextEdit</h2>
-    <h3>Why Use a Simple Text Editor?</h3>
-    <p>For learning HTML, it's best to use a simple text editor like Notepad (PC) or TextEdit (Mac).</p>
-    <h3>Steps to Create Your Web Page:</h3>
-    <h4>Step 1: Open Notepad (PC)</h4>
-    <p>Windows 8 or later: Click the Start button and type "Notepad."<br>
-    Windows 7 or earlier: Go to Start > Programs > Accessories > Notepad.</p>
-
-    <h4>Step 1: Open TextEdit (Mac)</h4>
-    <p>Open Finder, then go to Applications > TextEdit.<br>
-    Change settings:<br>
-    Go to Preferences > Format and select "Plain Text."<br>
-    Under "Open and Save," check "Display HTML files as HTML code."</p>
-    
-    <h4>Step 2: Write Your HTML Code</h4>
-    <p>Copy and paste this code into Notepad or TextEdit:</p>
-    <pre>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;body&gt;
-
-    &lt;h1&gt;My Heading&lt;/h1&gt;
-    &lt;p&gt;My paragraph.&lt;/p&gt;
-
-    &lt;/body&gt;
-    &lt;/html&gt;
-    </pre>
-    
-    <h4>Step 3: Save Your Web Page</h4>
-    <p>In Notepad, click File > Save As.<br>
-    Name the file "index.htm" and choose UTF-8 as the encoding.</p>
-    
-    <h4>Step 4: View in Browser</h4>
-    <p>Open the saved file in your web browser to see your first web page!</p>
     <button class="next-module" data-next="quiz1">Take Quiz</button>
-    `,
-
-
+</div>
+`,
     content2: `
-<h1>HTML Basic Syntax</h1>
-<h2>Module 2</h2>
+<div>
+    <h1>CSS Syntax</h1>
+    <h2>Module 2</h2>
+    <hr>
 
-<h2>1. Basic Structure</h2>
-<p>This is a basic HTML document structure:</p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;My First Web Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Welcome!&lt;/h1&gt;
-    &lt;p&gt;This is my first web page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<ul>
-    <li>&lt;!DOCTYPE html&gt;: Declares that this is an HTML5 document.</li>
-    <li>&lt;html&gt;: Starts the HTML document.</li>
-    <li>&lt;head&gt;: Contains meta-information, like the title.</li>
-    <li>&lt;title&gt;: Sets the title of the web page (shown in the browser tab).</li>
-    <li>&lt;body&gt;: Contains the visible content of the web page.</li>
-    <li>&lt;h1&gt;: Main heading of the page.</li>
-    <li>&lt;p&gt;: A paragraph of text.</li>
-</ul>
+    <div class="definition">
+        <p>A CSS rule consists of a selector and a declaration block.</p>
+        <h4>CSS Syntax</h4>
+        <img src="/Assets/Images/Courses/C-CSS/Syntax.png" alt="Syntax" style="max-width: 40%; height: auto;">
+        <p>The selector points to the HTML element you want to style.</p>
+        <p>The declaration block contains one or more declarations separated by semicolons.</p>
+        <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+        <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+    </div>
 
-<h2>2. Headings</h2>
-<p>Headings help to structure the content of your web page:</p>
-<pre>
-&lt;h1&gt;This is a Heading 1&lt;/h1&gt;
-&lt;h2&gt;This is a Heading 2&lt;/h2&gt;
-&lt;h3&gt;This is a Heading 3&lt;/h3&gt;
-</pre>
-<p>&lt;h1&gt; to &lt;h6&gt;: Tags for headings, with &lt;h1&gt; being the largest and most important, and &lt;h6&gt; being the smallest.</p>
+    <hr>
 
-<h2>3. Paragraphs</h2>
-<p>Paragraphs are defined using the &lt;p&gt; tag:</p>
-<pre>
-&lt;p&gt;This is the first paragraph.&lt;/p&gt;
-&lt;p&gt;This is the second paragraph.&lt;/p&gt;
-</pre>
-<p>&lt;p&gt;: Defines a paragraph of text. Each &lt;p&gt; tag creates a new paragraph with space around it.</p>
+    <div class="css-example">
+        <h3>Example</h3>
+        <p>In this example, all <code>&lt;p&gt;</code> elements will be center-aligned, with a red text color:</p>
+        <img src="/Assets/Images/Courses/C-CSS/p-element.png" alt="p" style="max-width: 40%; height: auto;">
+        <p><strong>Example Explained:</strong></p>
+        <ul>
+            <li><code>p</code> is a selector in CSS (it points to the HTML element you want to style: <code>&lt;p&gt;</code>).</li>
+            <li><code>color</code> is a property, and <code>red</code> is the property value.</li>
+            <li><code>text-align</code> is a property, and <code>center</code> is the property value.</li>
+        </ul>
+    </div>
 
-<h2>4. Links</h2>
-<p>Links are created with the &lt;a&gt; tag:</p>
-<pre>
-&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
-</pre>
-<p>&lt;a&gt;: Creates a hyperlink.</p>
-<ul>
-    <li>href: Attribute that specifies the URL the link points to.</li>
-    <li>The text between the tags is what users click on.</li>
-</ul>
+    <hr>
 
-<h2>5. Images</h2>
-<p>Images can be embedded using the &lt;img&gt; tag:</p>
-<pre>
-&lt;img src="image.jpg" alt="Description of Image" /&gt;
-</pre>
-<ul>
-    <li>&lt;img&gt;: Embeds an image in the web page.</li>
-    <li>src: Attribute that specifies the path to the image file.</li>
-    <li>alt: Provides alternative text for the image (important for accessibility).</li>
-</ul>
+    <div class="note">
+        <p><strong>Note:</strong> You will learn much more about CSS selectors and CSS properties in the next chapters!</p>
+    </div>
 
-<h2>6. Lists</h2>
-<p>HTML supports both unordered and ordered lists:</p>
-<p>Unordered List:</p>
-<pre>
-&lt;ul&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-    &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-<p>&lt;ul&gt;: Starts an unordered (bulleted) list.</p>
-<p>Ordered List:</p>
-<pre>
-&lt;ol&gt;
-    &lt;li&gt;First item&lt;/li&gt;
-    &lt;li&gt;Second item&lt;/li&gt;
-    &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
-<p>&lt;ol&gt;: Starts an ordered (numbered) list.</p>
+    <hr>
 
-<h2>7. Table</h2>
-<p>Tables are created using the &lt;table&gt; tag:</p>
-<pre>
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Header 1&lt;/th&gt;
-        &lt;th&gt;Header 2&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Data 1&lt;/td&gt;
-        &lt;td&gt;Data 2&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
-<ul>
-    <li>&lt;table&gt;: Creates a table.</li>
-    <li>&lt;tr&gt;: Starts a new row in the table.</li>
-    <li>&lt;th&gt;: Table header cell (bold and centered by default).</li>
-    <li>&lt;td&gt;: Table data cell (contains regular content).</li>
-</ul>
+    <button class="next-module" data-next="quiz2">Take Quiz</button>
+</div> 
+`,
+content3: `
+<div>
+<h1>CSS Selectors</h1>
+<h2>Module 3</h2>
+<hr>
 
-<p>Lorem ipsum dolor sit amet...</p>
-<button class="next-module" data-next="quiz2">Take Quiz</button>
-`
-,
-content3: '<div>\
-<h1>HTML Attributes</h1>\
-<h2>Module 3</h2>\
-<p>HTML attributes provide additional information about elements. Here are some common examples of HTML attributes:</p>\
-<ol>\
-    <li><strong>href Attribute (Links)</strong><br>\
-        <code>&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;</code><br>\
-        <em>Usage:</em> Specifies the URL that the link points to.\
-    </li>\
-    <li><strong>src Attribute (Images)</strong><br>\
-        <code>&lt;img src="image.jpg" alt="A beautiful scenery" /&gt;</code><br>\
-        <em>Usage:</em> Indicates the path to the image file.\
-    </li>\
-    <li><strong>alt Attribute (Images)</strong><br>\
-        <code>&lt;img src="image.jpg" alt="A description of the image" /&gt;</code><br>\
-        <em>Usage:</em> Provides alternative text for the image, useful for accessibility.\
-    </li>\
-    <li><strong>title Attribute (Tooltips)</strong><br>\
-        <code>&lt;a href="https://www.example.com" title="Go to Example.com"&gt;Visit Example.com&lt;/a&gt;</code><br>\
-        <em>Usage:</em> Displays additional information as a tooltip when the mouse hovers over the element.\
-    </li>\
-    <li><strong>style Attribute (Inline CSS)</strong><br>\
-        <code>&lt;p style="color: blue;"&gt;This text is blue.&lt;/p&gt;</code><br>\
-        <em>Usage:</em> Applies inline styles directly to the element.\
-    </li>\
-    <li><strong>id Attribute (Unique Identifier)</strong><br>\
-        <code>&lt;h1 id="main-heading"&gt;Main Heading&lt;/h1&gt;</code><br>\
-        <em>Usage:</em> Assigns a unique identifier to an element, useful for styling and scripting.\
-    </li>\
-    <li><strong>class Attribute (Grouping Elements)</strong><br>\
-        <code>&lt;p class="highlight"&gt;This is a highlighted paragraph.&lt;/p&gt;</code><br>\
-        <em>Usage:</em> Assigns one or more class names to an element for styling or scripting.\
-    </li>\
-    <li><strong>target Attribute (Links)</strong><br>\
-        <code>&lt;a href="https://www.example.com" target="_blank"&gt;Open in a new tab&lt;/a&gt;</code><br>\
-        <em>Usage:</em> Specifies where to open the linked document (e.g., _blank opens in a new tab).\
-    </li>\
-    <li><strong>placeholder Attribute (Forms)</strong><br>\
-        <code>&lt;input type="text" placeholder="Enter your name" /&gt;</code><br>\
-        <em>Usage:</em> Provides a hint to the user about what to enter in an input field.\
-    </li>\
-    <li><strong>value Attribute (Forms)</strong><br>\
-        <code>&lt;input type="submit" value="Submit" /&gt;</code><br>\
-        <em>Usage:</em> Sets the text displayed on a submit button.\
-    </li>\
-    <li><strong>disabled Attribute (Forms)</strong><br>\
-        <code>&lt;input type="text" disabled /&gt;</code><br>\
-        <em>Usage:</em> Disables an input element, making it uneditable.\
-    </li>\
-</ol>\
-<p>These examples showcase how attributes can enhance HTML elements by providing additional context, functionality, and styling options.</p>\
-<button class="next-module" data-next="quiz3">Take Quiz</button>\
-</div>',
+<div class="definition">
+    <p>A CSS selector selects the HTML element(s) you want to style.</p>
+    <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+    <p>We can divide CSS selectors into five categories:</p>
+    <ul>
+        <li><strong>Simple selectors:</strong> Select elements based on name, id, or class.</li>
+        <li><strong>Combinator selectors:</strong> Select elements based on a specific relationship between them.</li>
+        <li><strong>Pseudo-class selectors:</strong> Select elements based on a certain state.</li>
+        <li><strong>Pseudo-elements selectors:</strong> Select and style a part of an element.</li>
+        <li><strong>Attribute selectors:</strong> Select elements based on an attribute or attribute value.</li>
+    </ul>
+</div>
 
-content4: '<div>\
-<h1>HTML Headings</h1>\
-<h2>Module 4</h2>\
-<p>HTML headings are used to define the structure of your content, with six levels of headings available. Here are examples of each:</p>\
-<ol>\
-    <li><strong>Heading Level 1 (&lt;h1&gt;)</strong><br>\
-        <code>&lt;h1&gt;This is a Heading 1&lt;/h1&gt;</code><br>\
-        <em>Typically used for the main title of a page.</em>\
-    </li>\
-    <li><strong>Heading Level 2 (&lt;h2&gt;)</strong><br>\
-        <code>&lt;h2&gt;This is a Heading 2&lt;/h2&gt;</code><br>\
-        <em>Used for major sections within the page.</em>\
-    </li>\
-    <li><strong>Heading Level 3 (&lt;h3&gt;)</strong><br>\
-        <code>&lt;h3&gt;This is a Heading 3&lt;/h3&gt;</code><br>\
-        <em>Used for subsections under &lt;h2&gt; headings.</em>\
-    </li>\
-    <li><strong>Heading Level 4 (&lt;h4&gt;)</strong><br>\
-        <code>&lt;h4&gt;This is a Heading 4&lt;/h4&gt;</code><br>\
-        <em>Used for further subdivisions under &lt;h3&gt; headings.</em>\
-    </li>\
-    <li><strong>Heading Level 5 (&lt;h5&gt;)</strong><br>\
-        <code>&lt;h5&gt;This is a Heading 5&lt;/h5&gt;</code><br>\
-        <em>Used for smaller sections under &lt;h4&gt; headings.</em>\
-    </li>\
-    <li><strong>Heading Level 6 (&lt;h6&gt;)</strong><br>\
-        <code>&lt;h6&gt;This is a Heading 6&lt;/h6&gt;</code><br>\
-        <em>The smallest heading, used for minor sections.</em>\
-    </li>\
-</ol>\
-<p><strong>Example Usage in a Document</strong><br>\
-Here\'s how you might structure a document using all six heading levels:</p>\
-<code>&lt;h1&gt;Main Title&lt;/h1&gt;<br>\
-&lt;h2&gt;Section 1&lt;/h2&gt;<br>\
-&lt;h3&gt;Subsection 1.1&lt;/h3&gt;<br>\
-&lt;h4&gt;Detail 1.1.1&lt;/h4&gt;<br>\
-&lt;h5&gt;Note 1.1.1.1&lt;/h5&gt;<br>\
-&lt;h6&gt;Minor Detail&lt;/h6&gt;<br>\
-&lt;h2&gt;Section 2&lt;/h2&gt;<br>\
-&lt;h3&gt;Subsection 2.1&lt;/h3&gt;</code>\
-<p><strong>Importance of Headings</strong></p>\
-<ul>\
-    <li><strong>SEO:</strong> Search engines use headings to understand the structure and content of a page.</li>\
-    <li><strong>Accessibility:</strong> Headings help screen readers navigate the content.</li>\
-    <li><strong>Readability:</strong> They make the content easier to scan for users.</li>\
-</ul>\
-<p>Using headings appropriately enhances both the user experience and search engine optimization!</p>\
-<button class="next-module" data-next="quiz4">Take Quiz</button>\
-</div>',
-content5: '<div>\
-    <h1>HTML Paragraphs</h1>\
-    <h2>Module 5</h2>\
-    <p>HTML paragraphs are used to define blocks of text. Each paragraph is created using the <code>&lt;p&gt;</code> tag. Here are some examples:</p>\
-    <ol>\
-        <li><strong>Basic Paragraph Example</strong><br>\
-            <code>&lt;p&gt;This is a simple paragraph.&lt;/p&gt;</code>\
-        </li>\
-        <li><strong>Multiple Paragraphs</strong><br>\
-            <code>&lt;p&gt;This is the first paragraph.&lt;/p&gt;<br>\
-            &lt;p&gt;This is the second paragraph.&lt;/p&gt;<br>\
-            &lt;p&gt;This is the third paragraph.&lt;/p&gt;</code>\
-        </li>\
-        <li><strong>Paragraphs with Line Breaks</strong><br>\
-            You can create line breaks within a paragraph using the <code>&lt;br&gt;</code> tag:<br>\
-            <code>&lt;p&gt;This is the first line.&lt;br&gt;This is the second line.&lt;br&gt;This is the third line.&lt;/p&gt;</code>\
-        </li>\
-        <li><strong>Paragraphs with Formatting</strong><br>\
-            You can include inline elements for formatting within paragraphs:<br>\
-            <code>&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; word and this is an &lt;em&gt;italic&lt;/em&gt; word.&lt;/p&gt;</code>\
-        </li>\
-    </ol>\
-    <p><strong>Example in a Document</strong><br>\
-    Here’s how you might structure a document with paragraphs:</p>\
-    <code>&lt;!DOCTYPE html&gt;<br>\
-    &lt;html&gt;<br>\
-    &lt;head&gt;<br>\
-        &lt;title&gt;Paragraph Example&lt;/title&gt;<br>\
-    &lt;/head&gt;<br>\
-    &lt;body&gt;<br>\
-        &lt;h1&gt;Understanding Paragraphs&lt;/h1&gt;<br>\
-        &lt;p&gt;Paragraphs are blocks of text that are important for readability.&lt;/p&gt;<br>\
-        &lt;p&gt;They help organize content and make it easier to understand.&lt;/p&gt;<br>\
-        &lt;p&gt;Using &lt;strong&gt;HTML&lt;/strong&gt;, you can create multiple paragraphs easily.&lt;/p&gt;<br>\
-    &lt;/body&gt;<br>\
-    &lt;/html&gt;</code>\
-    <p><strong>Key Points about Paragraphs</strong></p>\
-    <ul>\
-        <li><strong>Spacing:</strong> Browsers automatically add space before and after each <code>&lt;p&gt;</code> element.</li>\
-        <li><strong>Semantics:</strong> Paragraphs improve the semantic structure of your content.</li>\
-        <li><strong>Accessibility:</strong> They help screen readers and other assistive technologies navigate text effectively.</li>\
-    </ul>\
-    <button class="next-module" data-next="quiz5">Take Quiz</button>\
-</div>',
+<hr>
 
-content6: '<div>\
-<h1>HTML Styles</h1>\
-<h2>Module 6</h2>\
-<p>HTML styles are typically applied using CSS (Cascading Style Sheets). However, you can also use inline styles directly within HTML tags. Here are some examples of both approaches:</p>\
-<ol>\
-    <li><strong>Inline Styles</strong><br>\
-        You can apply styles directly in an HTML element using the style attribute.<br>\
-        <code>&lt;p style="color: blue; font-size: 16px;"&gt;This is a blue paragraph with a font size of 16 pixels.&lt;/p&gt;</code>\
-    </li>\
-    <li><strong>Internal CSS</strong><br>\
-        You can define styles within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of your HTML document:<br>\
-        <code>&lt;!DOCTYPE html&gt;<br>\
-        &lt;html&gt;<br>\
-        &lt;head&gt;<br>\
-            &lt;title&gt;Internal CSS Example&lt;/title&gt;<br>\
-            &lt;style&gt;<br>\
-                body {<br>\
-                    background-color: lightgray;<br>\
-                }<br>\
-                h1 {<br>\
-                    color: darkblue;<br>\
-                }<br>\
-                p {<br>\
-                    font-family: Arial, sans-serif;<br>\
-                    font-size: 14px;<br>\
-                }<br>\
-            &lt;/style&gt;<br>\
-        &lt;/head&gt;<br>\
-        &lt;body&gt;<br>\
-            &lt;h1&gt;Welcome to My Web Page&lt;/h1&gt;<br>\
-            &lt;p&gt;This is a styled paragraph.&lt;/p&gt;<br>\
-        &lt;/body&gt;<br>\
-        &lt;/html&gt;</code>\
-    </li>\
-    <li><strong>External CSS</strong><br>\
-        You can link to an external CSS file, which is a common practice for larger projects.<br>\
-        HTML File:<br>\
-        <code>&lt;!DOCTYPE html&gt;<br>\
-        &lt;html&gt;<br>\
-        &lt;head&gt;<br>\
-            &lt;title&gt;External CSS Example&lt;/title&gt;<br>\
-            &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;<br>\
-        &lt;/head&gt;<br>\
-        &lt;body&gt;<br>\
-            &lt;h1&gt;Welcome to My Website&lt;/h1&gt;<br>\
-            &lt;p&gt;This is a paragraph styled from an external CSS file.&lt;/p&gt;<br>\
-        &lt;/body&gt;<br>\
-        &lt;/html&gt;</code><br>\
-        External CSS File (styles.css):<br>\
-        <code>body {<br>\
-            background-color: #f0f0f0;<br>\
-        }<br>\
-        h1 {<br>\
-            color: #333;<br>\
-        }<br>\
-        p {<br>\
-            font-size: 16px;<br>\
-            line-height: 1.5;<br>\
-        }</code>\
-    </li>\
-    <li><strong>CSS Classes</strong><br>\
-        You can create reusable styles using classes.<br>\
-        <code>&lt;!DOCTYPE html&gt;<br>\
-        &lt;html&gt;<br>\
-        &lt;head&gt;<br>\
-            &lt;title&gt;CSS Classes Example&lt;/title&gt;<br>\
-            &lt;style&gt;<br>\
-                .highlight {<br>\
-                    background-color: yellow;<br>\
-                    font-weight: bold;<br>\
-                }<br>\
-            &lt;/style&gt;<br>\
-        &lt;/head&gt;<br>\
-        &lt;body&gt;<br>\
-            &lt;p class="highlight"&gt;This paragraph is highlighted.&lt;/p&gt;<br>\
-            &lt;p&gt;This paragraph is not highlighted.&lt;/p&gt;<br>\
-        &lt;/body&gt;<br>\
-        &lt;/html&gt;</code>\
-    </li>\
-    <li><strong>CSS IDs</strong><br>\
-        You can also use IDs for unique styling.<br>\
-        <code>&lt;!DOCTYPE html&gt;<br>\
-        &lt;html&gt;<br>\
-        &lt;head&gt;<br>\
-            &lt;title&gt;CSS IDs Example&lt;/title&gt;<br>\
-            &lt;style&gt;<br>\
-                #special {<br>\
-                    color: red;<br>\
-                    font-size: 20px;<br>\
-                }<br>\
-            &lt;/style&gt;<br>\
-        &lt;/head&gt;<br>\
-        &lt;body&gt;<br>\
-            &lt;p id="special"&gt;This is a special paragraph.&lt;/p&gt;<br>\
-        &lt;/body&gt;<br>\
-        &lt;/html&gt;</code>\
-    </li>\
-</ol>\
-<p><strong>Key Points</strong></p>\
-<ul>\
-    <li><strong>Inline Styles:</strong> Quick but not recommended for larger projects due to lack of separation of content and design.</li>\
-    <li><strong>Internal CSS:</strong> Useful for single pages or quick styling.</li>\
-    <li><strong>External CSS:</strong> Best practice for larger websites, allowing for easier maintenance and reuse.</li>\
-    <li><strong>Classes and IDs:</strong> Help apply styles to multiple elements (classes) or uniquely identify a single element (IDs).</li>\
-</ul>\
-<button class="next-module" data-next="quiz6">Take Quiz</button>\
-</div>',
+<div class="css-example">
+    <h3>The CSS Element Selector</h3>
+    <p>The element selector selects HTML elements based on the element name.</p>
+    <p><strong>Example:</strong> Here, all <code>&lt;p&gt;</code> elements on the page will be center-aligned, with a red text color.</p>
+    <img src="/Assets/Images/Courses/C-CSS/e1.png" alt="e1" style="max-width: 40%; height: auto;">
+</div>
 
-content7: '<div>\
-<h1>Text Formatting</h1>\
-<h2>Module 7</h2>\
-<p>HTML text formatting elements allow you to change the appearance of text on a web page. Here are some common HTML tags for text formatting:</p>\
-<ol>\
-    <li><strong>Bold Text</strong><br>\
-        <code>&lt;strong&gt;This text is bold.&lt;/strong&gt;</code><br>\
-        The <code>&lt;strong&gt;</code> tag is used for important text, and it typically renders as bold.\
-    </li>\
-    <li><strong>Italic Text</strong><br>\
-        <code>&lt;em&gt;This text is italicized.&lt;/em&gt;</code><br>\
-        The <code>&lt;em&gt;</code> tag emphasizes text, usually rendering it in italics.\
-    </li>\
-    <li><strong>Underline Text</strong><br>\
-        <code>&lt;u&gt;This text is underlined.&lt;/u&gt;</code><br>\
-        The <code>&lt;u&gt;</code> tag adds an underline to the text.\
-    </li>\
-    <li><strong>Strikethrough Text</strong><br>\
-        <code>&lt;s&gt;This text is strikethrough.&lt;/s&gt;</code><br>\
-        The <code>&lt;s&gt;</code> tag indicates that the text has been deleted or is no longer relevant, displaying it with a strikethrough.\
-    </li>\
-    <li><strong>Small Text</strong><br>\
-        <code>&lt;small&gt;This text is smaller.&lt;/small&gt;</code><br>\
-        The <code>&lt;small&gt;</code> tag renders the text in a smaller font size.\
-    </li>\
-    <li><strong>Big Text</strong><br>\
-        <code>&lt;big&gt;This text is bigger.&lt;/big&gt;</code><br>\
-        The <code>&lt;big&gt;</code> tag makes the text larger. (Note: <code>&lt;big&gt;</code> is not widely used in modern HTML; use CSS for size changes instead.)\
-    </li>\
-    <li><strong>Superscript Text</strong><br>\
-        <code>&lt;sup&gt;This text is superscript.&lt;/sup&gt;</code><br>\
-        The <code>&lt;sup&gt;</code> tag raises text above the baseline, often used for exponents.\
-    </li>\
-    <li><strong>Subscript Text</strong><br>\
-        <code>&lt;sub&gt;This text is subscript.&lt;/sub&gt;</code><br>\
-        The <code>&lt;sub&gt;</code> tag lowers text below the baseline, often used in chemical formulas.\
-    </li>\
-    <li><strong>Quote Text</strong><br>\
-        <code>&lt;blockquote&gt;This is a blockquote.&lt;/blockquote&gt;</code><br>\
-        The <code>&lt;blockquote&gt;</code> tag is used for longer quotations, usually indented.\
-    </li>\
-    <li><strong>Preformatted Text</strong><br>\
-        <code>&lt;pre&gt;This text is preformatted.&lt;/pre&gt;</code><br>\
-        The <code>&lt;pre&gt;</code> tag maintains whitespace and line breaks, displaying text in a fixed-width font.\
-    </li>\
-</ol>\
-<p><strong>Example Usage in a Document</strong><br>\
-Here\'s how you might use various formatting tags in a simple HTML document:</p>\
-<code>&lt;!DOCTYPE html&gt;<br>\
-&lt;html&gt;<br>\
-&lt;head&gt;<br>\
-    &lt;title&gt;Text Formatting Example&lt;/title&gt;<br>\
-&lt;/head&gt;<br>\
-&lt;body&gt;<br>\
-    &lt;h1&gt;Text Formatting in HTML&lt;/h1&gt;<br>\
-    &lt;p&gt;This is an &lt;strong&gt;important&lt;/strong&gt; message.&lt;/p&gt;<br>\
-    &lt;p&gt;You can also &lt;em&gt;emphasize&lt;/em&gt; text or make it &lt;u&gt;underlined&lt;/u&gt;.&lt;/p&gt;<br>\
-    &lt;p&gt;Sometimes you need to indicate &lt;s&gt;deleted&lt;/s&gt; content.&lt;/p&gt;<br>\
-    &lt;p&gt;This is a &lt;small&gt;small&lt;/small&gt; note.&lt;/p&gt;<br>\
-    &lt;p&gt;Water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;<br>\
-    &lt;p&gt;And E=mc&lt;sup&gt;2&lt;/sup&gt; is a famous equation.&lt;/p&gt;<br>\
-    &lt;blockquote&gt;This is a quoted text.&lt;/blockquote&gt;<br>\
-    &lt;pre&gt;This is    preformatted text.&lt;/pre&gt;<br>\
-&lt;/body&gt;<br>\
-&lt;/html&gt;</code>\
-</p>\
-<p><strong>Key Points</strong></p>\
-<ul>\
-    <li>HTML text formatting tags help enhance the readability and visual appeal of text.</li>\
-    <li>Use formatting tags appropriately to maintain the semantic meaning of the content.</li>\
-    <li>For advanced styling, consider using CSS for more control over text appearance.</li>\
-</ul>\
-<button class="next-module" data-next="quiz7">Take Quiz</button>\
-</div>',
+<hr>
+
+<div class="css-id-selector">
+    <h3>The CSS ID Selector</h3>
+    <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+    <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+    <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+    <img src="/Assets/Images/Courses/C-CSS/e2.png" alt="e3" style="max-width: 40%; height: auto;">
+    <p><strong>Example:</strong> The CSS rule above will be applied to the HTML element with <code>id="para1"</code>.</p>
+    <p><strong>Note:</strong> An id name cannot start with a number.</p>
+</div>
+
+<hr>
+
+<div class="css-class-selector">
+    <h3>The CSS Class Selector</h3>
+    <p>The class selector selects HTML elements with a specific class attribute.</p>
+    <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+    <img src="/Assets/Images/Courses/C-CSS/e3.png" alt="e3" style="max-width: 40%; height: auto;">
+    <p><strong>Example:</strong> In this example, all HTML elements with <code>class="center"</code> will be red and center-aligned.</p>
+
+    <p>You can also specify that only specific HTML elements should be affected by a class.</p>
+    <img src="/Assets/Images/Courses/C-CSS/e4.png" alt="e4" style="max-width: 40%; height: auto;">
+    <p><strong>Example:</strong> In this example, only <code>&lt;p&gt;</code> elements with <code>class="center"</code> will be red and center-aligned.</p>
+
+    <p>HTML elements can also refer to more than one class.</p>
+    <img src="/Assets/Images/Courses/C-CSS/e5.png" alt="e5" style="max-width: 40%; height: auto;">
+    <p><strong>Example:</strong> In this example, the <code>&lt;p&gt;</code> element will be styled according to both <code>class="center"</code> and <code>class="large"</code>.</p>
+    <p><strong>Note:</strong> A class name cannot start with a number.</p>
+</div>
+
+<hr>
+
+<div class="css-universal-selector">
+    <h3>The CSS Universal Selector</h3>
+    <p>The universal selector (*) selects all HTML elements on the page.</p>
+    <img src="/Assets/Images/Courses/C-CSS/e6.png" alt="e6" style="max-width: 40%; height: auto;">
+    <p><strong>Example:</strong> The CSS rule above will affect every HTML element on the page.</p>
+</div>
+
+<hr>
+
+<div class="css-grouping-selector">
+    <h3>The CSS Grouping Selector</h3>
+    <p>The grouping selector selects all the HTML elements with the same style definitions.</p>
+    <p>Look at the following CSS code (the <code>h1</code>, <code>h2</code>, and <code>p</code> elements have the same style definitions):</p>
+    <img src="/Assets/Images/Courses/C-CSS/e7.png" alt="e7" style="max-width: 40%; height: auto;">
+    <p><strong>Example:</strong> In this example, we have grouped the selectors to minimize the code.</p>
+    <img src="/Assets/Images/Courses/C-CSS/e8.png" alt="e8" style="max-width: 40%; height: auto;">
+</div>
+
+<hr>
+
+<button class="next-module" data-next="quiz3">Take Quiz</button>
+</div>
+`,
+content4: `
+<div>
+<h1>How to Add CSS</h1>
+<h2>Module 4</h2>
+<hr>
+
+<div class="definition">
+    <p>There are three ways of inserting a style sheet:</p>
+    <ul>
+        <li><strong>External CSS</strong></li>
+        <li><strong>Internal CSS</strong></li>
+        <li><strong>Inline CSS</strong></li>
+    </ul>
+</div>
+
+<hr>
+
+<div class="css-external">
+    <h3>External CSS</h3>
+    <p>With an external style sheet, you can change the look of an entire website by changing just one file.</p>
+    <p>Each HTML page must include a reference to the external style sheet file inside the <code>&lt;link&gt;</code> element, inside the <code>&lt;head&gt;</code> section.</p>
+    <img src="/Assets/Images/Courses/C-CSS/f1.png" alt="f1" style="max-width: 40%; height: auto;">
+    <img src="/Assets/Images/Courses/C-CSS/f2.png" alt="f2" style="max-width: 20%; height: auto;">
+    <p>An external style sheet can be written in any text editor and must be saved with a <code>.css</code> extension. The external <code>.css</code> file should not contain any HTML tags.</p>
+    <img src="/Assets/Images/Courses/C-CSS/f3.png" alt="f3" style="max-width: 40%; height: auto;">
+    <p><strong>Note:</strong> Do not add a space between the property value (20) and the unit (px):<br>
+    Incorrect: <code>margin-left: 20 px;</code><br>
+    Correct: <code>margin-left: 20px;</code></p>
+</div>
+
+<hr>
+
+<div class="css-internal">
+    <h3>Internal CSS</h3>
+    <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
+    <p>The internal style is defined inside the <code>&lt;style&gt;</code> element, inside the <code>&lt;head&gt;</code> section.</p>
+   <img src="/Assets/Images/Courses/C-CSS/f4.png" alt="f4" style="max-width: 40%; height: auto;">
+   <img src="/Assets/Images/Courses/C-CSS/f5.png" alt="f5" style="max-width: 30%; height: auto;">
+</div>
+
+<hr>
+
+<div class="css-inline">
+    <h3>Inline CSS</h3>
+    <p>An inline style may be used to apply a unique style for a single element.</p>
+    <p>To use inline styles, add the <code>style</code> attribute to the relevant element. The <code>style</code> attribute can contain any CSS property.</p>
+    <img src="/Assets/Images/Courses/C-CSS/f6.png" alt="f6" style="max-width: 40%; height: auto;">
+    <img src="/Assets/Images/Courses/C-CSS/f7.png" alt="f7" style="max-width: 40%; height: auto;">
+</div>
+
+<hr>
+
+<button class="next-module" data-next="quiz4">Take Quiz</button>
+</div>
+`,
+content5: `<div>
+    <h1>CSS Comments</h1>
+    <h2>Module 5</h2>
+    <hr>
+
+    <div class="definition">
+        <p>CSS comments are not displayed in the browser, but they can help document your source code.</p>
+        <p>Comments are used to explain the code and may help when you edit the source code at a later date. They are ignored by browsers.</p>
+        <p>A CSS comment is placed inside the <code>&lt;style&gt;</code> element, and starts with <code>/*</code> and ends with <code>*/</code>:</p>
+    </div>
+
+    <hr>
+
+    <div class="example">
+        <h3>Example</h3>
+        <img src="/Assets/Images/Courses/C-CSS/ff1.png" alt="ff1" style="max-width: 40%; height: auto;">
+    </div>
+
+    <hr>
+
+    <div class="purpose">
+        <h3>Purpose of CSS Comments</h3>
+        <ul>
+            <li>To clarify complex code.</li>
+            <li>To leave notes for other developers (or your future self).</li>
+            <li>To temporarily disable certain parts of your code for testing.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <button class="next-module" data-next="quiz5">Take Quiz</button>
+</div>
+`,
+content6: `<div>
+<h1>CSS Colors</h1>
+<h2>Module 6</h2>
+<hr>
+
+<div class="definition">
+    <p>CSS Colors can be specified using named colors (e.g., Tomato), or using RGB, HEX, HSL, RGBA, and HSLA values.</p>
+</div>
+
+<hr>
+
+<div class="predefined-colors">
+    <h3>Predefined Color Names</h3>
+    <p>CSS supports 140 color names, such as:</p>
+    <ul>
+        <li>Tomato</li>
+        <li>DodgerBlue</li>
+        <li>MediumSeaGreen</li>
+        <li>Gray</li>
+        <li>Violet</li>
+    </ul>
+</div>
+
+<hr>
+
+<img src="/Assets/Images/Courses/C-CSS/ss1.png" alt="ss1" style="max-width: 40%; height: auto;">
+
+<hr>
+
+<div class="color-values">
+    <h3>Color Values</h3>
+    <ul>
+        <li><strong>RGB:</strong> <code>rgb(255, 99, 71)</code></li>
+        <li><strong>HEX:</strong> <code>#ff6347</code></li>
+        <li><strong>HSL:</strong> <code>hsl(9, 100%, 64%)</code></li>
+        <li><strong>RGBA (with transparency):</strong> <code>rgba(255, 99, 71, 0.5)</code></li>
+        <li><strong>HSLA (with transparency):</strong> <code>hsla(9, 100%, 64%, 0.5)</code></li>
+    </ul>
+</div>
+
+<hr>
+
+<button class="next-module" data-next="quiz6">Take Quiz</button>
+</div>
+`,
+
+
+content7: `<div>
+<h1>CSS Background Color</h1>
+<h2>Module 7</h2>
+<hr>
+
+<div class="definition">
+    <p>CSS Background Properties are used to apply background effects to elements. Key properties include:</p>
+    <ul>
+        <li><strong>background-color:</strong> Sets an element's background color.</li>
+        <li><strong>background-image:</strong> Adds a background image.</li>
+        <li><strong>background-repeat:</strong> Defines how a background image repeats.</li>
+        <li><strong>background-attachment:</strong> Controls if a background scrolls with the page.</li>
+        <li><strong>background-position:</strong> Sets the position of the background image.</li>
+        <li><strong>background:</strong> A shorthand property for setting all background properties.</li>
+    </ul>
+</div>
+
+<hr>
+
+<div class="background-color-specifications">
+    <h3>Specifies the background color of an element using:</h3>
+    <ul>
+        <li>Color name: <code>red</code></li>
+        <li>HEX value: <code>#ff0000</code></li>
+        <li>RGB value: <code>rgb(255,0,0)</code></li>
+    </ul>
+</div>
+
+<hr>
+
+<div class="background-color-example">
+    <h3>Example Code</h3>
+    <img src="/Assets/Images/Courses/C-CSS/sss1.png" alt="sss1" style="max-width: 40%; height: auto;">
+    <h5>Output</h5>
+    <img src="/Assets/Images/Courses/C-CSS/sss2.png" alt="sss2" style="max-width: 40%; height: auto;">
+</div>
+
+<hr>
+
+<div class="opacity-transparency">
+    <h3>Opacity / Transparency</h3>
+    <p>The opacity property adjusts transparency (0.0 to 1.0). Lower values make elements more transparent.</p>
+    <h4>Example Code</h4>
+    <img src="/Assets/Images/Courses/C-CSS/sss3.png" alt="sss3" style="max-width: 40%; height: auto;">
+    <h5>Output</h5>
+    <img src="/Assets/Images/Courses/C-CSS/sss4.png" alt="sss4" style="max-width: 40%; height: auto;">
+    </pre>
+</div>
+
+<hr>
+
+<button class="next-module" data-next="quiz7">Take Quiz</button>
+</div>
+`,
 
 content8: '<div>\
 <h1>HTML Quotation and Citation Element</h1>\
