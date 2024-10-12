@@ -23,10 +23,10 @@ $descriptions = [
 $urls = [
     "/Php/Courses/HTMLCourse.php",
     "/Php/Courses/CSSCourse.php",
-    "Courses.php",
-    "Courses.php",
-    "Courses.php",
-    "Courses.php"
+    "/Php/Courses/JSCourse.php",
+    "/Php/Courses/PHPCourse.php",
+    "/Php/Courses/PYTHONCourse.php",
+    "/Php/Courses/REACTCourse.php.php"
 ];
 
 $images = [
@@ -34,8 +34,8 @@ $images = [
     "/Assets/Images/Index/CSS.png",
     "/Assets/Images/Index/JS.png",
     "/Assets/Images/Index/PHP.png",
-    "/Assets/Images/",
-    "/Assets/Images/"
+    "/Assets/Images/Index/PYTHON.png",
+    "/Assets/Images/Index/REACT.png"
 ];
 ?>
 <!DOCTYPE html>

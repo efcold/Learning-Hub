@@ -48,22 +48,22 @@
         </a>
     </li>
     <li>
-        <a href="#" class="nav-item">
+        <a href="/Php/Courses/JSCourse.php" class="nav-item">
             <i class="fab fa-js-square c-nav-icon"></i> JAVASCRIPT
         </a>
     </li>
     <li>
-    <a href="#" class="nav-item">
+    <a href="/Php/Courses/PHPCourse.php" class="nav-item">
             <i class="fab fa-php c-nav-icon"></i> PHP
         </a>
     </li>
     <li>
-        <a href="#" class="nav-item">
-            <i class="fas fa-gem c-nav-icon"></i> RUBY
-        </a>
+    <a href="/Php/Courses/PYTHONCourse.php" class="nav-item">
+        <i class="fab fa-python c-nav-icon"></i> PYTHON
+    </a>
     </li>
     <li>
-    <a href="#" class="nav-item">
+    <a href="/Php/Courses/REACTCourse.php" class="nav-item">
             <i class="fab fa-react c-nav-icon"></i> REACT
         </a>
     </li>

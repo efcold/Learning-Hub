@@ -1,22 +1,24 @@
 const Logo={
-    src: "/Assets/Images/Index/HTML-W.png",
+    src: "/Assets/Images/Index/REACT.png",
     alt: "Course Logo" 
 }
 const categoryTitle = {
-    content1: { icon: 'fas fa-home', title: 'Introduction to HTML' },
-    content2: { icon: 'fas fa-code', title: 'HTML Basic Syntax' },
-    content3: { icon: 'fas fa-tag', title: 'HTML Attributes' },
-    content4: { icon: 'fas fa-heading', title: 'HTML Headings' },
-    content5: { icon: 'fas fa-paragraph', title: 'HTML Paragraphs' },
-    content6: { icon: 'fas fa-paint-brush', title: 'HTML Styles' },
-    content7: { icon: 'fas fa-font', title: 'Text Formatting' },
-    content8: { icon: 'fas fa-quote-right', title: 'HTML Quotation and Citation' },
-    content9: { icon: 'fas fa-file-alt', title: 'HTML Comments' },
-    content10: { icon: 'fas fa-file-alt', title: 'HTML Div' },
+    content1: { icon: 'fab fa-react', title: 'Introduction to React' },
+    content2: { icon: 'fas fa-cogs', title: 'Functional Components' },
+    content3: { icon: 'fas fa-building', title: 'Class Components' },
+    content4: { icon: 'fas fa-flag-checkered', title: 'State in React' },
+    content5: { icon: 'fas fa-hand-pointer', title: 'Handling Events' },
+    content6: { icon: 'fas fa-adjust', title: 'Conditional Rendering' },
+    content7: { icon: 'fas fa-list', title: 'Lists and Keys' },
+    content8: { icon: 'fas fa-form', title: 'Forms in React' },
+    content9: { icon: 'fas fa-route', title: 'React Router' },
+    content10: { icon: 'fas fa-layer-group', title: 'State Management with Context API' },
     content11: { icon: 'fas fa-check-circle', title: 'Assessment' },
-}
+};
+
 const categoryContent = {
-    content1: ` <div>
+    content1: `
+    <div>
         <h1>Introduction to HTML</h1>
         <h2>Module 1</h2>
             <hr>
@@ -97,8 +99,7 @@ const categoryContent = {
         <button class="next-module" data-next="quiz1">Take Quiz</button>
     </div>
 `,
-    content2: ` 
-        <h1>HTML Basic Syntax</h1>
+    content2: `<h1>HTML Basic Syntax</h1>
 <h2>Module 2</h2>
 
 <hr>

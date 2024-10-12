@@ -9,11 +9,14 @@ html, body {
 }
 body {
     background-color: #CCCEE4;
+    width:auto ;
+
 }
 
 .course-container {
     display:flex; 
 }
+
 
 .ass-card {
     height: auto;

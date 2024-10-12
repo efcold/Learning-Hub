@@ -3,18 +3,18 @@ const Logo={
     alt: "Course Logo"
 }
 const categoryTitle = {
-    content1: { icon: 'fas fa-home', title: 'Introduction to CSS1' },
-    content2: { icon: 'fas fa-code', title: 'CSS Syntax' },
-    content3: { icon: 'fas fa-tag', title: 'CSS Selectors' },
-    content4: { icon: 'fas fa-heading', title: 'How To Add CSS' },
-    content5: { icon: 'fas fa-paragraph', title: 'CSS Comments' },
-    content6: { icon: 'fas fa-paint-brush', title: 'Colors' },
-    content7: { icon: 'fas fa-font', title: 'Background Color' },
-    content8: { icon: 'fas fa-quote-right', title: 'HTML Quotation and Citation' },
-    content9: { icon: 'fas fa-file-alt', title: 'HTML Comments' },
-    content10: { icon: 'fas fa-file-alt', title: 'HTML Div' },
+    content1: { icon: 'fas fa-house-user', title: 'Introduction to CSS1' }, 
+    content2: { icon: 'fas fa-laptop-code', title: 'CSS Syntax' }, 
+    content3: { icon: 'fas fa-tags', title: 'CSS Selectors' }, 
+    content4: { icon: 'fas fa-file-import', title: 'How To Add CSS' }, 
+    content5: { icon: 'fas fa-comment-dots', title: 'CSS Comments' }, 
+    content6: { icon: 'fas fa-palette', title: 'Colors' }, 
+    content7: { icon: 'fas fa-tint', title: 'Background Color' }, 
+    content8: { icon: 'fas fa-quote-left', title: 'HTML Quotation and Citation' }, 
+    content9: { icon: 'fas fa-sticky-note', title: 'HTML Comments' }, 
+    content10: { icon: 'fas fa-box', title: 'HTML Div' }, 
     content11: { icon: 'fas fa-check-circle', title: 'Assessment' },
-}
+};
 const categoryContent = {
     content1: `
     <h1>Introduction to CSS</h1>

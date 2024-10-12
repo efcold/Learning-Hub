@@ -1,22 +1,24 @@
 const Logo={
-    src: "/Assets/Images/Index/HTML-W.png",
+    src: "/Assets/Images/Index/JS-W.png",
     alt: "Course Logo" 
 }
 const categoryTitle = {
-    content1: { icon: 'fas fa-home', title: 'Introduction to HTML' },
-    content2: { icon: 'fas fa-code', title: 'HTML Basic Syntax' },
-    content3: { icon: 'fas fa-tag', title: 'HTML Attributes' },
-    content4: { icon: 'fas fa-heading', title: 'HTML Headings' },
-    content5: { icon: 'fas fa-paragraph', title: 'HTML Paragraphs' },
-    content6: { icon: 'fas fa-paint-brush', title: 'HTML Styles' },
-    content7: { icon: 'fas fa-font', title: 'Text Formatting' },
-    content8: { icon: 'fas fa-quote-right', title: 'HTML Quotation and Citation' },
-    content9: { icon: 'fas fa-file-alt', title: 'HTML Comments' },
-    content10: { icon: 'fas fa-file-alt', title: 'HTML Div' },
+    content1: { icon: 'fas fa-laptop', title: 'Introduction to JAVASCRIPT' },
+    content2: { icon: 'fas fa-terminal', title: 'JavaScript Statements' },
+    content3: { icon: 'fas fa-file-code', title: 'JavaScript Syntax' },
+    content4: { icon: 'fas fa-comment-dots', title: 'JavaScript Comments' },
+    content5: { icon: 'fas fa-cogs', title: 'JavaScript Variables' },
+    content6: { icon: 'fas fa-arrow-alt-circle-right', title: 'JavaScript Let' },
+    content7: { icon: 'fas fa-arrow-alt-circle-up', title: 'JavaScript Const' },
+    content8: { icon: 'fas fa-exchange-alt', title: 'JavaScript Operators' },
+    content9: { icon: 'fas fa-calculator', title: 'JavaScript Arithmetic' },
+    content10: { icon: 'fas fa-clipboard-check', title: 'JavaScript Assignment' },
     content11: { icon: 'fas fa-check-circle', title: 'Assessment' },
-}
+};
+
 const categoryContent = {
-    content1: ` <div>
+    content1: `
+    <div>
         <h1>Introduction to HTML</h1>
         <h2>Module 1</h2>
             <hr>
@@ -97,8 +99,7 @@ const categoryContent = {
         <button class="next-module" data-next="quiz1">Take Quiz</button>
     </div>
 `,
-    content2: ` 
-        <h1>HTML Basic Syntax</h1>
+    content2: `<h1>HTML Basic Syntax</h1>
 <h2>Module 2</h2>
 
 <hr>
