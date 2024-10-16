@@ -331,8 +331,6 @@ content6: `<div>
 <button class="next-module" data-next="quiz6">Take Quiz</button>
 </div>
 `,
-
-
 content7: `<div>
 <h1>CSS Background Color</h1>
 <h2>Module 7</h2>
@@ -387,8 +385,8 @@ content7: `<div>
 <button class="next-module" data-next="quiz7">Take Quiz</button>
 </div>
 `,
-
-content8: '<div>\
+content8: 
+`<div>\
 <h1>HTML Quotation and Citation Element</h1>\
 <h2>Module 8</h2>\
 <ol>\
@@ -421,9 +419,9 @@ content8: '<div>\
 </ol>\
 <p>These elements help structure content related to quotations and citations clearly and semantically in HTML.</p>\
 <button class="next-module" data-next="quiz8">Take Quiz</button>\
-</div>',
+</div>`,
 
-content9: '<div>\
+content9: `<div>\
 <h1>HTML Comments</h1>\
 <h2>Module 9</h2>\
 <p>HTML comments are used to insert notes or explanations within your HTML code that are not displayed in the web browser. They are helpful for developers to leave reminders or explanations for themselves or others who may read the code later.</p>\
@@ -454,9 +452,9 @@ content9: '<div>\
     <li>Using comments effectively can help maintain clear communication within the code, especially in collaborative projects.</li>\
 </ul>\
 <button class="next-module" data-next="quiz9">Take Quiz</button>\
-</div>',
+</div>`,
 
-content10: '<div>\
+content10: `<div>\
 <h1>HTML Div</h1>\
 <h2>Module 10</h2>\
 <p>HTML <code>&lt;div&gt;</code> elements are used as container elements to group together related content and apply styles or layout. Here are some examples of how to use <code>&lt;div&gt;</code> elements:</p>\
@@ -498,7 +496,7 @@ content10: '<div>\
 </div>\
 <p>This <code>&lt;div&gt;</code> has an ID named "unique." IDs are intended to be unique within a page and can be targeted in CSS or JavaScript for specific styling or behavior. They are often used for elements that need specific styling or manipulation.</p>\
 <button class="next-module" data-next="quiz10">Take Quiz</button>\
-</div>',
+</div>`,
 
     content11: '<h1>Assessment</h1><p>Click Start assesment to answer all the question regarding this module!</p> <button class="next-module" data-next="assessment">Start Assessment</button>',
 };
@@ -506,111 +504,111 @@ content10: '<div>\
 const quizzes = {
     quiz1: `
     <h1>QUIZ # 1</h1>
-        <h2>What is the purpose of the <!DOCTYPE html> declaration?</h2>
+        <h2>What happens if you apply different stylesheets to one HTML page?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To specify the title of the page')">To specify the title of the page</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To indicate that the document is HTML5')">To indicate that the document is HTML5</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To start the body of the document')">To start the body of the document</div>          
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'No change happens')">No change happens</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'The page will use all styles at once')">The page will use all styles at once</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'The appearance of the webpage will change based on the stylesheet used')">The appearance of the webpage will change based on the stylesheet used</div>
         </div>
         <div id="selected-answer-1" class="selected-answer-container"></div>
         <button class="next-module" data-next="content2">Next Module</button>
     `,
     quiz2: `
     <h1>QUIZ # 2</h1>
-        <h2>What are <th> and <td> tags used for in an HTML table?</h2>
+        <h2>In CSS, what does the selector do?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(2, '<th> is for table header cells, and <td> is for table data cells.')"><th> is for table header cells, and <td> is for table data cells.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(2, 'Both are for creating table headers only.')">Both are for creating table headers only.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(2, '<th> is for rows, and <td> is for columns.')"><th> is for rows, and <td> is for columns.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, 'Chooses the color of the text')">Chooses the color of the text</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, 'Points to the HTML element you want to style')">Points to the HTML element you want to style</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, 'Adds a comment to the code')">Adds a comment to the code</div>
         </div>
         <div id="selected-answer-2" class="selected-answer-container"></div>
         <button class="next-module" data-next="content3">Next Module</button>
     `,
     quiz3: `
     <h1>QUIZ # 3</h1>
-        <h2>Which attribute would you use to apply inline styles directly to an HTML element?</h2>
+        <h2>What is JavaScript Comments?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'class')">class</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'style')">style</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'id')">id</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, 'Code after double slashes // or between /* and */ is treated as a comment.')">Code after double slashes // or between /* and */ is treated as a comment.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, 'Unicode covers (almost) all the characters, punctuations, and symbols in the world.')">Unicode covers (almost) all the characters, punctuations, and symbols in the world.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, 'Identifiers are used to name variables and keywords, and functions.')">Identifiers are used to name variables and keywords, and functions.</div>
         </div>
         <div id="selected-answer-3" class="selected-answer-container"></div>
         <button class="next-module" data-next="content4">Next Module</button>
     `,
     quiz4: `
     <h1>QUIZ # 4</h1>
-        <h2>Which heading level is typically used for major sections within a page?</h2>
+        <h2>Where should internal CSS be placed within an HTML document?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h2')">h2</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h3')">h3</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h1')">h1</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'Inside the <body>')">Inside the <body></div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'Inside the <footer>')">Inside the <footer></div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'Inside the <style> tag, in the <head> section')">Inside the <style> tag, in the <head> section</div>
         </div>
         <div id="selected-answer-4" class="selected-answer-container"></div>
         <button class="next-module" data-next="content5">Next Module</button>
     `,
     quiz5: `
     <h1>QUIZ # 5</h1>
-        <h2>In the example <p>This is a <strong>text</strong> word and this is <em>text</em> word.</p> what do the <strong> and <em> tags do?</h2>
+        <h2>Which of the following is a valid CSS comment?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They change the font size.')">They change the font size.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They format the text as bold and italic, respectively.')">They format the text as bold and italic, respectively.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They create new paragraphs.')">They create new paragraphs.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, '// This is a comment //')">// This is a comment //</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, '<!-- This is a comment -->')"><!-- This is a comment --></div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, '/* This is a comment */')">/* This is a comment */</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, '# This is a comment')"># This is a comment</div>
         </div>
         <div id="selected-answer-5" class="selected-answer-container"></div>
         <button class="next-module" data-next="content6">Next Module</button>
     `,
     quiz6: `
     <h1>QUIZ # 6</h1>
-        <h2>What does the following CSS rule do?</h2>
-        <code>#special { color: red; font-size: 20px; }</code>
+        <h2>How would you apply a background color to an element in CSS?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It applies red color and 20px font size to all paragraphs.')">It applies red color and 20px font size to all paragraphs.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It styles the element with the ID "special" to have red text and a font size of 20 pixels.')">It styles the element with the ID "special" to have red text and a font size of 20 pixels.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It creates a new HTML element.')">It creates a new HTML element.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, 'background-color:blue;')">background-color:blue;</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, 'border-color:blue;')">border-color:blue;</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, 'text-color:blue;')">text-color:blue;</div>
         </div>
         <div id="selected-answer-6" class="selected-answer-container"></div>
         <button class="next-module" data-next="content7">Next Module</button>
     `,
     quiz7: `
     <h1>QUIZ # 7</h1>
-        <h2>What is a key recommendation regarding the use of text formatting tags in HTML?</h2>
+        <h2>Which CSS code will set a full green background for a div element, but with 30% transparency?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Use as many formatting tags as possible.')">Use as many formatting tags as possible.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Use formatting tags appropriately to maintain the semantic meaning of the content.')">Use formatting tags appropriately to maintain the semantic meaning of the content.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Avoid using any formatting tags at all.')">Avoid using any formatting tags at all.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, 'div { background-color: green; opacity: 0.3; }')">div { background-color: green; opacity: 0.3; }</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, 'div { background-color: green; opacity: 3; }')">div { background-color: green; opacity: 3; }</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, 'div { background-color: rgba(0, 128, 0, 0.3); }')">div { background-color: rgba(0, 128, 0, 0.3); }</div>
         </div>
         <div id="selected-answer-7" class="selected-answer-container"></div>
         <button class="next-module" data-next="content8">Next Module</button>
     `,
     quiz8: `
     <h1>QUIZ # 8</h1>
-        <h2>How does the <abbr> tag enhance the use of abbreviations in HTML?</h2>
+        <h2>What are not Types of JavaScript Operators?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It creates a hyperlink to a definition.')">It creates a hyperlink to a definition.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It automatically formats the abbreviation in bold.')">It automatically formats the abbreviation in bold.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It provides the full name or meaning of the abbreviation.')">It provides the full name or meaning of the abbreviation.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'String Operators')">String Operators</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'Bitwise Operators')">Bitwise Operators</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'Const Operator')">Const Operator</div>
         </div>
         <div id="selected-answer-8" class="selected-answer-container"></div>
         <button class="next-module" data-next="content9">Next Module</button>
     `,
     quiz9: `
     <h1>QUIZ # 9</h1>
-        <h2>What is the correct syntax for an HTML comment?</h2>
+        <h2>What is the operator of Decrementing?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '// This is a comment')">// This is a comment</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '/* This is a comment */')">/* This is a comment */</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '<!-- This is a comment -->')"><!-- This is a comment --></div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(--)')">(--)</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(++)')">(++)</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(**)')">(**)</div>
         </div>
         <div id="selected-answer-9" class="selected-answer-container"></div>
         <button class="next-module" data-next="content10">Next Module</button>
     `,
     quiz10: `
     <h1>QUIZ # 10</h1>
-        <h2>What is the purpose of a <div> element in HTML?</h2>
+        <h2>What is |=?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To display images')">To display images</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To create a container for grouping content')">To create a container for grouping content</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To define the structure of a table')">To define the structure of a table</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Bitwise OR Assignment Operator')">Bitwise OR Assignment Operator</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Bitwise XOR Assignment Operator')">Bitwise XOR Assignment Operator</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Logical AND assignment operator')">Logical AND assignment operator</div>
         </div>
         <div id="selected-answer-10" class="selected-answer-container"></div>
         <button class="next-module" data-next="content11">Next Module</button>
@@ -618,33 +616,36 @@ const quizzes = {
 };
 
 const correctAnswers = {
-    1: 'To indicate that the document is HTML5',
-    2: '<th> is for table header cells, and <td> is for table data cells.',
-    3: 'style',
-    4: '<h2>',
-    5: 'They format the text as bold and italic, respectively.',
-    6: 'It styles the element with the ID "special" to have red text and a font size of 20 pixels.',
-    7: 'Use formatting tags appropriately to maintain the semantic meaning of the content.',
-    8: 'It provides the full name or meaning of the abbreviation.',
-    9: '<!-- This is a comment -->',
-    10: 'To create a container for grouping content',
+    1: 'The appearance of the webpage will change based on the stylesheet used',
+    2: 'Points to the HTML element you want to style',
+    3: 'Code after double slashes // or between /* and */ is treated as a comment.',
+    4: 'Inside the <style> tag, in the <head> section',
+    5: '/* This is a comment */',
+    6: 'background-color:blue;',
+    7: 'div { background-color: green; opacity: 0.3; }',
+    8: 'Const Operator',
+    9: '(--)',
+    10: 'Bitwise OR Assignment Operator',
 };
 
-
 const assessmentQuestions = [
-    { question: "Which of the following is a good practice when using comments in HTML?", choices: ["A) Adding comments for every line of code", "B) Using comments to explain complex sections of code", "C) Writing comments in a language that only you understand"], selectedChoice: null, correctAnswer: "B) Using comments to explain complex sections of code" },
-    { question: "What does the <cite> tag represent in an HTML document?", choices: ["A) A reference to the title of a creative work", "B) A link to an external website", "C) A block of text for a quote"], selectedChoice: null, correctAnswer: "A) A reference to the title of a creative work" },
-    { question: "Which HTML tag is used for shorter inline quotations that automatically add quotation marks?", choices: ["A) <cite>", "B) <q>", "C) <blockquote>"], selectedChoice: null, correctAnswer: "B) <q>" },
-    { question: "What is the purpose of the blockquote tag?", choices: ["A) To create a list", "B) To display longer quotations, usually indented", "C) To format text as code"], selectedChoice: null, correctAnswer: "B) To display longer quotations, usually indented" },
-    { question: "In CSS, what is the purpose of classes?", choices: ["A) To create reusable styles that can be applied to multiple elements", "B) To apply styles to unique elements only", "C) To link external stylesheets"], selectedChoice: null, correctAnswer: "A) To create reusable styles that can be applied to multiple elements" },
-    { question: "How does a browser typically handle spacing around paragraphs?", choices: ["A) No spacing is added.", "B) Spacing is added only if specified in CSS.", "C) Browsers automatically add space before and after each <p> element."], selectedChoice: null, correctAnswer: "C) Browsers automatically add space before and after each <p> element." },
-    { question: "How do headings enhance SEO (Search Engine Optimization)?", choices: ["A) By making the text colorful", "B) By reducing the page loading time", "C) By helping search engines understand the structure of the content"], selectedChoice: null, correctAnswer: "C) By helping search engines understand the structure of the content" },
-    { question: "What is the purpose of the placeholder attribute in an <input> tag?", choices: ["A) To specify the input field type", "B) To provide a hint to the user about what to enter", "C) To disable the input field"], selectedChoice: null, correctAnswer: "B) To provide a hint to the user about what to enter" },
-    { question: "What does the href attribute specify in an anchor (<a>) tag?", choices: ["A) The title of the link", "B) The URL that the link points to", "C) The color of the link"], selectedChoice: null, correctAnswer: "B) The URL that the link points to" },
-    { question: "What does the <!DOCTYPE html> declaration indicate?", choices: ["A) It declares that the document is an HTML5 document.", "B) It specifies the title of the page.", "C) It starts the body of the document."], selectedChoice: null, correctAnswer: "A) It declares that the document is an HTML5 document." },
-    { question: "What information is contained within the <head> section of an HTML document?", choices: ["A) The visible content of the page", "B) Images and links", "C) Meta-information like the title and links to styles"], selectedChoice: null, correctAnswer: "C) Meta-information like the title and links to styles" },
-]
-;
+    { question: "What does CSS stand for?", choices: ["A) Creative Style Sheets", "B) Cascading Style Sheets", "C) Computer Style Sheets"], selectedChoice: null, correctAnswer: "B) Cascading Style Sheets" },
+    { question: "What is the primary function of CSS?", choices: ["A) To create HTML elements", "B) To describe how HTML elements should be displayed", "C) To add interactivity to HTML elements"], selectedChoice: null, correctAnswer: "B) To describe how HTML elements should be displayed" },
+    { question: "A CSS rule consists of which two main parts?", choices: ["A) Selector and declaration block", "B) CSS file and HTML file", "C) Font and color"], selectedChoice: null, correctAnswer: "A) Selector and declaration block" },
+    { question: "How do you separate multiple CSS declarations inside a declaration block?", choices: ["A) Colon (:)", "B) Comma (,)", "C) Semicolon (;)"], selectedChoice: null, correctAnswer: "C) Semicolon (;)" },
+    { question: "Where should an external CSS file be linked inside an HTML document?", choices: ["A) Inside the <body> section", "B) Inside the <head> section", "C) Inside the <footer> section"], selectedChoice: null, correctAnswer: "B) Inside the <head> section" },
+    { question: "Which of these is the correct way to apply an inline CSS style to an HTML h1 element?", choices: ["A) &lt;h1 style=color: red;&gt;Hello&lt;/h1&gt;", "B) &lt;h1 class=color: red;&gt;Hello&lt;/h1&gt;", "C) &lt;h1 link=color:red;&gt;Hello&lt;/h1&gt;"], selectedChoice: null, correctAnswer: "A) <h1 style=\"color: red;\">Hello</h1>" },
+    { question: "What is the correct syntax for writing comments in a CSS file?", choices: ["A) <!-- This is a comment -->", "B) /* This is a comment */", "C) // This is a comment"], selectedChoice: null, correctAnswer: "B) /* This is a comment */" },
+    { question: "Why would you use comments in your CSS code?", choices: ["A) To make CSS code run faster", "B) To explain the code for yourself or other developers", "C) To style the comment text"], selectedChoice: null, correctAnswer: "B) To explain the code for yourself or other developers" },
+    { question: "Which of the following is a correct HEX value for a color?", choices: ["A) #ff0000", "B) hsl(0, 100%, 50%)", "C) rgb(255, 0, 0)"], selectedChoice: null, correctAnswer: "A) #ff0000" },
+    { question: "Which CSS property is used to change the text color of an element?", choices: ["A) background-color", "B) font-color", "C) color"], selectedChoice: null, correctAnswer: "C) color" },
+    { question: "How would you set a background color using the color name 'lightblue'?", choices: ["A) background: lightblue;", "B) background-image: lightblue;", "C) background-color: lightblue;"], selectedChoice: null, correctAnswer: "C) background-color: lightblue;" },
+    { question: "Which of these is an RGB color value that represents blue?", choices: ["A) rgb(0, 0, 255)", "B) rgb(255, 0, 0)", "C) rgb(0, 255, 0)"], selectedChoice: null, correctAnswer: "A) rgb(0, 0, 255)" },
+    { question: "What does the background-attachment property control in CSS?", choices: ["A) Controls how the background image repeats", "B) Controls whether a background image scrolls with the page content", "C) Controls the direction of the background color gradient"], selectedChoice: null, correctAnswer: "B) Controls whether a background image scrolls with the page content" },
+    { question: "How would you use CSS to set the background image of a web page?", choices: ["A) background: image:();", "B) background-image:;", "C) background-image: url ;"]        , selectedChoice: null, correctAnswer: "C) background-image: url('example.jpg');" },
+    { question: "How do you set an element to 50% transparent using CSS?", choices: ["A) opacity: 0;", "B) opacity: 0.5;", "C) opacity: 1;"], selectedChoice: null, correctAnswer: "B) opacity: 0.5;" }
+];
+
 let score = 0;
 let currentQuestionIndex = 0;
 const selectedAnswers = [];

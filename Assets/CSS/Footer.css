@@ -1,3 +1,10 @@
+html, body {
+    height: 100%; /* Set height to 100% for flexbox */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    background-color: #CCCEE4; 
+    margin: 0; /* Remove default margin */
+}
 .footer {
     background: linear-gradient(0deg, #3D437D 0%, #171D35 100%);
     padding: 20px;
@@ -6,6 +13,7 @@
     max-width: 100%; /* Prevents footer from exceeding the viewport width */
     position: relative; 
     bottom: 0;
+    flex: 1; /* Allow the card container to grow and take available space */
     box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 

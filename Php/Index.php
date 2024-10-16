@@ -68,8 +68,8 @@ include 'HomeIncludes/H-Sidebar.php';
         
     <h1 class="heading-create-learning-path">CREATE A LEARNING PATH</h1>
     <button class="button-learning-path" onclick="location.href='LearningPath.php';">I want to be a Frontend Developer</button>
-    <button class="button-learning-path">I want to be a Backend Developer</button>
-    <button class="button-learning-path">I want to be a Full Stack Developer</button>
+    <button class="button-learning-path" onclick="location.href='LearningPath.php';">I want to be a Backend Developer</button>
+    <button class="button-learning-path" onclick="location.href='LearningPath.php';">I want to be a Full Stack Developer</button>
 </main>
 <?php
 include 'HomeIncludes/Footer.php';

@@ -18,641 +18,663 @@ const categoryTitle = {
 
 const categoryContent = {
     content1: `
-    <div>
-        <h1>Introduction to HTML</h1>
-        <h2>Module 1</h2>
-            <hr>
-        <div class="definition">
-            <p>What is HTML?</p>
-            <p>HTML (HyperText Markup Language) is the standard markup language for building web pages. It describes the structure of a web page using a collection of elements. These elements provide the browser with instructions on how to display the text, naming different sections such as headings, paragraphs, links, and more.</p>
-            <p><strong>Example:</strong></p>
-            <pre>
-                <img src="/Assets/Images/Courses/C-HTML/Structure.png" alt="HTML Structure Example" style="max-width:20%; height:auto;">
-
-                &lt;!DOCTYPE html&gt; — This line tells the web browser that this document is an HTML5 document.
-                &lt;html&gt; — This tag starts the HTML document. Everything inside this tag is part of the HTML code.
-                &lt;head&gt; — This tag contains information about the web page that is not displayed directly on the page like its title.
-                &lt;title&gt;Page Title&lt;/title&gt; — Sets the title that shows in the browser tab.
-                &lt;/head&gt; — Ends the head section.
-                &lt;body&gt; — Starts the visible part of the web page.
-                &lt;h1&gt;Heading&lt;/h1&gt; — This creates a main heading on the page. It’s usually the biggest text and is important for understanding the content.
-                &lt;p&gt;Paragraph&lt;/p&gt; — This creates a paragraph of text. It’s used for regular content.
-                &lt;/body&gt; — This tag closes the body section of the web page.
-                &lt;/html&gt; — This tag closes the HTML document. It signals the end of the HTML code.
-            </pre>
-        </div>
-
-        <hr>
-
-        <div class="html-element">
-            <p><strong>HTML Element</strong></p>
-            <p>An HTML element is a basic building block of an HTML document. It consists of a start tag, content, and an end tag. For example, in the element &lt;p&gt;Paragraph&lt;/p&gt;:</p>
-            <ul>
-                <li>&lt;p&gt; is the start tag, indicating the beginning of a paragraph.</li>
-                <li>Paragraph is the content.</li>
-                <li>&lt;/p&gt; is the end tag, marking the end of the paragraph.</li>
-            </ul>
-            <p><strong>Note:</strong> Some HTML elements have no content (like the &lt;br&gt; element). These elements are called empty elements. Empty elements do not have an end tag!</p>
-        </div>
-
-        <hr>
-
-        <div class="creating-page">
-            <h2>Creating Your First Web Page with Notepad or TextEdit</h2>
-            <h3>Why Use a Simple Text Editor?</h3>
-            <p>For learning HTML, it's best to use a simple text editor like Notepad (PC) or TextEdit (Mac).</p>
-            <h3>Steps to Create Your Web Page:</h3>
-            <h4>Step 1: Open Notepad (PC)</h4>
-            <p>Windows 8 or later: Click the Start button and type "Notepad."<br>
-            Windows 7 or earlier: Go to Start > Programs > Accessories > Notepad.</p>
-            
-            <h4>Step 1: Open TextEdit (Mac)</h4>
-            <p>Open Finder, then go to Applications > TextEdit.<br>
-            Change settings:<br>
-            Go to Preferences > Format and select "Plain Text."<br>
-            Under "Open and Save," check "Display HTML files as HTML code."</p>
-            
-            <h4>Step 2: Write Your HTML Code</h4>
-            <p>Copy and paste this code into Notepad or TextEdit:</p>
-            <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html&gt;
-                &lt;body&gt;
-
-                &lt;h1&gt;My Heading&lt;/h1&gt;
-                &lt;p&gt;My paragraph.&lt;/p&gt;
-
-                &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
-            
-            <h4>Step 3: Save Your Web Page</h4>
-            <p>In Notepad, click File > Save As.<br>
-            Name the file "index.htm" and choose UTF-8 as the encoding.</p>
-            
-            <h4>Step 4: View in Browser</h4>
-            <p>Open the saved file in your web browser to see your first web page!</p>
-        </div>
-
-        <hr>
-
-        <button class="next-module" data-next="quiz1">Take Quiz</button>
+<div>
+    <h1>Introduction to Python</h1>
+    <h2>Module 1</h2>
+    <hr>
+    <div class="what-is-python">
+        <h3>What is Python?</h3>
+        <p>Python is a widely-used programming language developed by Guido van Rossum, first released in 1991. Its applications include:</p>
+        <ul>
+            <li>Server-side web development</li>
+            <li>Software development</li>
+            <li>Mathematical computing</li>
+            <li>System scripting</li>
+        </ul>
     </div>
+
+    <hr>
+
+    <div class="what-can-python-do">
+        <h3>What Can Python Do?</h3>
+        <ul>
+            <li>Build web applications on servers</li>
+            <li>Automate workflows</li>
+            <li>Connect to and manipulate databases and files</li>
+            <li>Process large datasets and perform complex mathematical tasks</li>
+            <li>Facilitate rapid prototyping and develop production-ready software</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="why-choose-python">
+        <h3>Why Choose Python?</h3>
+        <ul>
+            <li>Compatible across various platforms (Windows, Mac, Linux, Raspberry Pi)</li>
+            <li>Features a clear, easy-to-read syntax akin to English</li>
+            <li>Requires fewer lines of code compared to many other languages</li>
+            <li>Enables quick prototyping through an interpreter system</li>
+            <li>Supports multiple programming paradigms: procedural, object-oriented, and functional</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="additional-information">
+        <h3>Additional Information</h3>
+        <p>The current major version is Python 3, while Python 2 remains in use for some legacy systems.</p>
+        <p>Python can be written in text editors or IDEs like Thonny, PyCharm, and Eclipse.</p>
+    </div>
+
+    <hr>
+
+    <div class="syntax">
+        <h3>Syntax</h3>
+        <p>Python prioritizes readability and uses line breaks to finish commands, relying on indentation to indicate scope instead of curly brackets.</p>
+    </div>
+
+    <hr>
+
+    <div class="get-started">
+        <h3>Get Started</h3>
+        <h4>Python Installation</h4>
+        <p>Most PCs and Macs come with Python pre-installed. To check if Python is installed:</p>
+        <p><strong>On Windows:</strong> Search for "Python" in the Start menu, or open Command Prompt and run:</p>
+        <pre>python --version</pre>
+        <p><strong>On Linux/Mac:</strong> Open the Terminal and type:</p>
+        <pre>python --version</pre>
+        <p>If Python is not installed, you can download it for free from <a href="https://www.python.org">python.org</a>.</p>
+    </div>
+
+    <hr>
+
+    <div class="python-quickstart">
+        <h4>Python Quickstart</h4>
+        <p>Python is an interpreted language, meaning you write Python files (.py) in a text editor and run them through the Python interpreter.</p>
+        <p>To run a Python file, use the command:</p>
+        <pre>python helloworld.py</pre>
+        <p>Where "helloworld.py" is the name of your file.</p>
+    </div>
+
+    <hr>
+
+    <div class="create-your-first-file">
+        <h4>Create Your First Python File:</h4>
+        <p>Open a text editor and write the following code:</p>
+        <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m1-1.png" alt="HTML Structure Example" style="max-width:20%; height:auto;">
+        </pre>
+        <p>Save the file as helloworld.py.</p>
+    </div>
+
+    <hr>
+
+    <div class="run-your-program">
+        <h4>Run Your Program:</h4>
+        <p>Open Command Prompt or Terminal.</p>
+        <p>Navigate to the folder where you saved your file.</p>
+        <p>Run:</p>
+        <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m1-2.png" alt="HTML Structure Example" style="max-width:20%; height:auto;">
+        </pre>
+        <p>You should see:</p>
+        <pre>Congratulations! You've just written and executed your first Python program.</pre>
+    </div>
+
+    <hr>
+
+    <button class="next-module" data-next="quiz1">Take Quiz</button>
+</div>
 `,
-    content2: `<h1>HTML Basic Syntax</h1>
-<h2>Module 2</h2>
+content2: `
+<div>
+    <h1>Python Syntax</h1>
+    <h2>Module 2</h2>
+    <hr>
+    
+    <div class="executing-python-syntax">
+        <h3>Executing Python Syntax</h3>
+        <p>You can execute Python code in two ways:</p>
+        <ul>
+            <li><strong>Directly in the Command Line:</strong> You can enter Python commands directly in the command line (interpreter mode).</li>
+        </ul>
+        <p>For example:</p>
+        <pre>>> print("Hello, World!")</pre>
+        <pre>Hello, World!</pre>
 
-<hr>
+        <ul>
+            <li><strong>Through a Python File:</strong> Alternatively, you can write your Python code in a file with a .py extension and run it from the command line:</li>
+        </ul>
+        <pre>C:\\Users\\Your Name>python myfile.py</pre>
+    </div>
 
-<h2>1. Basic Structure</h2>
-<p>This is a basic HTML document structure:</p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;My First Web Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Welcome!&lt;/h1&gt;
-    &lt;p&gt;This is my first web page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<ul>
-    <li>&lt;!DOCTYPE html&gt;: Declares that this is an HTML5 document.</li>
-    <li>&lt;html&gt;: Starts the HTML document.</li>
-    <li>&lt;head&gt;: Contains meta-information, like the title.</li>
-    <li>&lt;title&gt;: Sets the title of the web page (shown in the browser tab).</li>
-    <li>&lt;body&gt;: Contains the visible content of the web page.</li>
-    <li>&lt;h1&gt;: Main heading of the page.</li>
-    <li>&lt;p&gt;: A paragraph of text.</li>
-</ul>
+    <hr>
 
-<hr>
+    <div class="python-indentation">
+        <h3>Python Indentation</h3>
+        <h4>What is Indentation?</h4>
+        <p>Indentation refers to the spaces at the beginning of a line of code. In Python, indentation is crucial as it defines the structure and flow of the code.</p>
+        
+        <h4>Importance of Indentation:</h4>
+        <p>Unlike some programming languages where indentation is just for readability, in Python, it determines how code blocks are grouped.</p>
+        <p>Example: Here’s a simple conditional statement:</p>
+         <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m2-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+        <p>In this example, the indented line is part of the if block.</p>
+        
+        <h4>Common Errors:</h4>
+        <p>If you forget to indent, Python will raise an error:</p>
+         <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m2-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+    </div>
 
-<h2>2. Headings</h2>
-<p>Headings help to structure the content of your web page:</p>
-<pre>
-&lt;h1&gt;This is a Heading 1&lt;/h1&gt;
-&lt;h2&gt;This is a Heading 2&lt;/h2&gt;
-&lt;h3&gt;This is a Heading 3&lt;/h3&gt;
-</pre>
-<p>&lt;h1&gt; to &lt;h6&gt;: Tags for headings, with &lt;h1&gt; being the largest and most important, and &lt;h6&gt; being the smallest.</p>
+    <hr>
 
-<hr>
+    <div class="indentation-consistency">
+        <h4>Indentation Consistency</h4>
+        <p>You can use any number of spaces for indentation, but it's common to use four spaces. It's crucial to maintain the same number of spaces within the same block.</p>
+         <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m2-3.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+        <p>However, mixing different indentation levels will cause an error:</p>
+        <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m2-4.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+        <p>This inconsistency will lead to a syntax error.</p>
+        <p>In summary, proper indentation is essential in Python for defining code blocks, and consistency is key to avoiding errors.</p>
+    </div>
 
-<h2>3. Paragraphs</h2>
-<p>Paragraphs are defined using the &lt;p&gt; tag:</p>
-<pre>
-&lt;p&gt;This is the first paragraph.&lt;/p&gt;
-&lt;p&gt;This is the second paragraph.&lt;/p&gt;
-</pre>
-<p>&lt;p&gt;: Defines a paragraph of text. Each &lt;p&gt; tag creates a new paragraph with space around it.</p>
+    <hr>
 
-<hr>
+    <div class="python-variables">
+        <h3>Python Variables</h3>
+        <p>In Python, a variable is created when you assign a value to it. This means you don't need a specific command to declare a variable; simply assign a value and the variable is ready to use.</p>
+        <p>Examples:</p>
+         <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m2-5.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+        <p>In these examples, x is an integer variable, and y is a string variable. You can use these variables later in your code without any additional declarations.</p>
+    </div>
 
-<h2>4. Links</h2>
-<p>Links are created with the &lt;a&gt; tag:</p>
-<pre>
-&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
-</pre>
-<p>&lt;a&gt;: Creates a hyperlink.</p>
-<ul>
-    <li>href: Attribute that specifies the URL the link points to.</li>
-    <li>The text between the tags is what users click on.</li>
-</ul>
+    <hr>
 
-<hr>
+    <div class="comments">
+        <h3>Comments</h3>
+        <p>Comments are used in Python for documentation within the code. They help explain what the code does, making it easier for others (or yourself) to understand it later. Comments are ignored by the Python interpreter, so they don’t affect the program’s execution.</p>
+        <h4>How to Write Comments:</h4>
+        <p>Comments start with a <code>#</code> symbol. Everything after the <code>#</code> on that line is treated as a comment.</p>
+        <p>Example:</p>
+        <pre># This is a comment explaining the next line of code
+        <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m2-6.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre></pre>
+        <p>In this example, the line starting with <code>#</code> is a comment and won't be executed. The second comment after print explains what that line does.</p>
+        <p>Using comments effectively can make your code more readable and maintainable.</p>
+    </div>
 
-<h2>5. Images</h2>
-<p>Images can be embedded using the &lt;img&gt; tag:</p>
-<pre>
-&lt;img src="image.jpg" alt="Description of Image" /&gt;
-</pre>
-<ul>
-    <li>&lt;img&gt;: Embeds an image in the web page.</li>
-    <li>src: Attribute that specifies the path to the image file.</li>
-    <li>alt: Provides alternative text for the image (important for accessibility).</li>
-</ul>
+    <hr>
 
-<hr>
-
-<h2>6. Lists</h2>
-<p>HTML supports both unordered and ordered lists:</p>
-<p>Unordered List:</p>
-<pre>
-&lt;ul&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-    &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-<p>&lt;ul&gt;: Starts an unordered (bulleted) list.</p>
-<p>Ordered List:</p>
-<pre>
-&lt;ol&gt;
-    &lt;li&gt;First item&lt;/li&gt;
-    &lt;li&gt;Second item&lt;/li&gt;
-    &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
-<p>&lt;ol&gt;: Starts an ordered (numbered) list.</p>
-
-<hr>
-
-<h2>7. Table</h2>
-<p>Tables are created using the &lt;table&gt; tag:</p>
-<pre>
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Header 1&lt;/th&gt;
-        &lt;th&gt;Header 2&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Data 1&lt;/td&gt;
-        &lt;td&gt;Data 2&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
-<ul>
-    <li>&lt;table&gt;: Creates a table.</li>
-    <li>&lt;tr&gt;: Starts a new row in the table.</li>
-    <li>&lt;th&gt;: Table header cell (bold and centered by default).</li>
-    <li>&lt;td&gt;: Table data cell (contains regular content).</li>
-</ul>
-
-<hr>
-
-<button class="next-module" data-next="quiz2">Take Quiz</button>
+    <button class="next-module" data-next="quiz2">Take Quiz</button>
+</div>
 `,
-content3: 
-`<div>
-    <h1>HTML Attributes</h1>
+content3: `
+<div>
+    <h1>Python Comments</h1>
     <h2>Module 3</h2>
-        <hr>
-    <h3>HTML attributes provide additional information about elements. Here are some common examples of HTML attributes:</h3>
-        <ol start="1">
-        <li><strong>href Attribute (Links)</strong><br>
-            <code>&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;</code><br>
-            <em>Usage:</em> Specifies the URL that the link points to.
-        </li>
-   
     <hr>
 
-        <li><strong>src Attribute (Images)</strong><br>
-            <code>&lt;img src="image.jpg" alt="A beautiful scenery" /&gt;</code><br>
-            <em>Usage:</em> Indicates the path to the image file.
-        </li>
-        <hr>
-        <li><strong>alt Attribute (Images)</strong><br>
-            <code>&lt;img src="image.jpg" alt="A description of the image" /&gt;</code><br>
-            <em>Usage:</em> Provides alternative text for the image, useful for accessibility.
-        </li>
-     
+    <div class="purpose">
+        <h3>Purpose:</h3>
+        <ul>
+            <li><strong>Explanation:</strong> Clarify the purpose and functionality of the code.</li>
+            <li><strong>Readability:</strong> Enhance understanding for yourself and others.</li>
+            <li><strong>Prevent Execution:</strong> Comment out code during testing without deleting it.</li>
+        </ul>
+    </div>
+
     <hr>
-   
-        <li><strong>title Attribute (Tooltips)</strong><br>
-            <code>&lt;a href="https://www.example.com" title="Go to Example.com"&gt;Visit Example.com&lt;/a&gt;</code><br>
-            <em>Usage:</em> Displays additional information as a tooltip when the mouse hovers over the element.
-        </li>
-        <hr>
-        <li><strong>style Attribute (Inline CSS)</strong><br>
-            <code>&lt;p style="color: blue;"&gt;This text is blue.&lt;/p&gt;</code><br>
-            <em>Usage:</em> Applies inline styles directly to the element.
-        </li>
-        <hr>
-        <li><strong>id Attribute (Unique Identifier)</strong><br>
-            <code>&lt;h1 id="main-heading"&gt;Main Heading&lt;/h1&gt;</code><br>
-            <em>Usage:</em> Assigns a unique identifier to an element, useful for styling and scripting.
-        </li>
-        <hr>
-        <li><strong>class Attribute (Grouping Elements)</strong><br>
-            <code>&lt;p class="highlight"&gt;This is a highlighted paragraph.&lt;/p&gt;</code><br>
-            <em>Usage:</em> Assigns one or more class names to an element for styling or scripting.
-        </li>
-        <hr>
-        <li><strong>target Attribute (Links)</strong><br>
-            <code>&lt;a href="https://www.example.com" target="_blank"&gt;Open in a new tab&lt;/a&gt;</code><br>
-            <em>Usage:</em> Specifies where to open the linked document (e.g., _blank opens in a new tab).
-        </li>
-        <hr>
-        <li><strong>placeholder Attribute (Forms)</strong><br>
-            <code>&lt;input type="text" placeholder="Enter your name" /&gt;</code><br>
-            <em>Usage:</em> Provides a hint to the user about what to enter in an input field.
-        </li>
-        <hr>
-        <li><strong>value Attribute (Forms)</strong><br>
-            <code>&lt;input type="submit" value="Submit" /&gt;</code><br>
-            <em>Usage:</em> Sets the text displayed on a submit button.
-        </li>
-        <hr>
-        <li><strong>disabled Attribute (Forms)</strong><br>
-            <code>&lt;input type="text" disabled /&gt;</code><br>
-            <em>Usage:</em> Disables an input element, making it uneditable.
-        </li>
-    </ol>
+
+    <div class="creating-comment">
+        <h3>Creating a Comment</h3>
+        <p>Comments start with a <code>#</code>, and Python ignores everything after it on that line.</p>
+    </div>
+
     <hr>
-    <p>These examples showcase how attributes can enhance HTML elements by providing additional context, functionality, and styling options.</p>
+
+    <div class="examples">
+        <h3>Example:</h3>
+        <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m3-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+        <h4>Inline Comments</h4>
+        <p>You can place comments at the end of a line:</p>
+        <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m3-2.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+        <h4>Commenting Out Code</h4>
+        <p>Use comments to prevent code from executing:</p>
+        <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m3-3.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+    </div>
+
+    <hr>
+
+    <p>In summary, comments are useful for explaining code, improving readability, and controlling execution during testing.</p>
+
     <button class="next-module" data-next="quiz3">Take Quiz</button>
 </div>
 `,
-content4: 
-`<div>
-    <h1>HTML Headings</h1>
+content4: `
+<div>
+    <h1>Python Variables</h1>
     <h2>Module 4</h2>
     <hr>
-    <h3>HTML headings are used to define the structure of your content, with six levels of headings available. Here are examples of each:</h3>
-   <ol start="1">
-        <li><strong>Heading Level 1 (&lt;h1&gt;)</strong><br>
-            <code>&lt;h1&gt;This is a Heading 1&lt;/h1&gt;</code><br>
-            <em>Typically used for the main title of a page.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 2 (&lt;h2&gt;)</strong><br>
-            <code>&lt;h2&gt;This is a Heading 2&lt;/h2&gt;</code><br>
-            <em>Used for major sections within the page.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 3 (&lt;h3&gt;)</strong><br>
-            <code>&lt;h3&gt;This is a Heading 3&lt;/h3&gt;</code><br>
-            <em>Used for subsections under &lt;h2&gt; headings.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 4 (&lt;h4&gt;)</strong><br>
-            <code>&lt;h4&gt;This is a Heading 4&lt;/h4&gt;</code><br>
-            <em>Used for further subdivisions under &lt;h3&gt; headings.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 5 (&lt;h5&gt;)</strong><br>
-            <code>&lt;h5&gt;This is a Heading 5&lt;/h5&gt;</code><br>
-            <em>Used for smaller sections under &lt;h4&gt; headings.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 6 (&lt;h6&gt;)</strong><br>
-            <code>&lt;h6&gt;This is a Heading 6&lt;/h6&gt;</code><br>
-            <em>The smallest heading, used for minor sections.</em>
-        </li>
-    </ol>
-    <hr>
-    <p><strong>Example Usage in a Document</strong><br>
-    Here’s how you might structure a document using all six heading levels:</p>
-    <code>&lt;h1&gt;Main Title&lt;/h1&gt;<br>
-    &lt;h2&gt;Section 1&lt;/h2&gt;<br>
-    &lt;h3&gt;Subsection 1.1&lt;/h3&gt;<br>
-    &lt;h4&gt;Detail 1.1.1&lt;/h4&gt;<br>
-    &lt;h5&gt;Note 1.1.1.1&lt;/h5&gt;<br>
-    &lt;h6&gt;Minor Detail&lt;/h6&gt;<br>
-    &lt;h2&gt;Section 2&lt;/h2&gt;<br>
-    &lt;h3&gt;Subsection 2.1&lt;/h3&gt;</code>
-    <hr>
-    <p><strong>Importance of Headings</strong></p>
+    <h2>Python Variables</h2>
+    <p>Variables are labels for storing data values.</p>
+    
+    <h3>Creation:</h3>
+    <p>Variables are created when you assign a value:</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+    </pre>
+
+    <h3>Dynamic Typing:</h3>
+    <p>Python variables don’t require type declarations and can change type:</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-2.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Casting:</h3>
+    <p>You can convert variable types explicitly:</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-3.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <p>This flexibility makes Python easy to use!</p>
+
+    <h2>Getting the Type</h2>
+    <h3>Using type() Function:</h3>
+    <p>You can determine the data type of a variable by using the type() function.</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-4.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+    </pre>
+
+    <h2>String Declaration</h2>
+    <p>Single or Double Quotes: You can define string variables using either single or double quotes; both are valid.</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-5.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+    <p>Both declarations create the same string variable.</p>
+
+    <h2>Case Sensitivity</h2>
+    <p>Case-Sensitive Variable Names: Variable names in Python are case-sensitive. This means that <code>a</code> and <code>A</code> are treated as two distinct variables.</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-6.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h2>Python - Variable Names</h2>
+    <h3>Naming Rules:</h3>
     <ul>
-        <li><strong>SEO:</strong> Search engines use headings to understand the structure and content of a page.</li>
-        <li><strong>Accessibility:</strong> Headings help screen readers navigate the content.</li>
-        <li><strong>Readability:</strong> They make the content easier to scan for users.</li>
+        <li>A variable name must start with a letter (a-z, A-Z) or an underscore (_).</li>
+        <li>It cannot start with a number.</li>
+        <li>It can contain letters, numbers, and underscores only.</li>
+        <li>Variable names are case-sensitive (e.g., age, Age, and AGE are different).</li>
+        <li>A variable name cannot be a reserved Python keyword.</li>
     </ul>
-    <hr>
-    <p>Using headings appropriately enhances both the user experience and search engine optimization!</p>
-    <button class="next-module" data-next="quiz4">Take Quiz</button>
+
+    <h3>Examples of Legal Variable Names:</h3>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-7.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Examples of Illegal Variable Names:</h3>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-8.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h2>Multi-Word Variable Names</h2>
+    <p>To improve readability for variable names with multiple words, you can use different conventions:</p>
+    <ul>
+        <li><strong>Camel Case:</strong> The first word is lowercase, and each subsequent word starts with an uppercase letter. <br> Example: <code>myVariableName = "John"</code></li>
+        <li><strong>Pascal Case:</strong> Each word starts with an uppercase letter. <br> Example: <code>MyVariableName = "John"</code></li>
+        <li><strong>Snake Case:</strong> Each word is separated by an underscore (_). <br> Example: <code>my_variable_name = "John"</code></li>
+    </ul>
+
+    <h2>Python Variables - Assign Multiple Values</h2>
+    <h3>Assigning Multiple Values to Multiple Variables</h3>
+    <p>Multiple Variables in One Line: You can assign different values to multiple variables simultaneously.</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-9.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+    <p>Note: Ensure that the number of variables matches the number of values. If they don't match, you'll get a ValueError.</p>
+
+    <h3>Assigning One Value to Multiple Variables</h3>
+    <p>Same Value to Multiple Variables: You can also assign the same value to multiple variables in one line.</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-10.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Unpacking a Collection</h3>
+    <p>Unpacking Collections: You can unpack values from collections like lists or tuples into individual variables. This is useful when you want to extract multiple values from a single collection.</p>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m4-11.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+        <button class="next-module" data-next="quiz4">Take Quiz</button>
 </div>
 `,
 content5: 
 `<div>
-    <h1>HTML Paragraphs</h1>
+    <h1>Python Data Types</h1>
     <h2>Module 5</h2>
     <hr>
-    <p>HTML paragraphs are used to define blocks of text. Each paragraph is created using the <code>&lt;p&gt;</code> tag. Here are some examples:</p>
-    <ol start="1">
-        <li><strong>Basic Paragraph Example</strong><br>
-            <code>&lt;p&gt;This is a simple paragraph.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Multiple Paragraphs</strong><br>
-            <code>&lt;p&gt;This is the first paragraph.&lt;/p&gt;<br>
-            &lt;p&gt;This is the second paragraph.&lt;/p&gt;<br>
-            &lt;p&gt;This is the third paragraph.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Paragraphs with Line Breaks</strong><br>
-            You can create line breaks within a paragraph using the <code>&lt;br&gt;</code> tag:<br>
-            <code>&lt;p&gt;This is the first line.&lt;br&gt;This is the second line.&lt;br&gt;This is the third line.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Paragraphs with Formatting</strong><br>
-            You can include inline elements for formatting within paragraphs:<br>
-            <code>&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; word and this is an &lt;em&gt;italic&lt;/em&gt; word.&lt;/p&gt;</code>
-        </li>
-    </ol>
-    <hr>
-    <p><strong>Example in a Document</strong><br>
-    Here’s how you might structure a document with paragraphs:</p>
-    <code>&lt;!DOCTYPE html&gt;<br>
-    &lt;html&gt;<br>
-    &lt;head&gt;<br>
-        &lt;title&gt;Paragraph Example&lt;/title&gt;<br>
-    &lt;/head&gt;<br>
-    &lt;body&gt;<br>
-        &lt;h1&gt;Understanding Paragraphs&lt;/h1&gt;<br>
-        &lt;p&gt;Paragraphs are blocks of text that are important for readability.&lt;/p&gt;<br>
-        &lt;p&gt;They help organize content and make it easier to understand.&lt;/p&gt;<br>
-        &lt;p&gt;Using &lt;strong&gt;HTML&lt;/strong&gt;, you can create multiple paragraphs easily.&lt;/p&gt;<br>
-    &lt;/body&gt;<br>
-    &lt;/html&gt;</code>
-    <hr>
-    <p><strong>Key Points about Paragraphs</strong></p>
+    <h2>Built-in Data Types in Python</h2>
+    <p>Python has several built-in data types, which can be categorized as follows:</p>
+
+    <h3>Text Type:</h3>
     <ul>
-        <li><strong>Spacing:</strong> Browsers automatically add space before and after each <code>&lt;p&gt;</code> element.</li>
-        <li><strong>Semantics:</strong> Paragraphs improve the semantic structure of your content.</li>
-        <li><strong>Accessibility:</strong> They help screen readers and other assistive technologies navigate text effectively.</li>
+        <li><code>str</code>: Represents a string of characters.</li>
     </ul>
-    <hr>
+
+    <h3>Numeric Types:</h3>
+    <ul>
+        <li><code>int</code>: Represents integers (whole numbers).</li>
+        <li><code>float</code>: Represents floating-point numbers (decimals).</li>
+        <li><code>complex</code>: Represents complex numbers (numbers with real and imaginary parts).</li>
+    </ul>
+
+    <h3>Sequence Types:</h3>
+    <ul>
+        <li><code>list</code>: An ordered, mutable collection of items.</li>
+        <li><code>tuple</code>: An ordered, immutable collection of items.</li>
+        <li><code>range</code>: Represents a sequence of numbers, commonly used for looping.</li>
+    </ul>
+
+    <h3>Mapping Type:</h3>
+    <ul>
+        <li><code>dict</code>: Represents a collection of key-value pairs.</li>
+    </ul>
+
+    <h3>Set Types:</h3>
+    <ul>
+        <li><code>set</code>: An unordered collection of unique items.</li>
+        <li><code>frozenset</code>: An immutable version of a set.</li>
+    </ul>
+
+    <h3>Boolean Type:</h3>
+    <ul>
+        <li><code>bool</code>: Represents Boolean values (True or False).</li>
+    </ul>
+
+    <h3>Binary Types:</h3>
+    <ul>
+        <li><code>bytes</code>: Represents a sequence of bytes.</li>
+        <li><code>bytearray</code>: A mutable version of bytes.</li>
+        <li><code>memoryview</code>: Provides a view of the byte data without copying.</li>
+    </ul>
+
+    <h3>None Type:</h3>
+    <ul>
+        <li><code>NoneType</code>: Represents the absence of a value (i.e., None).</li>
+    </ul>
+
+    <h2>Getting the Data Type</h2>
+    <p>You can check the data type of any variable using the <code>type()</code> function:</p>
+
+    <h3>Example:</h3>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m5-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h2>Setting the Data Type</h2>
+    <p>In Python, the data type of a variable is determined when you assign a value to it. Here are examples of assigning different data types:</p>
+
+    <h3>Examples:</h3>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m5-2.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h2>Setting the Specific Data Type</h2>
+    <p>You can explicitly set a variable's data type using constructor functions:</p>
+
+    <h3>Examples:</h3>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m5-3.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
     <button class="next-module" data-next="quiz5">Take Quiz</button>
 </div>
 `,
 content6: 
 `<div>
-    <h1>HTML Styles</h1>
+    <h1>Python Arithmetic Operators</h1>
     <h2>Module 6</h2>
     <hr>
-    <p>HTML styles are typically applied using CSS (Cascading Style Sheets). However, you can also use inline styles directly within HTML tags. Here are some examples of both approaches:</p>
-     <ol start="1">
-        <li><strong>Inline Styles</strong><br>
-            You can apply styles directly in an HTML element using the style attribute.<br>
-            <code>&lt;p style="color: blue; font-size: 16px;"&gt;This is a blue paragraph with a font size of 16 pixels.&lt;/p&gt;</code>
-        </li>
-    <hr>
-        <li><strong>Internal CSS</strong><br>
-            You can define styles within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of your HTML document:<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;Internal CSS Example&lt;/title&gt;<br>
-                &lt;style&gt;<br>
-                    body {<br>
-                        background-color: lightgray;<br>
-                    }<br>
-                    h1 {<br>
-                        color: darkblue;<br>
-                    }<br>
-                    p {<br>
-                        font-family: Arial, sans-serif;<br>
-                        font-size: 14px;<br>
-                    }<br>
-                &lt;/style&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;h1&gt;Welcome to My Web Page&lt;/h1&gt;<br>
-                &lt;p&gt;This is a styled paragraph.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code>
-        </li>
-        <hr>
-        <li><strong>External CSS</strong><br>
-            You can link to an external CSS file, which is a common practice for larger projects.<br>
-            HTML File:<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;External CSS Example&lt;/title&gt;<br>
-                &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;h1&gt;Welcome to My Website&lt;/h1&gt;<br>
-                &lt;p&gt;This is a paragraph styled from an external CSS file.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code><br>
-            External CSS File (styles.css):<br>
-            <code>body {<br>
-                background-color: #f0f0f0;<br>
-            }<br>
-            h1 {<br>
-                color: #333;<br>
-            }<br>
-            p {<br>
-                font-size: 16px;<br>
-                line-height: 1.5;<br>
-            }</code>
-        </li>
-        <hr>
-        <li><strong>CSS Classes</strong><br>
-            You can create reusable styles using classes.<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;CSS Classes Example&lt;/title&gt;<br>
-                &lt;style&gt;<br>
-                    .highlight {<br>
-                        background-color: yellow;<br>
-                        font-weight: bold;<br>
-                    }<br>
-                &lt;/style&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;p class="highlight"&gt;This paragraph is highlighted.&lt;/p&gt;<br>
-                &lt;p&gt;This paragraph is not highlighted.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code>
-        </li>
-        <hr>
-        <li><strong>CSS IDs</strong><br>
-            You can also use IDs for unique styling.<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;CSS IDs Example&lt;/title&gt;<br>
-                &lt;style&gt;<br>
-                    #special {<br>
-                        color: red;<br>
-                        font-size: 20px;<br>
-                    }<br>
-                &lt;/style&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;p id="special"&gt;This is a special paragraph.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code>
-        </li>
-    </ol>
-    <hr>
-    <p><strong>Key Points</strong></p>
-    <ul>
-        <li><strong>Inline Styles:</strong> Quick but not recommended for larger projects due to lack of separation of content and design.</li>
-        <li><strong>Internal CSS:</strong> Useful for single pages or quick styling.</li>
-        <li><strong>External CSS:</strong> Best practice for larger websites, allowing for easier maintenance and reuse.</li>
-        <li><strong>Classes and IDs:</strong> Help apply styles to multiple elements (classes) or uniquely identify a single element (IDs).</li>
-    </ul>
-    <hr>
+    <h2>Arithmetic Operators</h2>
+    <p>Arithmetic operators are used with numeric values to perform common mathematical operations:</p>
+
+    <h3>Addition (+):</h3>
+    <p>Adds two numbers.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m6-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Subtraction (-):</h3>
+    <p>Subtracts the second number from the first.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m6-2.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Multiplication (*):</h3>
+    <p>Multiplies two numbers.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m6-3.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Division (/):</h3>
+    <p>Divides the first number by the second, resulting in a float.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m6-4.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Modulus (%):</h3>
+    <p>Returns the remainder of the division.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m6-5.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Exponentiation (**):</h3>
+    <p>Raises the first number to the power of the second.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m6-6.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Floor Division (//):</h3>
+    <p>Divides the first number by the second and rounds down to the nearest integer.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m6-7.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+        <h2>Summary</h2>
+    <p>Arithmetic operators allow you to perform basic mathematical operations such as addition, subtraction, multiplication, and division.</p>
+    <p>Each operator serves a specific function, and they can be used with numeric values to manipulate data in Python.</p>
     <button class="next-module" data-next="quiz6">Take Quiz</button>
 </div>
-`,
-content7: 
-`<div>
-    <h1>Text Formatting</h1>
-    <h2>Module 7</h2>
-        <hr>
-    <p>HTML text formatting elements allow you to change the appearance of text on a web page. Here are some common HTML tags for text formatting:</p>
-  <ol start="1">
-        <li><strong>Bold Text</strong><br>
-            <code>&lt;strong&gt;This text is bold.&lt;/strong&gt;</code><br>
-            The <code>&lt;strong&gt;</code> tag is used for important text, and it typically renders as bold.
-        </li>
-    <hr>
 
-        <li><strong>Italic Text</strong><br>
-            <code>&lt;em&gt;This text is italicized.&lt;/em&gt;</code><br>
-            The <code>&lt;em&gt;</code> tag emphasizes text, usually rendering it in italics.
-        </li>
-        <hr>
-        <li><strong>Underline Text</strong><br>
-            <code>&lt;u&gt;This text is underlined.&lt;/u&gt;</code><br>
-            The <code>&lt;u&gt;</code> tag adds an underline to the text.
-        </li>
-        <hr>
-        <li><strong>Strikethrough Text</strong><br>
-            <code>&lt;s&gt;This text is strikethrough.&lt;/s&gt;</code><br>
-            The <code>&lt;s&gt;</code> tag indicates that the text has been deleted or is no longer relevant, displaying it with a strikethrough.
-        </li>
-        <hr>
-        <li><strong>Small Text</strong><br>
-            <code>&lt;small&gt;This text is smaller.&lt;/small&gt;</code><br>
-            The <code>&lt;small&gt;</code> tag renders the text in a smaller font size.
-        </li>
-        <hr>
-        <li><strong>Big Text</strong><br>
-            <code>&lt;big&gt;This text is bigger.&lt;/big&gt;</code><br>
-            The <code>&lt;big&gt;</code> tag makes the text larger. (Note: <code>&lt;big&gt;</code> is not widely used in modern HTML; use CSS for size changes instead.)
-        </li>
-        <hr>
-        <li><strong>Superscript Text</strong><br>
-            <code>&lt;sup&gt;This text is superscript.&lt;/sup&gt;</code><br>
-            The <code>&lt;sup&gt;</code> tag raises text above the baseline, often used for exponents.
-        </li>
-        <hr>
-        <li><strong>Subscript Text</strong><br>
-            <code>&lt;sub&gt;This text is subscript.&lt;/sub&gt;</code><br>
-            The <code>&lt;sub&gt;</code> tag lowers text below the baseline, often used in chemical formulas.
-        </li>
-        <hr>
-        <li><strong>Quote Text</strong><br>
-            <code>&lt;blockquote&gt;This is a blockquote.&lt;/blockquote&gt;</code><br>
-            The <code>&lt;blockquote&gt;</code> tag is used for longer quotations, usually indented.
-        </li>
-        <hr>
-        <li><strong>Preformatted Text</strong><br>
-            <code>&lt;pre&gt;This text is preformatted.&lt;/pre&gt;</code><br>
-            The <code>&lt;pre&gt;</code> tag maintains whitespace and line breaks, displaying text in a fixed-width font.
-        </li>
-    </ol>
+`,
+content7: `
+<div>
+    <h1>Python Assignment Operators</h1>
+    <h2>Module 7</h2>
     <hr>
-    <p><strong>Example Usage in a Document</strong><br>
-    Here's how you might use various formatting tags in a simple HTML document:</p>
-    <code>&lt;!DOCTYPE html&gt;<br>
-    &lt;html&gt;<br>
-    &lt;head&gt;<br>
-        &lt;title&gt;Text Formatting Example&lt;/title&gt;<br>
-    &lt;/head&gt;<br>
-    &lt;body&gt;<br>
-        &lt;h1&gt;Text Formatting in HTML&lt;/h1&gt;<br>
-        &lt;p&gt;This is an &lt;strong&gt;important&lt;/strong&gt; message.&lt;/p&gt;<br>
-        &lt;p&gt;You can also &lt;em&gt;emphasize&lt;/em&gt; text or make it &lt;u&gt;underlined&lt;/u&gt;.&lt;/p&gt;<br>
-        &lt;p&gt;Sometimes you need to indicate &lt;s&gt;deleted&lt;/s&gt; content.&lt;/p&gt;<br>
-        &lt;p&gt;This is a &lt;small&gt;small&lt;/small&gt; note.&lt;/p&gt;<br>
-        &lt;p&gt;Water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;<br>
-        &lt;p&gt;And E=mc&lt;sup&gt;2&lt;/sup&gt; is a famous equation.&lt;/p&gt;<br>
-        &lt;blockquote&gt;This is a quoted text.&lt;/blockquote&gt;<br>
-        &lt;pre&gt;This is    preformatted text.&lt;/pre&gt;<br>
-    &lt;/body&gt;<br>
-    &lt;/html&gt;</code>
-    </p>
-    <hr>
-    <p><strong>Key Points</strong></p>
-    <ul>
-        <li>HTML text formatting tags help enhance the readability and visual appeal of text.</li>
-        <li>Use formatting tags appropriately to maintain the semantic meaning of the content.</li>
-        <li>For advanced styling, consider using CSS for more control over text appearance.</li>
-    </ul>
-    <hr>
+    <h2>Assignment Operators</h2>
+    <p>Assignment operators are used to assign values to variables:</p>
+    
+    <h3>Basic Assignment (=):</h3>
+    <p>Assigns the value on the right to the variable on the left.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Addition Assignment (+=):</h3>
+    <p>Adds the right operand to the left operand and assigns the result to the left operand. Equivalent: <code>x += 3</code> is the same as <code>x = x + 3</code>.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-2.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Subtraction Assignment (-=):</h3>
+    <p>Subtracts the right operand from the left operand and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-3.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Multiplication Assignment (*=):</h3>
+    <p>Multiplies the left operand by the right operand and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-4.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Division Assignment (/=):</h3>
+    <p>Divides the left operand by the right operand and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-5.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Modulus Assignment (%=):</h3>
+    <p>Applies the modulus operation and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-6.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Floor Division Assignment (//=):</h3>
+    <p>Performs floor division and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-7.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Exponentiation Assignment (**=):</h3>
+    <p>Raises the left operand to the power of the right operand and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-8.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Bitwise AND Assignment (&=):</h3>
+    <p>Performs a bitwise AND operation and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-9.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Bitwise OR Assignment (|=):</h3>
+    <p>Performs a bitwise OR operation and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-10.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Bitwise XOR Assignment (^=):</h3>
+    <p>Performs a bitwise XOR operation and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-11.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Right Shift Assignment (>>=):</h3>
+    <p>Performs a right bitwise shift and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-12.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Left Shift Assignment (<<=):</h3>
+    <p>Performs a left bitwise shift and assigns the result.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-13.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Walrus Operator (:=):</h3>
+    <p>Assigns a value to a variable as part of an expression. This is known as the walrus operator.</p>
+    <h4>Example:</h4>
+     <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m7-14.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h2>Summary</h2>
+    <p>Assignment operators are used to assign values to variables and modify them in various ways. They combine assignment with arithmetic, bitwise, or logical operations, making code more concise and readable.</p>
     <button class="next-module" data-next="quiz7">Take Quiz</button>
 </div>
 `,
-content8: 
-`<div>
-    <h1>HTML Quotation and Citation Element</h1>
+content8: `
+<div>
+    <h1>Python Comparison Operators</h1>
     <h2>Module 8</h2>
     <hr>
-    <ol>
-        <li><strong>Blockquote</strong><br>
-            The <code>&lt;blockquote&gt;</code> element is used for longer quotations that are usually indented.<br>
-            <code>&lt;blockquote&gt;<br>
-                "The only limit to our realization of tomorrow is our doubts of today." – Franklin D. Roosevelt<br>
-            &lt;/blockquote&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Cite</strong><br>
-            The <code>&lt;cite&gt;</code> element is used to reference the title of a creative work, such as a book, article, or song.<br>
-            <code>&lt;p&gt;In her book, &lt;cite&gt;To Kill a Mockingbird&lt;/cite&gt;, Harper Lee addresses serious issues of race and injustice.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Q (Inline Quotation)</strong><br>
-            The <code>&lt;q&gt;</code> element is used for shorter inline quotations and automatically adds quotation marks around the text.<br>
-            <code>&lt;p&gt;She said, &lt;q&gt;This is an example of an inline quotation.&lt;/q&gt;&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Abbr (Abbreviation)</strong><br>
-            The <code>&lt;abbr&gt;</code> element can also be used for citations, especially when providing the full name of an abbreviation.<br>
-            <code>&lt;p&gt;The &lt;abbr title="United Nations Educational, Scientific and Cultural Organization"&gt;UNESCO&lt;/abbr&gt; was founded in 1945.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Address</strong><br>
-            The <code>&lt;address&gt;</code> element is used to provide contact information for the author of a document or an article, often displayed in italics.<br>
-            <code>&lt;address&gt;<br>
-                Written by &lt;a href="mailto:author@example.com"&gt;Author Name&lt;/a&gt;&lt;br&gt;<br>
-                123 Main St.&lt;br&gt;<br>
-                City, Country<br>
-            &lt;/address&gt;</code>
-        </li>
-    </ol>
-    <p>These elements help structure content related to quotations and citations clearly and semantically in HTML.</p>
+    <h2>Comparison Operators</h2>
+    <p>Comparison operators are used to compare two values:</p>
+    
+    <h3>Equal (==):</h3>
+    <p>Checks if two values are equal.</p>
+    <h4>Example:</h4>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m8-1.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Not Equal (!=):</h3>
+    <p>Checks if two values are not equal.</p>
+    <h4>Example:</h4>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m8-2.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Greater Than (>):</h3>
+    <p>Checks if the left value is greater than the right value.</p>
+    <h4>Example:</h4>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m8-3.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Less Than (<):</h3>
+    <p>Checks if the left value is less than the right value.</p>
+    <h4>Example:</h4>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m8-4.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Greater Than or Equal To (>=):</h3>
+    <p>Checks if the left value is greater than or equal to the right value.</p>
+    <h4>Example:</h4>
+    <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m8-5.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h3>Less Than or Equal To (<=):</h3>
+    <p>Checks if the left value is less than or equal to the right value.</p>
+    <h4>Example:</h4>
+   <pre>              
+          <img src="/Assets/Images/Courses/C-Python/m8-6.png" alt="HTML Structure Example" style="max-width:40%; height:auto;">
+        </pre>
+
+    <h2>Summary</h2>
+    <p>Comparison operators are used to compare two values and return a Boolean result (True or False).</p>
+    <p>These operators are essential for making decisions in conditional statements and loops in Python.</p>
     <button class="next-module" data-next="quiz8">Take Quiz</button>
 </div>
 `,
@@ -783,128 +805,127 @@ content11: '<h1>Assessment</h1><p>Click Start assesment to answer all the questi
 const quizzes = {
     quiz1: `
     <h1>QUIZ # 1</h1>
-        <h2>What is the purpose of the <!DOCTYPE html> declaration?</h2>
+        <h2>What is the Python Command Line?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To specify the title of the page')">To specify the title of the page</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To indicate that the document is HTML5')">To indicate that the document is HTML5</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To start the body of the document')">To start the body of the document</div>          
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'is an interpreted programming language, this means that as a developer you write Python')">is an interpreted programming language, this means that as a developer you write Python</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file.')">To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'an interpreted, object-oriented, high-level programming language with dynamic semantics.')">an interpreted, object-oriented, high-level programming language with dynamic semantics.</div>
         </div>
         <div id="selected-answer-1" class="selected-answer-container"></div>
         <button class="next-module" data-next="content2">Next Module</button>
     `,
     quiz2: `
     <h1>QUIZ # 2</h1>
-        <h2>What are <th> and <td> tags used for in an HTML table?</h2>
+        <h2>Which of the following is the correct syntax for creating a tuple in Python?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(2, '<th> is for table header cells, and <td> is for table data cells.')"><th> is for table header cells, and <td> is for table data cells.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(2, 'Both are for creating table headers only.')">Both are for creating table headers only.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(2, '<th> is for rows, and <td> is for columns.')"><th> is for rows, and <td> is for columns.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, '[1, 2, 3]')">[1, 2, 3]</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, '{1, 2, 3}')">{1, 2, 3}</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, '(1, 2, 3)')">(1, 2, 3)</div>
         </div>
         <div id="selected-answer-2" class="selected-answer-container"></div>
         <button class="next-module" data-next="content3">Next Module</button>
     `,
     quiz3: `
     <h1>QUIZ # 3</h1>
-        <h2>Which attribute would you use to apply inline styles directly to an HTML element?</h2>
+        <h2>Which of the following is a valid way to write a multi-line comment in Python?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'class')">class</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'style')">style</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'id')">id</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, '/* This is a multi-line comment */')">/* This is a multi-line comment */</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, '# This is a multi-line comment')"># This is a multi-line comment</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, '""" This is a multi-line comment """')">""" This is a multi-line comment """</div>
         </div>
         <div id="selected-answer-3" class="selected-answer-container"></div>
         <button class="next-module" data-next="content4">Next Module</button>
     `,
     quiz4: `
     <h1>QUIZ # 4</h1>
-        <h2>Which heading level is typically used for major sections within a page?</h2>
+        <h2>Which of the following is a valid Python variable name?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h2')">h2</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h3')">h3</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h1')">h1</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, '123_abc')">123_abc</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'abc-123')">abc-123</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'abc_123')">abc_123</div>
         </div>
         <div id="selected-answer-4" class="selected-answer-container"></div>
         <button class="next-module" data-next="content5">Next Module</button>
     `,
     quiz5: `
     <h1>QUIZ # 5</h1>
-        <h2>In the example <p>This is a <strong>text</strong> word and this is <em>text</em> word.</p> what do the <strong> and <em> tags do?</h2>
+        <h2>Which of the following data types is used to represent a collection of key-value pairs in Python?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They change the font size.')">They change the font size.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They format the text as bold and italic, respectively.')">They format the text as bold and italic, respectively.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They create new paragraphs.')">They create new paragraphs.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, 'List')">List</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, 'Tuple')">Tuple</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, 'Dictionary')">Dictionary</div>
         </div>
         <div id="selected-answer-5" class="selected-answer-container"></div>
         <button class="next-module" data-next="content6">Next Module</button>
     `,
     quiz6: `
     <h1>QUIZ # 6</h1>
-        <h2>What does the following CSS rule do?</h2>
-        <code>#special { color: red; font-size: 20px; }</code>
+        <h2>What is the output of the following Python code?<br>x = 10<br>y = 3<br>print(x ** y)</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It applies red color and 20px font size to all paragraphs.')">It applies red color and 20px font size to all paragraphs.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It styles the element with the ID "special" to have red text and a font size of 20 pixels.')">It styles the element with the ID "special" to have red text and a font size of 20 pixels.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It creates a new HTML element.')">It creates a new HTML element.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, '30')">30</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, '13')">13</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, '1000')">1000</div>
         </div>
         <div id="selected-answer-6" class="selected-answer-container"></div>
         <button class="next-module" data-next="content7">Next Module</button>
     `,
     quiz7: `
     <h1>QUIZ # 7</h1>
-        <h2>What is a key recommendation regarding the use of text formatting tags in HTML?</h2>
+        <h2>What is the output of the following Python code?<br>x = "10.5"<br>y = int(x)<br>print(y)</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Use as many formatting tags as possible.')">Use as many formatting tags as possible.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Use formatting tags appropriately to maintain the semantic meaning of the content.')">Use formatting tags appropriately to maintain the semantic meaning of the content.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Avoid using any formatting tags at all.')">Avoid using any formatting tags at all.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, '10.5')">10.5</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, '10')">10</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Error: Cannot convert string to integer')">Error: Cannot convert string to integer</div>
         </div>
         <div id="selected-answer-7" class="selected-answer-container"></div>
         <button class="next-module" data-next="content8">Next Module</button>
     `,
     quiz8: `
     <h1>QUIZ # 8</h1>
-        <h2>How does the <abbr> tag enhance the use of abbreviations in HTML?</h2>
+        <h2>What is the output of the following Python code?<br>my_string = "Hello world"<br>print(my_string.startswith("Hello"))</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It creates a hyperlink to a definition.')">It creates a hyperlink to a definition.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It automatically formats the abbreviation in bold.')">It automatically formats the abbreviation in bold.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It provides the full name or meaning of the abbreviation.')">It provides the full name or meaning of the abbreviation.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'True')">True</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'False')">False</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, '"Hello"')">"Hello"</div>
         </div>
         <div id="selected-answer-8" class="selected-answer-container"></div>
         <button class="next-module" data-next="content9">Next Module</button>
     `,
     quiz9: `
     <h1>QUIZ # 9</h1>
-        <h2>What is the correct syntax for an HTML comment?</h2>
+        <h2>What is the operator of Decrementing?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '// This is a comment')">// This is a comment</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '/* This is a comment */')">/* This is a comment */</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '<!-- This is a comment -->')"><!-- This is a comment --></div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(--)')">(--)</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(++)')">(++)</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(**)')">(**)</div>
         </div>
         <div id="selected-answer-9" class="selected-answer-container"></div>
         <button class="next-module" data-next="content10">Next Module</button>
     `,
     quiz10: `
     <h1>QUIZ # 10</h1>
-        <h2>What is the purpose of a <div> element in HTML?</h2>
+        <h2>What is |=?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To display images')">To display images</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To create a container for grouping content')">To create a container for grouping content</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To define the structure of a table')">To define the structure of a table</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Bitwise OR Assignment Operator')">Bitwise OR Assignment Operator</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Bitwise XOR Assignment Operator')">Bitwise XOR Assignment Operator</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Logical AND assignment operator')">Logical AND assignment operator</div>
         </div>
         <div id="selected-answer-10" class="selected-answer-container"></div>
         <button class="next-module" data-next="content11">Next Module</button>
     `,
 };
 
-const correctAnswers = {
-    1: 'To indicate that the document is HTML5',
-    2: '<th> is for table header cells, and <td> is for table data cells.',
-    3: 'style',
-    4: '<h2>',
-    5: 'They format the text as bold and italic, respectively.',
-    6: 'It styles the element with the ID "special" to have red text and a font size of 20 pixels.',
-    7: 'Use formatting tags appropriately to maintain the semantic meaning of the content.',
-    8: 'It provides the full name or meaning of the abbreviation.',
-    9: '<!-- This is a comment -->',
-    10: 'To create a container for grouping content',
+const pythonCorrectAnswers = {
+    1: 'To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file.',
+    2: '(1, 2, 3)',
+    3: '""" This is a multi-line comment """',
+    4: 'abc_123',
+    5: 'Dictionary',
+    6: '1000',
+    7: 'Error: Cannot convert string to integer',
+    8: 'True',
+    9: '(--)',
+    10: 'Bitwise OR Assignment Operator',
 };
 
 

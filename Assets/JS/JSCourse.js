@@ -19,79 +19,119 @@ const categoryTitle = {
 const categoryContent = {
     content1: `
     <div>
-        <h1>Introduction to HTML</h1>
+        <h1>Introduction to JavaScript</h1>
         <h2>Module 1</h2>
-            <hr>
+        <hr>
         <div class="definition">
-            <p>What is HTML?</p>
-            <p>HTML (HyperText Markup Language) is the standard markup language for building web pages. It describes the structure of a web page using a collection of elements. These elements provide the browser with instructions on how to display the text, naming different sections such as headings, paragraphs, links, and more.</p>
-            <p><strong>Example:</strong></p>
-            <pre>
-                <img src="/Assets/Images/Courses/C-HTML/Structure.png" alt="HTML Structure Example" style="max-width:20%; height:auto;">
-
-                &lt;!DOCTYPE html&gt; — This line tells the web browser that this document is an HTML5 document.
-                &lt;html&gt; — This tag starts the HTML document. Everything inside this tag is part of the HTML code.
-                &lt;head&gt; — This tag contains information about the web page that is not displayed directly on the page like its title.
-                &lt;title&gt;Page Title&lt;/title&gt; — Sets the title that shows in the browser tab.
-                &lt;/head&gt; — Ends the head section.
-                &lt;body&gt; — Starts the visible part of the web page.
-                &lt;h1&gt;Heading&lt;/h1&gt; — This creates a main heading on the page. It’s usually the biggest text and is important for understanding the content.
-                &lt;p&gt;Paragraph&lt;/p&gt; — This creates a paragraph of text. It’s used for regular content.
-                &lt;/body&gt; — This tag closes the body section of the web page.
-                &lt;/html&gt; — This tag closes the HTML document. It signals the end of the HTML code.
-            </pre>
-        </div>
-
-        <hr>
-
-        <div class="html-element">
-            <p><strong>HTML Element</strong></p>
-            <p>An HTML element is a basic building block of an HTML document. It consists of a start tag, content, and an end tag. For example, in the element &lt;p&gt;Paragraph&lt;/p&gt;:</p>
+            <p>What is JavaScript?</p>
+            <p>JavaScript, often abbreviated as JS, is a programming language and core technology of the Web, alongside HTML and CSS. 99% of websites use JavaScript on the client side for webpage behavior. Web browsers have a dedicated JavaScript engine that executes the client code.</p>
+            
+            <h3>JavaScript Display Possibilities</h3>
+            <p>JavaScript can "display" data in different ways:</p>
             <ul>
-                <li>&lt;p&gt; is the start tag, indicating the beginning of a paragraph.</li>
-                <li>Paragraph is the content.</li>
-                <li>&lt;/p&gt; is the end tag, marking the end of the paragraph.</li>
+                <li>Writing into an HTML element, using <code>innerHTML</code>.</li>
+                <li>Writing into the HTML output using <code>document.write()</code>.</li>
+                <li>Writing into an alert box, using <code>window.alert()</code>.</li>
+                <li>Writing into the browser console, using <code>console.log()</code>.</li>
             </ul>
-            <p><strong>Note:</strong> Some HTML elements have no content (like the &lt;br&gt; element). These elements are called empty elements. Empty elements do not have an end tag!</p>
+            <p>Example:</p>
+        <img src="/Assets/Images/Courses/C-JS/m1-1.png" alt="HTML Structure Example" style="max-width:50%; height:auto;">
+        </div>
+        
+        <hr>
+
+        <div class="why-study">
+            <h3>Why Study JavaScript?</h3>
+            <p>JavaScript is one of the 3 languages all web developers must learn:</p>
+            <ul>
+                <li>HTML to define the content of web pages</li>
+                <li>CSS to specify the layout of web pages</li>
+                <li>JavaScript to program the behavior of web pages</li>
+            </ul>
         </div>
 
         <hr>
 
-        <div class="creating-page">
-            <h2>Creating Your First Web Page with Notepad or TextEdit</h2>
-            <h3>Why Use a Simple Text Editor?</h3>
-            <p>For learning HTML, it's best to use a simple text editor like Notepad (PC) or TextEdit (Mac).</p>
-            <h3>Steps to Create Your Web Page:</h3>
-            <h4>Step 1: Open Notepad (PC)</h4>
-            <p>Windows 8 or later: Click the Start button and type "Notepad."<br>
-            Windows 7 or earlier: Go to Start > Programs > Accessories > Notepad.</p>
-            
-            <h4>Step 1: Open TextEdit (Mac)</h4>
-            <p>Open Finder, then go to Applications > TextEdit.<br>
-            Change settings:<br>
-            Go to Preferences > Format and select "Plain Text."<br>
-            Under "Open and Save," check "Display HTML files as HTML code."</p>
-            
-            <h4>Step 2: Write Your HTML Code</h4>
-            <p>Copy and paste this code into Notepad or TextEdit:</p>
+        <div class="js-examples">
+            <h3>JavaScript Can Change HTML Content</h3>
+            <p>One of many JavaScript HTML methods is <code>getElementById()</code>. The example below "finds" an HTML element (with <code>id="demo"</code>), and changes the element content (<code>innerHTML</code>) to "Hello JavaScript":</p>
             <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html&gt;
-                &lt;body&gt;
-
-                &lt;h1&gt;My Heading&lt;/h1&gt;
-                &lt;p&gt;My paragraph.&lt;/p&gt;
-
-                &lt;/body&gt;
-                &lt;/html&gt;
+                document.getElementById("demo").innerHTML = "Hello JavaScript";
             </pre>
-            
-            <h4>Step 3: Save Your Web Page</h4>
-            <p>In Notepad, click File > Save As.<br>
-            Name the file "index.htm" and choose UTF-8 as the encoding.</p>
-            
-            <h4>Step 4: View in Browser</h4>
-            <p>Open the saved file in your web browser to see your first web page!</p>
+
+            <h3>JavaScript Can Change HTML Attribute Values</h3>
+            <p>In this example, JavaScript changes the value of the <code>src</code> attribute of an <code>&lt;img&gt;</code> tag:</p>
+            <pre>
+                document.getElementById("myImage").src = "newImage.jpg";
+            </pre>
+
+            <h3>JavaScript Can Change HTML Styles (CSS)</h3>
+            <p>Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+            <pre>
+                document.getElementById("demo").style.fontSize = "35px";
+            </pre>
+
+            <h3>JavaScript Can Hide HTML Elements</h3>
+            <p>Showing or hiding HTML elements can also be done by changing the display style:</p>
+            <pre>
+                document.getElementById("demo").style.display = "none";
+            </pre>
+        </div>
+
+        <hr>
+
+        <div class="script-tag">
+            <h3>The <code>&lt;script&gt;</code> Tag</h3>
+            <p>In HTML, JavaScript code is inserted between <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags.</p>
+            <pre>
+                &lt;script&gt;
+                document.getElementById("demo").innerHTML = "My First JavaScript";
+                &lt;/script&gt;
+            </pre>
+            <p><strong>Note:</strong> Old JavaScript examples may use a type attribute: <code>&lt;script type="text/javascript"&gt;</code>. The type attribute is not required as JavaScript is the default scripting language in HTML.</p>
+        </div>
+
+        <hr>
+
+        <div class="js-location">
+            <h3>JavaScript in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code></h3>
+            <p>You can place any number of scripts in an HTML document. Scripts can be placed in the <code>&lt;body&gt;</code>, or in the <code>&lt;head&gt;</code> section of an HTML page, or in both.</p>
+
+            <h4>JavaScript in <code>&lt;head&gt;</code></h4>
+            <pre>
+                &lt;script&gt;
+                function myFunction() {
+                    document.getElementById("demo").innerHTML = "Paragraph changed.";
+                }
+                &lt;/script&gt;
+            </pre>
+
+            <h4>JavaScript in <code>&lt;body&gt;</code></h4>
+            <pre>
+                &lt;script&gt;
+                function myFunction() {
+                    document.getElementById("demo").innerHTML = "Paragraph changed.";
+                }
+                &lt;/script&gt;
+            </pre>
+            <p><strong>Note:</strong> Placing scripts at the bottom of the <code>&lt;body&gt;</code> element improves display speed, because script interpretation slows down the display.</p>
+        </div>
+
+        <hr>
+
+        <div class="external-js">
+            <h3>External JavaScript</h3>
+            <p>Scripts can also be placed in external files with a .js extension. To use an external script, put the name of the script file in the <code>src</code> attribute of a <code>&lt;script&gt;</code> tag:</p>
+            <pre>
+                &lt;script src="myScript.js"&gt;&lt;/script&gt;
+            </pre>
+            <p>External scripts are practical when the same code is used in many different web pages.</p>
+            <p><strong>Advantages of External JavaScript:</strong></p>
+            <ul>
+                <li>Separates HTML and code</li>
+                <li>Makes HTML and JavaScript easier to read and maintain</li>
+                <li>Cached JavaScript files can speed up page loads</li>
+            </ul>
         </div>
 
         <hr>
@@ -99,682 +139,496 @@ const categoryContent = {
         <button class="next-module" data-next="quiz1">Take Quiz</button>
     </div>
 `,
-    content2: `<h1>HTML Basic Syntax</h1>
-<h2>Module 2</h2>
+    content2: `<div>
+    <h1>Introduction to JavaScript</h1>
+    <h2>Module 2</h2>
+    <hr>
 
-<hr>
+    <div class="definition">
+        <p><strong>JavaScript Statements</strong></p>
+        <p>A computer program is a list of "instructions" to be "executed" by a computer. In a programming language, these programming instructions are called statements. A JavaScript program is a list of programming statements.</p>
+        <p>JavaScript statements are composed of: Values, Operators, Expressions, Keywords, and Comments.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+            let x, y, z;    // Statement 1
+            x = 5;          // Statement 2
+            y = 6;          // Statement 3
+            z = x + y;      // Statement 4
+        </pre>
+    </div>
 
-<h2>1. Basic Structure</h2>
-<p>This is a basic HTML document structure:</p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;My First Web Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Welcome!&lt;/h1&gt;
-    &lt;p&gt;This is my first web page.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<ul>
-    <li>&lt;!DOCTYPE html&gt;: Declares that this is an HTML5 document.</li>
-    <li>&lt;html&gt;: Starts the HTML document.</li>
-    <li>&lt;head&gt;: Contains meta-information, like the title.</li>
-    <li>&lt;title&gt;: Sets the title of the web page (shown in the browser tab).</li>
-    <li>&lt;body&gt;: Contains the visible content of the web page.</li>
-    <li>&lt;h1&gt;: Main heading of the page.</li>
-    <li>&lt;p&gt;: A paragraph of text.</li>
-</ul>
+    <hr>
 
-<hr>
+    <div class="html-element">
+        <p><strong>Semicolons</strong></p>
+        <p>Semicolons separate JavaScript statements. Add a semicolon at the end of each executable statement:</p>
+        <pre>
+            let a, b, c;  // Declare 3 variables
+            a = 5;        // Assign the value 5 to a
+            b = 6;        // Assign the value 6 to b
+            c = a + b;    // Assign the sum of a and b to c
+        </pre>
+        <p><strong>Note:</strong> Ending statements with semicolons is not required, but highly recommended.</p>
+    </div>
 
-<h2>2. Headings</h2>
-<p>Headings help to structure the content of your web page:</p>
-<pre>
-&lt;h1&gt;This is a Heading 1&lt;/h1&gt;
-&lt;h2&gt;This is a Heading 2&lt;/h2&gt;
-&lt;h3&gt;This is a Heading 3&lt;/h3&gt;
-</pre>
-<p>&lt;h1&gt; to &lt;h6&gt;: Tags for headings, with &lt;h1&gt; being the largest and most important, and &lt;h6&gt; being the smallest.</p>
+    <hr>
 
-<hr>
+    <div class="creating-page">
+        <h2>JavaScript Code Blocks</h2>
+        <p>JavaScript statements can be grouped together in code blocks, inside curly brackets <code>{...}</code>. The purpose of code blocks is to define statements to be executed together. One place you will find statements grouped together in blocks is in JavaScript functions:</p>
+        <pre>
+            function myFunction() {
+              document.getElementById("demo1").innerHTML = "Hello Dolly!";
+              document.getElementById("demo2").innerHTML = "How are you?";
+            }
+        </pre>
+    </div>
 
-<h2>3. Paragraphs</h2>
-<p>Paragraphs are defined using the &lt;p&gt; tag:</p>
-<pre>
-&lt;p&gt;This is the first paragraph.&lt;/p&gt;
-&lt;p&gt;This is the second paragraph.&lt;/p&gt;
-</pre>
-<p>&lt;p&gt;: Defines a paragraph of text. Each &lt;p&gt; tag creates a new paragraph with space around it.</p>
+    <hr>
 
-<hr>
+    <button class="next-module" data-next="quiz2">Take Quiz</button>
+</div>
 
-<h2>4. Links</h2>
-<p>Links are created with the &lt;a&gt; tag:</p>
-<pre>
-&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
-</pre>
-<p>&lt;a&gt;: Creates a hyperlink.</p>
-<ul>
-    <li>href: Attribute that specifies the URL the link points to.</li>
-    <li>The text between the tags is what users click on.</li>
-</ul>
-
-<hr>
-
-<h2>5. Images</h2>
-<p>Images can be embedded using the &lt;img&gt; tag:</p>
-<pre>
-&lt;img src="image.jpg" alt="Description of Image" /&gt;
-</pre>
-<ul>
-    <li>&lt;img&gt;: Embeds an image in the web page.</li>
-    <li>src: Attribute that specifies the path to the image file.</li>
-    <li>alt: Provides alternative text for the image (important for accessibility).</li>
-</ul>
-
-<hr>
-
-<h2>6. Lists</h2>
-<p>HTML supports both unordered and ordered lists:</p>
-<p>Unordered List:</p>
-<pre>
-&lt;ul&gt;
-    &lt;li&gt;Item 1&lt;/li&gt;
-    &lt;li&gt;Item 2&lt;/li&gt;
-    &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-<p>&lt;ul&gt;: Starts an unordered (bulleted) list.</p>
-<p>Ordered List:</p>
-<pre>
-&lt;ol&gt;
-    &lt;li&gt;First item&lt;/li&gt;
-    &lt;li&gt;Second item&lt;/li&gt;
-    &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
-<p>&lt;ol&gt;: Starts an ordered (numbered) list.</p>
-
-<hr>
-
-<h2>7. Table</h2>
-<p>Tables are created using the &lt;table&gt; tag:</p>
-<pre>
-&lt;table&gt;
-    &lt;tr&gt;
-        &lt;th&gt;Header 1&lt;/th&gt;
-        &lt;th&gt;Header 2&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Data 1&lt;/td&gt;
-        &lt;td&gt;Data 2&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
-<ul>
-    <li>&lt;table&gt;: Creates a table.</li>
-    <li>&lt;tr&gt;: Starts a new row in the table.</li>
-    <li>&lt;th&gt;: Table header cell (bold and centered by default).</li>
-    <li>&lt;td&gt;: Table data cell (contains regular content).</li>
-</ul>
-
-<hr>
-
-<button class="next-module" data-next="quiz2">Take Quiz</button>
 `,
 content3: 
 `<div>
-    <h1>HTML Attributes</h1>
+    <h1>Introduction to JavaScript</h1>
     <h2>Module 3</h2>
-        <hr>
-    <h3>HTML attributes provide additional information about elements. Here are some common examples of HTML attributes:</h3>
-        <ol start="1">
-        <li><strong>href Attribute (Links)</strong><br>
-            <code>&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;</code><br>
-            <em>Usage:</em> Specifies the URL that the link points to.
-        </li>
-   
     <hr>
 
-        <li><strong>src Attribute (Images)</strong><br>
-            <code>&lt;img src="image.jpg" alt="A beautiful scenery" /&gt;</code><br>
-            <em>Usage:</em> Indicates the path to the image file.
-        </li>
-        <hr>
-        <li><strong>alt Attribute (Images)</strong><br>
-            <code>&lt;img src="image.jpg" alt="A description of the image" /&gt;</code><br>
-            <em>Usage:</em> Provides alternative text for the image, useful for accessibility.
-        </li>
-     
+    <div class="definition">
+        <p><strong>JavaScript Syntax</strong></p>
+        <p>JavaScript syntax is the set of rules for constructing JavaScript programs. It includes how to create and use variables, literals, and values.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+// How to create variables:
+var x;
+let y;
+
+// How to use variables:
+x = 5;
+y = 6;
+let z = x + y;
+        </pre>
+    </div>
+
     <hr>
-   
-        <li><strong>title Attribute (Tooltips)</strong><br>
-            <code>&lt;a href="https://www.example.com" title="Go to Example.com"&gt;Visit Example.com&lt;/a&gt;</code><br>
-            <em>Usage:</em> Displays additional information as a tooltip when the mouse hovers over the element.
-        </li>
-        <hr>
-        <li><strong>style Attribute (Inline CSS)</strong><br>
-            <code>&lt;p style="color: blue;"&gt;This text is blue.&lt;/p&gt;</code><br>
-            <em>Usage:</em> Applies inline styles directly to the element.
-        </li>
-        <hr>
-        <li><strong>id Attribute (Unique Identifier)</strong><br>
-            <code>&lt;h1 id="main-heading"&gt;Main Heading&lt;/h1&gt;</code><br>
-            <em>Usage:</em> Assigns a unique identifier to an element, useful for styling and scripting.
-        </li>
-        <hr>
-        <li><strong>class Attribute (Grouping Elements)</strong><br>
-            <code>&lt;p class="highlight"&gt;This is a highlighted paragraph.&lt;/p&gt;</code><br>
-            <em>Usage:</em> Assigns one or more class names to an element for styling or scripting.
-        </li>
-        <hr>
-        <li><strong>target Attribute (Links)</strong><br>
-            <code>&lt;a href="https://www.example.com" target="_blank"&gt;Open in a new tab&lt;/a&gt;</code><br>
-            <em>Usage:</em> Specifies where to open the linked document (e.g., _blank opens in a new tab).
-        </li>
-        <hr>
-        <li><strong>placeholder Attribute (Forms)</strong><br>
-            <code>&lt;input type="text" placeholder="Enter your name" /&gt;</code><br>
-            <em>Usage:</em> Provides a hint to the user about what to enter in an input field.
-        </li>
-        <hr>
-        <li><strong>value Attribute (Forms)</strong><br>
-            <code>&lt;input type="submit" value="Submit" /&gt;</code><br>
-            <em>Usage:</em> Sets the text displayed on a submit button.
-        </li>
-        <hr>
-        <li><strong>disabled Attribute (Forms)</strong><br>
-            <code>&lt;input type="text" disabled /&gt;</code><br>
-            <em>Usage:</em> Disables an input element, making it uneditable.
-        </li>
-    </ol>
+
+    <div class="html-element">
+        <p><strong>JavaScript Values and Variables</strong></p>
+        <p>Fixed values are called Literals, and variable values are called Variables. The two most important syntax rules for fixed values are:</p>
+        <ul>
+            <li>Numbers are written with or without decimals (e.g., 10.50, 1001).</li>
+            <li>Strings are text written within double or single quotes (e.g., "John Doe" or 'John Doe').</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <pre>
+            let x;
+            x = 6;
+        </pre>
+    </div>
+
     <hr>
-    <p>These examples showcase how attributes can enhance HTML elements by providing additional context, functionality, and styling options.</p>
+
+    <div class="creating-page">
+        <h2>JavaScript Operators and Expressions</h2>
+        <p>JavaScript uses arithmetic operators (<code>+ - * /</code>) to compute values. An expression is a combination of values, variables, and operators, which computes to a value.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+            (5 + 6) * 10
+            x * 10
+            "John" + " " + "Doe"
+        </pre>
+    </div>
+
+    <hr>
+
     <button class="next-module" data-next="quiz3">Take Quiz</button>
 </div>
+
 `,
 content4: 
 `<div>
-    <h1>HTML Headings</h1>
+    <h1>Introduction to JavaScript</h1>
     <h2>Module 4</h2>
     <hr>
-    <h3>HTML headings are used to define the structure of your content, with six levels of headings available. Here are examples of each:</h3>
-   <ol start="1">
-        <li><strong>Heading Level 1 (&lt;h1&gt;)</strong><br>
-            <code>&lt;h1&gt;This is a Heading 1&lt;/h1&gt;</code><br>
-            <em>Typically used for the main title of a page.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 2 (&lt;h2&gt;)</strong><br>
-            <code>&lt;h2&gt;This is a Heading 2&lt;/h2&gt;</code><br>
-            <em>Used for major sections within the page.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 3 (&lt;h3&gt;)</strong><br>
-            <code>&lt;h3&gt;This is a Heading 3&lt;/h3&gt;</code><br>
-            <em>Used for subsections under &lt;h2&gt; headings.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 4 (&lt;h4&gt;)</strong><br>
-            <code>&lt;h4&gt;This is a Heading 4&lt;/h4&gt;</code><br>
-            <em>Used for further subdivisions under &lt;h3&gt; headings.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 5 (&lt;h5&gt;)</strong><br>
-            <code>&lt;h5&gt;This is a Heading 5&lt;/h5&gt;</code><br>
-            <em>Used for smaller sections under &lt;h4&gt; headings.</em>
-        </li>
-        <hr>
-        <li><strong>Heading Level 6 (&lt;h6&gt;)</strong><br>
-            <code>&lt;h6&gt;This is a Heading 6&lt;/h6&gt;</code><br>
-            <em>The smallest heading, used for minor sections.</em>
-        </li>
-    </ol>
+
+    <div class="definition">
+        <p><strong>JavaScript Comments</strong></p>
+        <p>JavaScript comments can be used to explain JavaScript code, making it more readable. They can also be used to prevent execution when testing alternative code.</p>
+    </div>
+
     <hr>
-    <p><strong>Example Usage in a Document</strong><br>
-    Here’s how you might structure a document using all six heading levels:</p>
-    <code>&lt;h1&gt;Main Title&lt;/h1&gt;<br>
-    &lt;h2&gt;Section 1&lt;/h2&gt;<br>
-    &lt;h3&gt;Subsection 1.1&lt;/h3&gt;<br>
-    &lt;h4&gt;Detail 1.1.1&lt;/h4&gt;<br>
-    &lt;h5&gt;Note 1.1.1.1&lt;/h5&gt;<br>
-    &lt;h6&gt;Minor Detail&lt;/h6&gt;<br>
-    &lt;h2&gt;Section 2&lt;/h2&gt;<br>
-    &lt;h3&gt;Subsection 2.1&lt;/h3&gt;</code>
+
+    <div class="html-element">
+        <p><strong>Single Line Comments</strong></p>
+        <p>Single line comments start with <code>//</code>. Any text between <code>//</code> and the end of the line will be ignored by JavaScript.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+// Change heading:
+document.getElementById("myH").innerHTML = "My First Page";
+
+// Change paragraph:
+document.getElementById("myP").innerHTML = "My first paragraph.";
+        </pre>
+    </div>
+
     <hr>
-    <p><strong>Importance of Headings</strong></p>
-    <ul>
-        <li><strong>SEO:</strong> Search engines use headings to understand the structure and content of a page.</li>
-        <li><strong>Accessibility:</strong> Headings help screen readers navigate the content.</li>
-        <li><strong>Readability:</strong> They make the content easier to scan for users.</li>
-    </ul>
+
+    <div class="creating-page">
+        <h2>Multi-line Comments</h2>
+        <p>Multi-line comments start with <code>/*</code> and end with <code>*/</code>. Any text between <code>/*</code> and <code>*/</code> will be ignored by JavaScript.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+/*
+The code below will change
+the heading with id = "myH"
+and the paragraph with id = "myP"
+in my web page:
+*/
+document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";
+        </pre>
+    </div>
+
     <hr>
-    <p>Using headings appropriately enhances both the user experience and search engine optimization!</p>
+
+    <div class="creating-page">
+        <h2>Using Comments to Prevent Execution</h2>
+        <p>Using comments to prevent execution of code is useful for code testing.</p>
+        <p><strong>Example:</strong></p>
+        <pre>
+//document.getElementById("myH").innerHTML = "My First Page";
+document.getElementById("myP").innerHTML = "My first paragraph.";
+        </pre>
+    </div>
+
+    <hr>
+
     <button class="next-module" data-next="quiz4">Take Quiz</button>
 </div>
+
 `,
 content5: 
 `<div>
-    <h1>HTML Paragraphs</h1>
+    <h1>Introduction to JavaScript</h1>
     <h2>Module 5</h2>
     <hr>
-    <p>HTML paragraphs are used to define blocks of text. Each paragraph is created using the <code>&lt;p&gt;</code> tag. Here are some examples:</p>
-    <ol start="1">
-        <li><strong>Basic Paragraph Example</strong><br>
-            <code>&lt;p&gt;This is a simple paragraph.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Multiple Paragraphs</strong><br>
-            <code>&lt;p&gt;This is the first paragraph.&lt;/p&gt;<br>
-            &lt;p&gt;This is the second paragraph.&lt;/p&gt;<br>
-            &lt;p&gt;This is the third paragraph.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Paragraphs with Line Breaks</strong><br>
-            You can create line breaks within a paragraph using the <code>&lt;br&gt;</code> tag:<br>
-            <code>&lt;p&gt;This is the first line.&lt;br&gt;This is the second line.&lt;br&gt;This is the third line.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Paragraphs with Formatting</strong><br>
-            You can include inline elements for formatting within paragraphs:<br>
-            <code>&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; word and this is an &lt;em&gt;italic&lt;/em&gt; word.&lt;/p&gt;</code>
-        </li>
-    </ol>
+
+    <div class="definition">
+        <p><strong>JavaScript Variables</strong></p>
+        <p>Variables are containers for storing data values. JavaScript variables can be declared using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+    </div>
+
     <hr>
-    <p><strong>Example in a Document</strong><br>
-    Here’s how you might structure a document with paragraphs:</p>
-    <code>&lt;!DOCTYPE html&gt;<br>
-    &lt;html&gt;<br>
-    &lt;head&gt;<br>
-        &lt;title&gt;Paragraph Example&lt;/title&gt;<br>
-    &lt;/head&gt;<br>
-    &lt;body&gt;<br>
-        &lt;h1&gt;Understanding Paragraphs&lt;/h1&gt;<br>
-        &lt;p&gt;Paragraphs are blocks of text that are important for readability.&lt;/p&gt;<br>
-        &lt;p&gt;They help organize content and make it easier to understand.&lt;/p&gt;<br>
-        &lt;p&gt;Using &lt;strong&gt;HTML&lt;/strong&gt;, you can create multiple paragraphs easily.&lt;/p&gt;<br>
-    &lt;/body&gt;<br>
-    &lt;/html&gt;</code>
+
+    <div class="html-element">
+        <p><strong>Declaring Variables</strong></p>
+        <p>In this example, <code>x</code>, <code>y</code>, and <code>z</code> are undeclared variables, automatically declared when first used:</p>
+        <pre>
+x = 5;
+y = 6;
+z = x + y;
+        </pre>
+    </div>
+
     <hr>
-    <p><strong>Key Points about Paragraphs</strong></p>
-    <ul>
-        <li><strong>Spacing:</strong> Browsers automatically add space before and after each <code>&lt;p&gt;</code> element.</li>
-        <li><strong>Semantics:</strong> Paragraphs improve the semantic structure of your content.</li>
-        <li><strong>Accessibility:</strong> They help screen readers and other assistive technologies navigate text effectively.</li>
-    </ul>
+
+    <div class="creating-page">
+        <h2>Using let and const</h2>
+        <p><strong>Example:</strong></p>
+        <pre>
+let x = 5;
+let y = 6;
+let z = x + y;
+
+const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
+        </pre>
+        <p>The variables <code>price1</code> and <code>price2</code> are declared with <code>const</code>. These are constant values that cannot be changed. The variable <code>total</code> is declared with <code>let</code> and can be changed.</p>
+    </div>
+
     <hr>
+
     <button class="next-module" data-next="quiz5">Take Quiz</button>
 </div>
+
 `,
 content6: 
 `<div>
-    <h1>HTML Styles</h1>
+    <h1>Introduction to JavaScript</h1>
     <h2>Module 6</h2>
     <hr>
-    <p>HTML styles are typically applied using CSS (Cascading Style Sheets). However, you can also use inline styles directly within HTML tags. Here are some examples of both approaches:</p>
-     <ol start="1">
-        <li><strong>Inline Styles</strong><br>
-            You can apply styles directly in an HTML element using the style attribute.<br>
-            <code>&lt;p style="color: blue; font-size: 16px;"&gt;This is a blue paragraph with a font size of 16 pixels.&lt;/p&gt;</code>
-        </li>
-    <hr>
-        <li><strong>Internal CSS</strong><br>
-            You can define styles within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of your HTML document:<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;Internal CSS Example&lt;/title&gt;<br>
-                &lt;style&gt;<br>
-                    body {<br>
-                        background-color: lightgray;<br>
-                    }<br>
-                    h1 {<br>
-                        color: darkblue;<br>
-                    }<br>
-                    p {<br>
-                        font-family: Arial, sans-serif;<br>
-                        font-size: 14px;<br>
-                    }<br>
-                &lt;/style&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;h1&gt;Welcome to My Web Page&lt;/h1&gt;<br>
-                &lt;p&gt;This is a styled paragraph.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code>
-        </li>
-        <hr>
-        <li><strong>External CSS</strong><br>
-            You can link to an external CSS file, which is a common practice for larger projects.<br>
-            HTML File:<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;External CSS Example&lt;/title&gt;<br>
-                &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;h1&gt;Welcome to My Website&lt;/h1&gt;<br>
-                &lt;p&gt;This is a paragraph styled from an external CSS file.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code><br>
-            External CSS File (styles.css):<br>
-            <code>body {<br>
-                background-color: #f0f0f0;<br>
-            }<br>
-            h1 {<br>
-                color: #333;<br>
-            }<br>
-            p {<br>
-                font-size: 16px;<br>
-                line-height: 1.5;<br>
-            }</code>
-        </li>
-        <hr>
-        <li><strong>CSS Classes</strong><br>
-            You can create reusable styles using classes.<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;CSS Classes Example&lt;/title&gt;<br>
-                &lt;style&gt;<br>
-                    .highlight {<br>
-                        background-color: yellow;<br>
-                        font-weight: bold;<br>
-                    }<br>
-                &lt;/style&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;p class="highlight"&gt;This paragraph is highlighted.&lt;/p&gt;<br>
-                &lt;p&gt;This paragraph is not highlighted.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code>
-        </li>
-        <hr>
-        <li><strong>CSS IDs</strong><br>
-            You can also use IDs for unique styling.<br>
-            <code>&lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>
-            &lt;head&gt;<br>
-                &lt;title&gt;CSS IDs Example&lt;/title&gt;<br>
-                &lt;style&gt;<br>
-                    #special {<br>
-                        color: red;<br>
-                        font-size: 20px;<br>
-                    }<br>
-                &lt;/style&gt;<br>
-            &lt;/head&gt;<br>
-            &lt;body&gt;<br>
-                &lt;p id="special"&gt;This is a special paragraph.&lt;/p&gt;<br>
-            &lt;/body&gt;<br>
-            &lt;/html&gt;</code>
-        </li>
-    </ol>
-    <hr>
-    <p><strong>Key Points</strong></p>
-    <ul>
-        <li><strong>Inline Styles:</strong> Quick but not recommended for larger projects due to lack of separation of content and design.</li>
-        <li><strong>Internal CSS:</strong> Useful for single pages or quick styling.</li>
-        <li><strong>External CSS:</strong> Best practice for larger websites, allowing for easier maintenance and reuse.</li>
-        <li><strong>Classes and IDs:</strong> Help apply styles to multiple elements (classes) or uniquely identify a single element (IDs).</li>
-    </ul>
-    <hr>
-    <button class="next-module" data-next="quiz6">Take Quiz</button>
-</div>
-`,
-content7: 
-`<div>
-    <h1>Text Formatting</h1>
-    <h2>Module 7</h2>
-        <hr>
-    <p>HTML text formatting elements allow you to change the appearance of text on a web page. Here are some common HTML tags for text formatting:</p>
-  <ol start="1">
-        <li><strong>Bold Text</strong><br>
-            <code>&lt;strong&gt;This text is bold.&lt;/strong&gt;</code><br>
-            The <code>&lt;strong&gt;</code> tag is used for important text, and it typically renders as bold.
-        </li>
+
+    <div class="definition">
+        <p><strong>The let Keyword</strong></p>
+        <p>The <code>let</code> keyword was introduced in ES6 (2015) and provides block scope. Variables declared with <code>let</code> must be declared before use and cannot be redeclared in the same scope.</p>
+    </div>
+
     <hr>
 
-        <li><strong>Italic Text</strong><br>
-            <code>&lt;em&gt;This text is italicized.&lt;/em&gt;</code><br>
-            The <code>&lt;em&gt;</code> tag emphasizes text, usually rendering it in italics.
-        </li>
-        <hr>
-        <li><strong>Underline Text</strong><br>
-            <code>&lt;u&gt;This text is underlined.&lt;/u&gt;</code><br>
-            The <code>&lt;u&gt;</code> tag adds an underline to the text.
-        </li>
-        <hr>
-        <li><strong>Strikethrough Text</strong><br>
-            <code>&lt;s&gt;This text is strikethrough.&lt;/s&gt;</code><br>
-            The <code>&lt;s&gt;</code> tag indicates that the text has been deleted or is no longer relevant, displaying it with a strikethrough.
-        </li>
-        <hr>
-        <li><strong>Small Text</strong><br>
-            <code>&lt;small&gt;This text is smaller.&lt;/small&gt;</code><br>
-            The <code>&lt;small&gt;</code> tag renders the text in a smaller font size.
-        </li>
-        <hr>
-        <li><strong>Big Text</strong><br>
-            <code>&lt;big&gt;This text is bigger.&lt;/big&gt;</code><br>
-            The <code>&lt;big&gt;</code> tag makes the text larger. (Note: <code>&lt;big&gt;</code> is not widely used in modern HTML; use CSS for size changes instead.)
-        </li>
-        <hr>
-        <li><strong>Superscript Text</strong><br>
-            <code>&lt;sup&gt;This text is superscript.&lt;/sup&gt;</code><br>
-            The <code>&lt;sup&gt;</code> tag raises text above the baseline, often used for exponents.
-        </li>
-        <hr>
-        <li><strong>Subscript Text</strong><br>
-            <code>&lt;sub&gt;This text is subscript.&lt;/sub&gt;</code><br>
-            The <code>&lt;sub&gt;</code> tag lowers text below the baseline, often used in chemical formulas.
-        </li>
-        <hr>
-        <li><strong>Quote Text</strong><br>
-            <code>&lt;blockquote&gt;This is a blockquote.&lt;/blockquote&gt;</code><br>
-            The <code>&lt;blockquote&gt;</code> tag is used for longer quotations, usually indented.
-        </li>
-        <hr>
-        <li><strong>Preformatted Text</strong><br>
-            <code>&lt;pre&gt;This text is preformatted.&lt;/pre&gt;</code><br>
-            The <code>&lt;pre&gt;</code> tag maintains whitespace and line breaks, displaying text in a fixed-width font.
-        </li>
-    </ol>
+    <div class="html-element">
+        <p><strong>Block Scope</strong></p>
+        <p>Variables declared with <code>let</code> have block scope, meaning they are only available within the block they are defined in:</p>
+        <pre>
+{
+  let x = 2;
+// x can NOT be used here outside the block
+}
+        </pre>
+    </div>
+
     <hr>
-    <p><strong>Example Usage in a Document</strong><br>
-    Here's how you might use various formatting tags in a simple HTML document:</p>
-    <code>&lt;!DOCTYPE html&gt;<br>
-    &lt;html&gt;<br>
-    &lt;head&gt;<br>
-        &lt;title&gt;Text Formatting Example&lt;/title&gt;<br>
-    &lt;/head&gt;<br>
-    &lt;body&gt;<br>
-        &lt;h1&gt;Text Formatting in HTML&lt;/h1&gt;<br>
-        &lt;p&gt;This is an &lt;strong&gt;important&lt;/strong&gt; message.&lt;/p&gt;<br>
-        &lt;p&gt;You can also &lt;em&gt;emphasize&lt;/em&gt; text or make it &lt;u&gt;underlined&lt;/u&gt;.&lt;/p&gt;<br>
-        &lt;p&gt;Sometimes you need to indicate &lt;s&gt;deleted&lt;/s&gt; content.&lt;/p&gt;<br>
-        &lt;p&gt;This is a &lt;small&gt;small&lt;/small&gt; note.&lt;/p&gt;<br>
-        &lt;p&gt;Water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;<br>
-        &lt;p&gt;And E=mc&lt;sup&gt;2&lt;/sup&gt; is a famous equation.&lt;/p&gt;<br>
-        &lt;blockquote&gt;This is a quoted text.&lt;/blockquote&gt;<br>
-        &lt;pre&gt;This is    preformatted text.&lt;/pre&gt;<br>
-    &lt;/body&gt;<br>
-    &lt;/html&gt;</code>
-    </p>
+
+    <div class="creating-page">
+        <h2>Redeclaring Variables</h2>
+        <p>Variables defined with <code>let</code> cannot be redeclared. Redeclaring a variable inside a block will not affect the variable outside the block:</p>
+        <pre>
+let x = 10;
+// Here x is 10
+
+{
+  let x = 2;
+// Here x is 2 inside the block
+}
+
+// Here x is 10 outside the block
+        </pre>
+    </div>
+
     <hr>
-    <p><strong>Key Points</strong></p>
-    <ul>
-        <li>HTML text formatting tags help enhance the readability and visual appeal of text.</li>
-        <li>Use formatting tags appropriately to maintain the semantic meaning of the content.</li>
-        <li>For advanced styling, consider using CSS for more control over text appearance.</li>
-    </ul>
+
+    <button class="next-module" data-next="quiz6">Take Quiz</button>
+</div>
+
+`,
+content7: `
+<div>
+    <h1>JavaScript Const</h1>
+    <h2>Module 7</h2>
     <hr>
+    <div class="definition">
+        <p>The <code>const</code> keyword was introduced in ES6 (2015) and is used to declare block-scoped variables that cannot be redeclared or reassigned.</p>
+        
+        <h3>Characteristics of <code>const</code></h3>
+        <ul>
+            <li><strong>Cannot be Redeclared:</strong> Variables defined with <code>const</code> cannot be redeclared within the same scope.</li>
+            <li><strong>Cannot be Reassigned:</strong> A variable defined with <code>const</code> cannot be reassigned.</li>
+            <pre>
+                const PI = 3.141592653589793;
+                // PI = 3.14; // This will give an error
+            </pre>
+            <li><strong>Must be Assigned:</strong> <code>const</code> variables must be assigned a value when they are declared.</li>
+        </ul>
+        
+        <h3>When to Use <code>const</code></h3>
+        <p>Use <code>const</code> when you know that the value should not be changed. Common use cases include:</p>
+        <ul>
+            <li>A new Array</li>
+            <li>A new Object</li>
+            <li>A new Function</li>
+            <li>A new RegExp</li>
+        </ul>
+        
+        <h3>Constant Objects and Arrays</h3>
+        <p>The <code>const</code> keyword defines a constant reference to a value. Therefore:</p>
+        <ul>
+            <li><strong>Cannot Reassign:</strong>
+                <pre>
+                    const cars = ["Saab", "Volvo", "BMW"];
+                    // cars = ["Toyota", "Volvo", "Audi"]; // ERROR
+                </pre>
+            </li>
+            <li><strong>Can Change Elements:</strong>
+                <pre>
+                    cars[0] = "Toyota"; // Changing an element
+                    cars.push("Audi");  // Adding an element
+                </pre>
+            </li>
+            <li><strong>For Objects:</strong>
+                <pre>
+                    const car = { type: "Fiat", model: "500", color: "white" };
+                    car.color = "red"; // Changing a property
+                    car.owner = "Johnson"; // Adding a property
+                </pre>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+    
     <button class="next-module" data-next="quiz7">Take Quiz</button>
 </div>
 `,
-content8: 
-`<div>
-    <h1>HTML Quotation and Citation Element</h1>
+
+content8: `
+<div>
+    <h1>JavaScript Operators</h1>
     <h2>Module 8</h2>
     <hr>
-    <ol>
-        <li><strong>Blockquote</strong><br>
-            The <code>&lt;blockquote&gt;</code> element is used for longer quotations that are usually indented.<br>
-            <code>&lt;blockquote&gt;<br>
-                "The only limit to our realization of tomorrow is our doubts of today." – Franklin D. Roosevelt<br>
-            &lt;/blockquote&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Cite</strong><br>
-            The <code>&lt;cite&gt;</code> element is used to reference the title of a creative work, such as a book, article, or song.<br>
-            <code>&lt;p&gt;In her book, &lt;cite&gt;To Kill a Mockingbird&lt;/cite&gt;, Harper Lee addresses serious issues of race and injustice.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Q (Inline Quotation)</strong><br>
-            The <code>&lt;q&gt;</code> element is used for shorter inline quotations and automatically adds quotation marks around the text.<br>
-            <code>&lt;p&gt;She said, &lt;q&gt;This is an example of an inline quotation.&lt;/q&gt;&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Abbr (Abbreviation)</strong><br>
-            The <code>&lt;abbr&gt;</code> element can also be used for citations, especially when providing the full name of an abbreviation.<br>
-            <code>&lt;p&gt;The &lt;abbr title="United Nations Educational, Scientific and Cultural Organization"&gt;UNESCO&lt;/abbr&gt; was founded in 1945.&lt;/p&gt;</code>
-        </li>
-        <hr>
-        <li><strong>Address</strong><br>
-            The <code>&lt;address&gt;</code> element is used to provide contact information for the author of a document or an article, often displayed in italics.<br>
-            <code>&lt;address&gt;<br>
-                Written by &lt;a href="mailto:author@example.com"&gt;Author Name&lt;/a&gt;&lt;br&gt;<br>
-                123 Main St.&lt;br&gt;<br>
-                City, Country<br>
-            &lt;/address&gt;</code>
-        </li>
-    </ol>
-    <p>These elements help structure content related to quotations and citations clearly and semantically in HTML.</p>
+    <div class="definition">
+        <p>Operators are special symbols in JavaScript that perform operations on variables and values. They can be categorized into various types.</p>
+        
+        <h3>Types of Operators</h3>
+        <ul>
+            <li><strong>Arithmetic Operators:</strong> Used for mathematical calculations.</li>
+            <li><strong>Assignment Operators:</strong> Used to assign values to variables.</li>
+            <li><strong>Comparison Operators:</strong> Used to compare two values.</li>
+            <li><strong>Logical Operators:</strong> Used to combine two or more conditions.</li>
+            <li><strong>Bitwise Operators:</strong> Operate on bits and perform bit-by-bit operations.</li>
+        </ul>
+        
+        <h3>Examples of Operators</h3>
+        <h4>Arithmetic Operators</h4>
+        <pre>
+            let sum = 10 + 5; // Addition
+            let product = 10 * 5; // Multiplication
+            let difference = 10 - 5; // Subtraction
+            let quotient = 10 / 5; // Division
+        </pre>
+        
+        <h4>Assignment Operators</h4>
+        <pre>
+            let x = 10; // Assigns 10 to x
+            x += 5; // x = x + 5
+        </pre>
+        
+        <h4>Comparison Operators</h4>
+        <pre>
+            let isEqual = (5 === 5); // true
+            let isNotEqual = (5 !== 10); // true
+        </pre>
+        
+        <h4>Logical Operators</h4>
+        <pre>
+            let andResult = (true && false); // false
+            let orResult = (true || false); // true
+        </pre>
+        
+        <h4>Bitwise Operators</h4>
+        <pre>
+            let bitwiseAnd = 5 & 1; // 1
+            let bitwiseOr = 5 | 1; // 5
+        </pre>
+    </div>
+
+    <hr>
+    
     <button class="next-module" data-next="quiz8">Take Quiz</button>
 </div>
 `,
-content9: 
-`<div>
-        <h1>HTML Comments</h1>
-        <h2>Module 9</h2>
-        <hr>
-        <p>HTML comments are used to insert notes or explanations within your HTML code that are not displayed in the web browser. They are helpful for developers to leave reminders or explanations for themselves or others who may read the code later.</p>
-      <hr>       
-        <div class="syntax">
-            <h3>Syntax</h3>
-            <p>HTML comments are written using the following syntax:</p>
-            <pre>
-                &lt;!-- This is a comment --&gt;
-            </pre>
-        </div>
-        <hr>
-        <div class="examples">
-            <h3>Examples</h3>
-            <ul>
-                <li><strong>Single-line Comment:</strong>
-                    <pre>
-                        &lt;!-- This is a single-line comment --&gt;
-                    </pre>
-                </li>
-                <li><strong>Multi-line Comment:</strong>
-                    <pre>
-                        &lt;!-- 
-                            This is a multi-line comment.
-                            It can span multiple lines.
-                        --&gt;
-                    </pre>
-                </li>
-                <li><strong>Commenting Out Code:</strong>
-                    <p>Comments can be used to temporarily disable code without deleting it:</p>
-                    <pre>
-                        &lt;!-- &lt;p&gt;This paragraph will not be displayed.&lt;/p&gt; --&gt;
-                    </pre>
-                </li>
-            </ul>
-        </div>
-        <hr>
-        <div class="key-points">
-            <h3>Key Points</h3>
-            <ul>
-                <li>Comments can help improve the readability of the code.</li>
-                <li>They are ignored by the browser, meaning they won't affect the rendering of the HTML.</li>
-                <li>Comments should be used wisely, as excessive commenting can clutter the code.</li>
-                <li>Using comments effectively can help maintain clear communication within the code, especially in collaborative projects.</li>
-            </ul>
-        </div>
-        <hr>
-        <button class="next-module" data-next="quiz9">Take Quiz</button>
+
+content9: `
+<div>
+    <h1>JavaScript Arithmetic Operators</h1>
+    <h2>Module 9</h2>
+    <hr>
+    <div class="definition">
+        <p>Arithmetic operators are used to perform basic mathematical operations on numbers. They are essential for performing calculations in JavaScript.</p>
+        
+        <h3>Types of Arithmetic Operators</h3>
+        <ul>
+            <li><strong>Addition (+):</strong> Adds two numbers.</li>
+            <li><strong>Subtraction (-):</strong> Subtracts one number from another.</li>
+            <li><strong>Multiplication (*):</strong> Multiplies two numbers.</li>
+            <li><strong>Division (/):</strong> Divides one number by another.</li>
+            <li><strong>Modulus (%):</strong> Returns the remainder of a division operation.</li>
+            <li><strong>Exponentiation (**):</strong> Raises the first operand to the power of the second.</li>
+        </ul>
+        
+        <h3>Examples</h3>
+        <h4>Addition</h4>
+        <pre>
+            let sum = 10 + 5; // 15
+        </pre>
+        
+        <h4>Subtraction</h4>
+        <pre>
+            let difference = 10 - 5; // 5
+        </pre>
+        
+        <h4>Multiplication</h4>
+        <pre>
+            let product = 10 * 5; // 50
+        </pre>
+        
+        <h4>Division</h4>
+        <pre>
+            let quotient = 10 / 5; // 2
+        </pre>
+        
+        <h4>Modulus</h4>
+        <pre>
+            let remainder = 10 % 3; // 1
+        </pre>
+        
+        <h4>Exponentiation</h4>
+        <pre>
+            let power = 2 ** 3; // 8
+        </pre>
     </div>
+
+    <hr>
+    
+    <button class="next-module" data-next="quiz9">Take Quiz</button>
+</div>
 `,
 
-content10: `<div>
-        <h1>HTML Div</h1>
-        <h2>Module 10</h2>
-        <hr>
-        <p>HTML <code>&lt;div&gt;</code> elements are used as container elements to group together related content and apply styles or layout. Here are some examples of how to use <code>&lt;div&gt;</code> elements:</p>
+content10: `
+<div>
+    <h1>JavaScript Assignment Operators</h1>
+    <h2>Module 10</h2>
+    <hr>
+    <div class="definition">
+        <p>Assignment operators are used to assign values to variables. They are a fundamental part of JavaScript programming.</p>
         
-        <hr>
-
-        <h2>1. Basic Div Example</h2>
-        <div>
-            <p>This is a basic div.</p>
-        </div>
-        <p>This is a simple <code>&lt;div&gt;</code> that contains a paragraph. The <code>&lt;div&gt;</code> acts as a container, grouping the paragraph together. It doesn't add any visible styling or layout on its own.</p>
+        <h3>Types of Assignment Operators</h3>
+        <ul>
+            <li><strong>Basic Assignment (=):</strong> Assigns the right operand to the left operand.</li>
+            <li><strong>Addition Assignment (+=):</strong> Adds the right operand to the left operand and assigns the result to the left operand.</li>
+            <li><strong>Subtraction Assignment (-=):</strong> Subtracts the right operand from the left operand and assigns the result to the left operand.</li>
+            <li><strong>Multiplication Assignment (*=):</strong> Multiplies the left operand by the right operand and assigns the result to the left operand.</li>
+            <li><strong>Division Assignment (/=):</strong> Divides the left operand by the right operand and assigns the result to the left operand.</li>
+            <li><strong>Modulus Assignment (%=):</strong> Takes the modulus using two operands and assigns the result to the left operand.</li>
+        </ul>
         
-        <hr>
-
-        <h2>2. Div with Class</h2>
-        <div class="content">
-            <p>This div has a class for styling.</p>
-        </div>
-        <p>This <code>&lt;div&gt;</code> has a class named "content." Classes can be used in CSS to apply specific styles to all elements with that class, allowing for easier styling and layout management.</p>
-
-        <hr>
-
-        <h2>3. Nested Divs</h2>
-        <div>
-            <h2>Main Title</h2>
-            <div>
-                <p>This is a nested div.</p>
-            </div>
-        </div>
-        <p>This example shows a <code>&lt;div&gt;</code> containing a heading (<code>&lt;h2&gt;</code>) and another <code>&lt;div&gt;</code> inside it. Nesting <code>&lt;div&gt;</code> elements helps organize content hierarchically, making it clearer and easier to style.</p>
-
-        <hr>
-
-        <h2>4. Div for Layout</h2>
-        <div class="container">
-            <h3>Header</h3>
-            <p>This is the main content area.</p>
-        </div>
-        <p>This <code>&lt;div&gt;</code> acts as a container for both a header (<code>&lt;h3&gt;</code>) and a paragraph. It can be styled as a section of a webpage, often used to group related content together.</p>
-
-        <hr>
-
-        <h2>5. Multiple Divs</h2>
-        <div>
-            <p>First div content.</p>
-        </div>
-        <div>
-            <p>Second div content.</p>
-        </div>
-        <p>Here, two separate <code>&lt;div&gt;</code> elements are used, each containing a paragraph. This structure can help separate different sections of content on the page.</p>
-
-        <hr>
-
-        <h2>6. Div with ID</h2>
-        <div id="unique">
-            <p>This div has a unique ID.</p>
-        </div>
-        <p>This <code>&lt;div&gt;</code> has an ID named "unique." IDs are intended to be unique within a page and can be targeted in CSS or JavaScript for specific styling or behavior. They are often used for elements that need specific styling or manipulation.</p>
-
-        <hr>
-
-        <button class="next-module" data-next="quiz10">Take Quiz</button>
+        <h3>Examples</h3>
+        <h4>Basic Assignment</h4>
+        <pre>
+            let x = 10; // Assigns 10 to x
+        </pre>
+        
+        <h4>Addition Assignment</h4>
+        <pre>
+            x += 5; // x = x + 5; // 15
+        </pre>
+        
+        <h4>Subtraction Assignment</h4>
+        <pre>
+            x -= 5; // x = x - 5; // 10
+        </pre>
+        
+        <h4>Multiplication Assignment</h4>
+        <pre>
+            x *= 2; // x = x * 2; // 20
+        </pre>
+        
+        <h4>Division Assignment</h4>
+        <pre>
+            x /= 2; // x = x / 2; // 10
+        </pre>
+        
+        <h4>Modulus Assignment</h4>
+        <pre>
+            x %= 3; // x = x % 3; // 1
+        </pre>
     </div>
+
+    <hr>
+    
+    <button class="next-module" data-next="quiz10">Take Quiz</button>
+</div>
 `,
 
 content11: '<h1>Assessment</h1><p>Click Start assesment to answer all the question regarding this module!</p> <button class="next-module" data-next="assessment">Start Assessment</button>',
@@ -783,128 +637,128 @@ content11: '<h1>Assessment</h1><p>Click Start assesment to answer all the questi
 const quizzes = {
     quiz1: `
     <h1>QUIZ # 1</h1>
-        <h2>What is the purpose of the <!DOCTYPE html> declaration?</h2>
+        <h2>What is JavaScript?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To specify the title of the page')">To specify the title of the page</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To indicate that the document is HTML5')">To indicate that the document is HTML5</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(1, 'To start the body of the document')">To start the body of the document</div>          
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'Often abbreviated as JS, is a programming language and core technology of the Web.', true)">Often abbreviated as JS, is a programming language and core technology of the Web.</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'The function is invoked (called) when a button is clicked.')">The function is invoked (called) when a button is clicked.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(1, 'Start the body of the document')">Start the body of the document</div>
         </div>
         <div id="selected-answer-1" class="selected-answer-container"></div>
         <button class="next-module" data-next="content2">Next Module</button>
     `,
     quiz2: `
     <h1>QUIZ # 2</h1>
-        <h2>What are <th> and <td> tags used for in an HTML table?</h2>
+        <h2>What JavaScript statements often start with a keyword to identify the JavaScript action to be performed?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(2, '<th> is for table header cells, and <td> is for table data cells.')"><th> is for table header cells, and <td> is for table data cells.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(2, 'Both are for creating table headers only.')">Both are for creating table headers only.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(2, '<th> is for rows, and <td> is for columns.')"><th> is for rows, and <td> is for columns.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, 'JavaScript Code Blocks')">JavaScript Code Blocks</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, 'JavaScript Line Length and Line Breaks')">JavaScript Line Length and Line Breaks</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(2, 'JavaScript Keywords', true)">JavaScript Keywords</div> <!-- Correct Answer -->
         </div>
         <div id="selected-answer-2" class="selected-answer-container"></div>
         <button class="next-module" data-next="content3">Next Module</button>
     `,
     quiz3: `
     <h1>QUIZ # 3</h1>
-        <h2>Which attribute would you use to apply inline styles directly to an HTML element?</h2>
+        <h2>What is JavaScript Comments?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'class')">class</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'style')">style</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(3, 'id')">id</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, 'Code after double slashes // or between /* and */ is treated as a comment.', true)">Code after double slashes // or between /* and */ is treated as a comment.</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(3, 'Unicode covers (almost) all the characters, punctuations, and symbols in the world.')">Unicode covers (almost) all the characters, punctuations, and symbols in the world.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(3, 'Identifiers are used to name variables and keywords, and functions.')">Identifiers are used to name variables and keywords, and functions.</div>
         </div>
         <div id="selected-answer-3" class="selected-answer-container"></div>
         <button class="next-module" data-next="content4">Next Module</button>
     `,
     quiz4: `
     <h1>QUIZ # 4</h1>
-        <h2>Which heading level is typically used for major sections within a page?</h2>
+        <h2>What is multi-line Comments?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h2')">h2</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h3')">h3</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(4, 'h1')">h1</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'Comments start with /* and end with */', true)">Comments start with /* and end with */</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'Comments to prevent execution of code is suitable for code testing.')">Comments to prevent execution of code is suitable for code testing.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(4, 'Comments can also be used to prevent execution, when testing alternative code.')">Comments can also be used to prevent execution, when testing alternative code.</div>
         </div>
         <div id="selected-answer-4" class="selected-answer-container"></div>
         <button class="next-module" data-next="content5">Next Module</button>
     `,
     quiz5: `
     <h1>QUIZ # 5</h1>
-        <h2>In the example <p>This is a <strong>text</strong> word and this is <em>text</em> word.</p> what do the <strong> and <em> tags do?</h2>
+        <h2>What is Javascript arithmetic?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They change the font size.')">They change the font size.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They format the text as bold and italic, respectively.')">They format the text as bold and italic, respectively.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(5, 'They create new paragraphs.')">They create new paragraphs.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, 'As a letter, identifiers containing _ are valid variable names')">As a letter, identifiers containing _ are valid variable names</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(5, 'As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +', true)">As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(5, 'Professional programmers often use it as an alias for the main function in a JavaScript library.')">Professional programmers often use it as an alias for the main function in a JavaScript library.</div>
         </div>
         <div id="selected-answer-5" class="selected-answer-container"></div>
         <button class="next-module" data-next="content6">Next Module</button>
     `,
     quiz6: `
     <h1>QUIZ # 6</h1>
-        <h2>What does the following CSS rule do?</h2>
-        <code>#special { color: red; font-size: 20px; }</code>
+        <h2>What is Let Hoisting?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It applies red color and 20px font size to all paragraphs.')">It applies red color and 20px font size to all paragraphs.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It styles the element with the ID "special" to have red text and a font size of 20 pixels.')">It styles the element with the ID "special" to have red text and a font size of 20 pixels.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(6, 'It creates a new HTML element.')">It creates a new HTML element.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, 'A variable using the let keyword can solve this problem.', true)">A variable using the let keyword can solve this problem.</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(6, 'Variables defined with var are hoisted to the top and can be initialised at any time.')">Variables defined with var are hoisted to the top and can be initialised at any time.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(6, 'A JavaScript variable with var is allowed anywhere in a program')">A JavaScript variable with var is allowed anywhere in a program</div>
         </div>
         <div id="selected-answer-6" class="selected-answer-container"></div>
         <button class="next-module" data-next="content7">Next Module</button>
     `,
     quiz7: `
     <h1>QUIZ # 7</h1>
-        <h2>What is a key recommendation regarding the use of text formatting tags in HTML?</h2>
+        <h2>What is a Constant object?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Use as many formatting tags as possible.')">Use as many formatting tags as possible.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Use formatting tags appropriately to maintain the semantic meaning of the content.')">Use formatting tags appropriately to maintain the semantic meaning of the content.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Avoid using any formatting tags at all.')">Avoid using any formatting tags at all.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, 'Can change the properties of a constant object')">Can change the properties of a constant object</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(7, 'A variable defined with the const keyword cannot be reassigned:', true)">A variable defined with the const keyword cannot be reassigned:</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(7, 'A JavaScript var variable is allowed anywhere in a program')">A JavaScript var variable is allowed anywhere in a program</div>
         </div>
         <div id="selected-answer-7" class="selected-answer-container"></div>
         <button class="next-module" data-next="content8">Next Module</button>
     `,
     quiz8: `
     <h1>QUIZ # 8</h1>
-        <h2>How does the <abbr> tag enhance the use of abbreviations in HTML?</h2>
+        <h2>What are not Types of JavaScript Operators?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It creates a hyperlink to a definition.')">It creates a hyperlink to a definition.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It automatically formats the abbreviation in bold.')">It automatically formats the abbreviation in bold.</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(8, 'It provides the full name or meaning of the abbreviation.')">It provides the full name or meaning of the abbreviation.</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'String Operators')">String Operators</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'Bitwise Operators')">Bitwise Operators</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(8, 'Const Operator', true)">Const Operator</div> <!-- Correct Answer -->
         </div>
         <div id="selected-answer-8" class="selected-answer-container"></div>
         <button class="next-module" data-next="content9">Next Module</button>
     `,
     quiz9: `
     <h1>QUIZ # 9</h1>
-        <h2>What is the correct syntax for an HTML comment?</h2>
+        <h2>What is the operator of Decrementing?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '// This is a comment')">// This is a comment</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '/* This is a comment */')">/* This is a comment */</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(9, '<!-- This is a comment -->')"><!-- This is a comment --></div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(--)', true)">(--)</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(++)')">(++)</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(9, '(**)')">(**)</div>
         </div>
         <div id="selected-answer-9" class="selected-answer-container"></div>
         <button class="next-module" data-next="content10">Next Module</button>
     `,
     quiz10: `
     <h1>QUIZ # 10</h1>
-        <h2>What is the purpose of a <div> element in HTML?</h2>
+        <h2>What is |=?</h2>
         <div class="quiz-options">
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To display images')">To display images</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To create a container for grouping content')">To create a container for grouping content</div>
-            <div class="quiz-card" onclick="selectQuizAnswer(10, 'To define the structure of a table')">To define the structure of a table</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Bitwise OR Assignment Operator', true)">Bitwise OR Assignment Operator</div> <!-- Correct Answer -->
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Bitwise XOR Assignment Operator')">Bitwise XOR Assignment Operator</div>
+            <div class="quiz-card" onclick="selectQuizAnswer(10, 'Bitwise AND Assignment Operator')">Bitwise AND Assignment Operator</div>
         </div>
         <div id="selected-answer-10" class="selected-answer-container"></div>
-        <button class="next-module" data-next="content11">Next Module</button>
+         <button class="next-module" data-next="content11">Next Module</button>
     `,
 };
 
+
 const correctAnswers = {
-    1: 'To indicate that the document is HTML5',
-    2: '<th> is for table header cells, and <td> is for table data cells.',
-    3: 'style',
-    4: '<h2>',
-    5: 'They format the text as bold and italic, respectively.',
-    6: 'It styles the element with the ID "special" to have red text and a font size of 20 pixels.',
-    7: 'Use formatting tags appropriately to maintain the semantic meaning of the content.',
-    8: 'It provides the full name or meaning of the abbreviation.',
-    9: '<!-- This is a comment -->',
-    10: 'To create a container for grouping content',
+    1: 'Often abbreviated as JS, is a programming language and core technology of the Web.',
+    2: 'JavaScript Keywords',
+    3: 'Code after double slashes // or between /* and */ is treated as a comment.',
+    4: 'Comments start with /* and end with */',
+    5: 'As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +',
+    6: 'A variable using the let keyword can solve this problem.',
+    7: 'A variable defined with the const keyword cannot be reassigned.',
+    8: 'Const Operator',
+    9: '(--)',
+    10: 'Bitwise OR Assignment Operator',
 };
 
 

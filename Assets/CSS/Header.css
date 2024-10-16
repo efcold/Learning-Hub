@@ -25,7 +25,7 @@ html, body {
 body {
     font-family: var(--font-family);
     background-color: var(--bg);
-    box-sizing: border-box; 
+   
 }
 
 header {
