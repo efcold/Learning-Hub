@@ -13,6 +13,7 @@ const categoryTitle = {
     content8: { icon: 'fas fa-exchange-alt', title: 'JavaScript Operators' },
     content9: { icon: 'fas fa-calculator', title: 'JavaScript Arithmetic' },
     content10: { icon: 'fas fa-clipboard-check', title: 'JavaScript Assignment' },
+    content11: { icon: 'fas fa-check-circle', title: 'Assessment' },
 };
 
 const categoryContent = {
@@ -630,6 +631,7 @@ content10: `
 </div>
 `,
 
+content11: '<h1>Assessment</h1><p>Click Start assesment to answer all the question regarding this module!</p> <button class="next-module" data-next="assessment">Start Assessment</button>',
 };  
 
 const quizzes = {
@@ -742,7 +744,6 @@ const quizzes = {
         </div>
         <div id="selected-answer-10" class="selected-answer-container"></div>
          <button class="next-module" data-next="content11">Next Module</button>
-           <div id="result-message"></div>
     `,
 };
 
@@ -760,6 +761,23 @@ const correctAnswers = {
     10: 'Bitwise OR Assignment Operator',
 };
 
+
+const assessmentQuestions = [
+    { question: "What is the primary purpose of assignment operators in JavaScript?", choices: ["A) To perform arithmetic calculations", "B) To compare values", "C) To assign values to variables"], selectedChoice: null, correctAnswer: "C) To assign values to variables" },
+    { question: "What is JavaScript often abbreviated as?", choices: ["A) JS", "B) Java", "C) Script"], selectedChoice: null, correctAnswer: "A) JS" },
+    { question: "Where should a semicolon be added in JavaScript?", choices: ["A) At the beginning of each statement", "B) At the end of each executable statement", "C) After each variable declaration"], selectedChoice: null, correctAnswer: "B) At the end of each executable statement" },
+    { question: "What is a JavaScript program essentially composed of?", choices: ["A) Only variables and functions", "B) Primarily loops and conditions", "C) Values, operators, expressions, keywords, and comments"], selectedChoice: null, correctAnswer: "C) Values, operators, expressions, keywords, and comments" },
+    { question: "What is the primary purpose of JavaScript syntax?", choices: ["A) To define the website's layout", "B) To create new HTML elements", "C) To establish the rules for constructing JavaScript programs"], selectedChoice: null, correctAnswer: "C) To establish the rules for constructing JavaScript programs" },
+    { question: "Which keywords are used in JavaScript to declare variables?", choices: ["A) define, create, assign", "B) var, const, let", "C) declare, initialize, set"], selectedChoice: null, correctAnswer: "B) var, const, let" },
+    { question: "Which symbols are used to create single-line comments in JavaScript?", choices: ["A) /* */", "B) //", "C) #"], selectedChoice: null, correctAnswer: "B) //" },
+    { question: "Which symbols are used to create multi-line comments in JavaScript?", choices: ["A) //", "B) /* */", "C) --"], selectedChoice: null, correctAnswer: "B) /* */" },
+    { question: "What is the primary purpose of variables in JavaScript?", choices: ["A) To define JavaScript functions", "B) To create new HTML elements", "C) To store data values"], selectedChoice: null, correctAnswer: "C) To store data values" },
+    { question: "What is the primary purpose of the let keyword in JavaScript?", choices: ["A) To declare a constant variable", "B) To declare a block-scoped variable", "C) To declare a global variable"], selectedChoice: null, correctAnswer: "B) To declare a block-scoped variable" },
+    { question: "What is the primary purpose of the const keyword in JavaScript?", choices: ["A) To declare a variable that can be reassigned multiple times.", "B) To declare a variable that can be reassigned only once.", "C) To declare a constant variable that cannot be reassigned."], selectedChoice: null, correctAnswer: "C) To declare a constant variable that cannot be reassigned." },
+    { question: "Which of the following is NOT an arithmetic operator in JavaScript?", choices: ["A) + (addition)", "B) - (subtraction)", "C) * (multiplication)"], selectedChoice: null, correctAnswer: "C) * (multiplication)" },
+    { question: "What is the result of the following JavaScript expression: Math.sqrt(16)?", choices: ["A) 4", "B) 4", "C) 8"], selectedChoice: null, correctAnswer: "C) 8" },
+    { question: "What is the result of the following JavaScript expression: Math.round(3.7)?", choices: ["A) 3", "B) 4", "C) 3.7"], selectedChoice: null, correctAnswer: "C) 3.7" },
+];
 
 ;
 let score = 0;
@@ -809,11 +827,75 @@ function displayQuiz(quizKey) {
     nextButton.setAttribute('data-module', quizKey.replace('quiz', '')); 
 }
 
+function displayAssessment() {
+    const mainContent = document.getElementById('main-content');
+    const questionCard = `
+        <div class="assessment-card">
+            <h1>Assessment Question</h1>
+            <p>${assessmentQuestions[currentQuestionIndex].question}</p>
+        </div>`;
+    
+    const choiceCards = `
+        <div class="choices">
+            ${assessmentQuestions[currentQuestionIndex].choices.map(choice => `
+                <div class="card choice-card" onclick="selectChoice('${choice}')">
+                    <p>${choice}</p>
+                </div>
+            `).join('')}
+        </div>`;
+    
+    const isLastQuestion = currentQuestionIndex === assessmentQuestions.length - 1;
+    mainContent.innerHTML = `
+        ${questionCard}
+        ${choiceCards}
+        <div class="button-container">
+            <button class="back-question-button" onclick="prevQuestion()" style="display:${currentQuestionIndex === 0 ? 'none' : 'block'};">Back</button>
+            <button class="next-question-button" onclick="${isLastQuestion ? 'showSummary()' : 'nextQuestion()'}" id="next-button" disabled>
+                ${isLastQuestion ? 'Show Summary' : 'Next Question'}
+            </button>
+        </div>
+        <div id="result-message"></div>`;
+    
+    toggleNextButton();
+}
 
+function selectChoice(choice) {
+    assessmentQuestions[currentQuestionIndex].selectedChoice = choice;
+    const choiceCards = document.querySelectorAll('.choice-card');
+    choiceCards.forEach(card => {
+        card.classList.remove('selected');
+    });
+    const selectedCard = Array.from(choiceCards).find(card => card.textContent.trim() === choice);
+    if (selectedCard) {
+        selectedCard.classList.add('selected');
+    }
+    toggleNextButton();
+}
+
+function toggleNextButton() {
+    const nextButton = document.getElementById('next-button');
+    nextButton.disabled = !assessmentQuestions[currentQuestionIndex].selectedChoice;
+}
+
+function nextQuestion() {
+    selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
+    currentQuestionIndex++;
+    if (currentQuestionIndex < assessmentQuestions.length) {
+        displayAssessment();
+    }
+}
+
+function prevQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        displayAssessment();
+    }
+}
 
 function showSummary() {
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
 
     const resultMessage = document.getElementById('result-message');
 
@@ -821,12 +903,20 @@ function showSummary() {
         `<div class="module-result"><strong>Module ${module}:</strong> Your answer: ${answer}</div>`
     ).join('');
 
+    const resultContent = assessmentQuestions.map((question, index) => `
+        <div >
+            <p ><strong>${question.question}</strong></p>
+            <p class="answer-text">Your answer: <span class="selected-answer">${selectedAnswers[index]}</span></p>
+        </div>
+    `).join('');
 
     resultMessage.innerHTML = `
         <h2>Your Selected Answers:</h2>
         <div class="module-results">${moduleResults}</div>
+        <div class="question-results-c">${resultContent}</div>
         <div class="button-container">
             <button class="all-submit-button button" onclick="submitAssessment()">Submit Answers</button>
+            <button class="re-take-button button" onclick="resetAssessment()">Retake Assessment</button>
         </div>
     `;
 
@@ -837,10 +927,16 @@ function showSummary() {
 
 
 
-
+function resetAssessment() {
+    currentQuestionIndex = 0;
+    selectedAnswers.length = 0;
+    displayAssessment();
+}
 
 function submitAssessment() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
+    let totalCorrect = 0; 
     let totalModuleCorrect = 0; // Variable to count correct answers in module quizzes
 
     // Generate the module results content
@@ -858,20 +954,39 @@ function submitAssessment() {
     `;
     }).join('');
 
+    // Generate the assessment questions results content
+    const resultContent = assessmentQuestions.map((question, index) => {
+        const isCorrect = question.correctAnswer === selectedAnswers[index];
+        if (isCorrect) {
+            totalCorrect++;
+        }
+        return `
+            <div class="question-result ${isCorrect ? 'correct' : 'incorrect'}">
+                <p class="question-text"><strong>Assessment Question ${index + 1}:</strong> ${question.question}</p>
+                <p class="answer-text">Your answer: <span class="${isCorrect ? 'correct-answer' : 'wrong-answer'}">${selectedAnswers[index]}</span></p>
+                <p class="answer-text">Correct answer: <span class="correct-answer">${question.correctAnswer}</span></p>
+            </div>
+        `;
+    }).join('');
 
+    const scorePercentage = (totalCorrect / assessmentQuestions.length) * 100;
     const moduleScorePercentage = (totalModuleCorrect / Object.keys(moduleQuizAnswers).length) * 100; // Calculate module percentage
 
     // Create chart containers for a horizontal layout
-
+    const resultChartContainer = document.createElement('div');
+    resultChartContainer.className = "chart-canvas-container small-chart";
     const moduleChartContainer = document.createElement('div');
     moduleChartContainer.className = "chart-canvas-container small-chart";
 
     // Create canvas elements for both charts
-
+    const resultCanvas = document.createElement('canvas');
+    resultCanvas.id = "result-chart";
+    resultCanvas.height = 120; // Reduced chart size
     const moduleCanvas = document.createElement('canvas');
     moduleCanvas.id = "module-chart";
     moduleCanvas.height = 120; // Reduced chart size
 
+    resultChartContainer.appendChild(resultCanvas);
     moduleChartContainer.appendChild(moduleCanvas);
 
     // Updated result message to include both charts in a horizontal layout
@@ -883,9 +998,17 @@ function submitAssessment() {
                 <p class="score-percentage">${moduleScorePercentage.toFixed(2)}%</p>
                 ${moduleChartContainer.outerHTML} <!-- Append the module chart container -->
             </div>
+            <div class="assessment-results-c">
+                <h2>Assessment Results</h2>
+                <h3>Total Correct Answers: ${totalCorrect}</h3>
+                <p class="score-percentage">${scorePercentage.toFixed(2)}%</p>
+                ${resultChartContainer.outerHTML} <!-- Append the result chart container -->
+            </div>    
         </div>
         ${moduleResults} <!-- Display module quiz answers -->
+        ${resultContent} <!-- Display assessment answers -->
         <div class="buttons">
+            <button class="all-submit-button button learning-path-btn" onclick="goToLearningPath()">Go to Learning Path</button>
             <button class="learn-submit-button button next-course-btn" onclick="continueLearning()">Continue Learning</button>
         </div>`;
 
@@ -893,6 +1016,8 @@ function submitAssessment() {
     mainContent.innerHTML = resultMessage;
 
     // Data for both pie charts
+    const resultLayout = ["Correct", "Wrong"];
+    const resultScore = [totalCorrect, assessmentQuestions.length - totalCorrect];
     const moduleLayout = ["Correct", "Wrong"];
     const moduleScore = [totalModuleCorrect, Object.keys(moduleQuizAnswers).length - totalModuleCorrect];
     const barColors = ["#4b9b74", "#dd5555"];
@@ -921,9 +1046,34 @@ function submitAssessment() {
             }
         }
     });
-  
+    const ctxResult = document.getElementById("result-chart").getContext("2d");
+    new Chart(ctxResult, {
+        type: "pie",
+        data: {
+            labels: resultLayout,
+            datasets: [{
+                label: 'Assessment Results',
+                backgroundColor: barColors,
+                data: resultScore,
+                borderWidth: 0
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+
+    const learningPathBtn = document.querySelector('.all-submit-button');
     const nextCourseBtn = document.querySelector('.learn-submit-button');
 
+    learningPathBtn.addEventListener("click", function() {
+        alert("Navigating to Learning Path...");
+    });
 
     nextCourseBtn.addEventListener("click", function() {
         alert("Proceeding to the Next Course...");
@@ -987,50 +1137,35 @@ function setDefaultContent() {
 function addNextModuleEventListener() {
     document.querySelectorAll('.next-module').forEach(button => {
         button.addEventListener('click', function () {
-            const mainContent = document.getElementById('main-content');
-            const currentModule = parseInt(this.getAttribute('data-module'));
-            const quizKeys = Object.keys(quizzes); // Get the quiz keys
-            
-            // Check if the current module is the last quiz
-            const isLastQuiz = quizKeys[quizKeys.length - 1] === `quiz${currentModule}`;
-
-            // If this is a quiz next button and answer not selected
-            if (this.classList.contains('quiz-next-button') && !moduleQuizAnswers[currentModule]) {
-                alert("Please pick an answer before proceeding.");
-                return; // Exit if no answer is selected
-            }
-
-            // If this is the last quiz, change the button behavior to show the summary
-            if (isLastQuiz) {
-                this.textContent = "Show Summary"; // Change button text
-                this.removeEventListener('click', arguments.callee); // Remove the old event listener
-                
-                // Create a new event listener to call showSummary
-                this.addEventListener('click', function () {
-                    showSummary(); // Show summary on click
-                });
-                return; // Stop here so it doesn't load the next content
-            }
-
-            // Load the next content (module, quiz, or assessment)
             const nextContent = this.getAttribute('data-next');
+            const mainContent = document.getElementById('main-content');
+
+            if (this.classList.contains('quiz-next-button')) {
+                const currentModule = parseInt(this.getAttribute('data-module'));
+                if (!moduleQuizAnswers[currentModule]) {
+                    alert("Please pick an answer before proceeding to the next module.");
+                    return;
+                }
+            }
+
             if (categoryContent[nextContent]) {
                 mainContent.innerHTML = categoryContent[nextContent];
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                addNextModuleEventListener(); // Reattach event listeners for the new content
-                updateActiveSidebarItem(nextContent);
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
+                addNextModuleEventListener();
+                updateActiveSidebarItem(nextContent); 
             } else if (nextContent === 'assessment') {
                 displayAssessment();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                updateActiveSidebarItem('content11');
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
+                updateActiveSidebarItem('content11'); 
             } else if (quizzes[nextContent]) {
                 displayQuiz(nextContent);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                updateActiveSidebarItem(nextContent);
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
+                updateActiveSidebarItem(nextContent); 
             }
         });
     });
 }
+
 
 
 function updateActiveSidebarItem(contentId) {

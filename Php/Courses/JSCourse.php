@@ -1,7 +1,7 @@
 <?php
+
 $showConditionalNav = true; 
 include '../HomeIncludes/Header.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

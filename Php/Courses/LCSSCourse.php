@@ -1,7 +1,5 @@
 <?php
-
-$showConditionalNav = true; 
-include '../HomeIncludes/Header.php';
+include './HomeIncludes/Header.php';
 $showNav = true;
 ?>
 <!DOCTYPE html>
@@ -16,7 +14,7 @@ $showNav = true;
 <main>
 <div class="course-container"> 
 <?php
-    include '../HomeIncludes/Sidebar.php';
+    include './HomeIncludes/Sidebar.php';
     ?>
      <div class="ass-card">
         <div class="main-content" id="main-content">
@@ -25,10 +23,10 @@ $showNav = true;
 </div>
 </main>
 <?php
-include '../HomeIncludes/Footer.php';
+include './HomeIncludes/Footer.php';
 ?>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/852b931f78.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-<script src="/Assets/JS/CSSCourse.js"></script>
+<script src="/Assets/JS/LCSSCourse.js"></script>
 </html>

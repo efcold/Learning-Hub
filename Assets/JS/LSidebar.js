@@ -41,4 +41,5 @@ document.addEventListener('DOMContentLoaded', function () {
         const contentSection = document.querySelector('.card-container-courses');
         contentSection.innerHTML = `<h3>${contentId} Content</h3><p>This is the content for ${contentId}.</p>`;
     }
+    
 });

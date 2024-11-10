@@ -14,7 +14,6 @@
             <li><a href="#" class="sidebar-item" data-content="content8"><i></i> </a></li>
             <li><a href="#" class="sidebar-item" data-content="content9"><i></i> </a></li>
             <li><a href="#" class="sidebar-item" data-content="content10"><i></i></a></li>
-            <li><a href="#" class="sidebar-item" data-content="content11"><i></i> </a></li>
         </ul>
     </div>
 </body>

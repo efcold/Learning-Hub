@@ -26,7 +26,7 @@ $urls = [
     "/Php/Courses/JSCourse.php",
     "/Php/Courses/PHPCourse.php",
     "/Php/Courses/PYTHONCourse.php",
-    "/Php/Courses/REACTCourse.php.php"
+    "/Php/Courses/REACTCourse.php"
 ];
 
 $images = [
@@ -53,7 +53,10 @@ $images = [
 include 'HomeIncludes/H-Sidebar.php';
 ?>
 <main>
-    <h1 class="heading-learn-to-code">Learn how to code with DevSphere</h1>
+    <h1 class="heading-learn-to-code">Learn how to code with DevSphere  </h1>
+    <div style="text-align: center;">
+    <h4>Choose your <a href="/Php/LearningPath.php"  class="link">  Learning Path <i class="fas fa-graduation-cap animated-icon"></i></a>
+    </div>
     <div class="card-container-courses">
         <?php for ($i = 0; $i < count($titles); $i++): ?>
             <div class="card-course">
@@ -66,10 +69,6 @@ include 'HomeIncludes/H-Sidebar.php';
         <?php endfor; ?>
     </div>
         
-    <h1 class="heading-create-learning-path">CREATE A LEARNING PATH</h1>
-    <button class="button-learning-path" onclick="location.href='LearningPath.php';">I want to be a Frontend Developer</button>
-    <button class="button-learning-path" onclick="location.href='LearningPath.php';">I want to be a Backend Developer</button>
-    <button class="button-learning-path" onclick="location.href='LearningPath.php';">I want to be a Full Stack Developer</button>
 </main>
 <?php
 include 'HomeIncludes/Footer.php';

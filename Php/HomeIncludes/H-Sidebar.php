@@ -18,7 +18,7 @@
 
         <ul class="others">
             <li><a href="/Php/Index.php">Courses</a></li>
-            <li><a href="/Php/Assessment.php">Assessments</a></li>
+            <li><a href="/Php/Quiz-Summary.php">Quiz-Summary</a></li>
             <li><a href="/Php/LearningPath.php">Learning Path</a></li>
         </ul>
     </div>

@@ -15,7 +15,7 @@ include 'HomeIncludes/Header.php';
 include 'HomeIncludes/H-Sidebar.php';
 ?>
 <div class="assm-card-container">
-    <h1>Assessment Summary</h1>
+    <h1>Quiz Summary</h1>
     <?php 
     $cards = [
         "HTML" => [
@@ -36,19 +36,19 @@ include 'HomeIncludes/H-Sidebar.php';
             "JavaScript enables interactive web pages.",
             "It can be used on both client-side and server-side."
         ],
-        "SQL" => [
-            "SQL (Structured Query Language) is a domain-specific language used in programming.",
-            "It is used for managing and manipulating relational databases.",
-            "Common SQL commands include SELECT, INSERT, UPDATE, and DELETE.",
-            "SQL is essential for data analysis."
-        ],
         "PHP" => [
             "PHP is a popular general-purpose scripting language especially suited to web development.",
             "It can be embedded into HTML.",
             "PHP is widely used for server-side scripting.",
             "PHP frameworks like Laravel help in rapid development."
         ],
-        "C#" => [
+        "Python" => [
+            "SQL (Structured Query Language) is a domain-specific language used in programming.",
+            "It is used for managing and manipulating relational databases.",
+            "Common SQL commands include SELECT, INSERT, UPDATE, and DELETE.",
+            "SQL is essential for data analysis."
+        ],
+        "React" => [
             "C# is a modern, object-oriented programming language developed by Microsoft.",
             "It is part of the .NET initiative.",
             "C# is used for developing a wide range of applications.",

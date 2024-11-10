@@ -1,3 +1,4 @@
+/* Hide scrollbar */
 ::-webkit-scrollbar {
     display: none; /* Hides the scroll bar */
 }
@@ -7,16 +8,18 @@ html, body {
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
     scrollbar-width: none; /* For modern versions of Firefox */
 }
+
 body {
     background-color: #CCCEE4;
-    width:auto ;
-
+    width: auto;
+    margin: 0;
+    padding: 10px 50px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .course-container {
-    display:flex; 
+    display: flex; 
 }
-
 
 .ass-card {
     height: auto;
@@ -37,11 +40,11 @@ body {
     overflow: hidden; 
 }
 
-
 .assessment-card {
     background-color: #adb3ed;
     border-radius: 15px;
 }
+
 .assessment-card p {
     background-color: #ffffff;
     padding: 20px;
@@ -52,6 +55,7 @@ body {
     min-width: 150px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
+
 .choices {
     margin: 20px;
     display: flex;
@@ -75,7 +79,6 @@ body {
     background-color: #f0f0f0;
 }
 
-
 .choice-card.selected {
     background-color: #cce5ff; 
 }
@@ -93,7 +96,7 @@ body {
 .path-submit-button,
 .learn-submit-button,
 .next-module,
-.next-question-button{ 
+.next-question-button { 
     margin: 20px; 
     padding: 10px 20px;
     background-color: #464b87;
@@ -104,11 +107,11 @@ body {
 }
 
 .ass-submit-button:hover,
-.back-question-button,
-.all-submit-button,
-.path-submit-button,
-.learn-submit-button,
-.re-take-button,
+.back-question-button:hover,
+.all-submit-button:hover,
+.path-submit-button:hover,
+.learn-submit-button:hover,
+.re-take-button:hover,
 .next-question-button:hover { 
     background-color: #383f7a;
 }
@@ -122,6 +125,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .quiz-options {
     margin: 20px; 
     display: flex; 
@@ -159,63 +163,57 @@ body {
     text-align: center;
 }
 
-body {
-    background-color: #D9D9D9;
-    margin: 0;
-    padding: 10px 50px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.chart-container {
-    background-color: #ADB3ED;
+/* Styles for the charts in horizontal layout */
+.chart-container-horizontal {
     border-radius: 15px;
-    padding: 39px; 
-    display: flex; 
-    flex-direction: row; 
-    align-items: flex-start; 
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.chart-canvas-container.small-chart {
+    width: 200px; /* Reduced width for compact size */
+    height: auto;
+}
+
+.question-results-c, .module-results {
+    background-color: #FFFFFF; /* White background for a clean look */
+    border-radius: 10px; /* Rounded corners for a smoother card appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    margin: 15px 0; /* Spacing between cards */
+    padding: 20px; /* More padding for better text spacing */
+    text-align: left;
 }
 
 
-.text-container {
-    width: 50%; 
-    padding-right: 20px; 
+.assessment-results-c, .module-results-c{
+    text-align: center;
+    padding: 10px;
 }
-
-
 .chart-heading {
-    font-size: 32px;
+    font-size: 24px; /* Reduced heading size */
 }
-
-
-.score-text {
-    font-size: 26px;
-}
-
 
 .score-percentage {
-    text-align: left;
-    font-size: 44px;
+    text-align: center;
+    font-size: 26px; /* Reduced score percentage size */
     color: #4b9b74;
     font-weight: bold;
 }
-
-
-.tutorial-text {
-    margin: 0;
-}
-
 
 .chart-canvas-container {
     width: 50%; 
     max-height: 300px;
     display: flex;
 }
+
 .buttons {
     display: flex;
     justify-content: flex-end; 
     margin-top: 20px; 
 }
-
 
 .button {
     border-radius: 15px;
@@ -238,6 +236,8 @@ body {
     border: none;
     font-weight: bold;
 }
+
+/* Result container styling */
 .result-container {
     margin-top: 20px;
     padding: 20px;
@@ -277,60 +277,4 @@ body {
 .wrong-answer {
     color: #dd5555; 
     font-weight: bold;
-}
-.module-results {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #F0F4FF; 
-    border-radius: 10px;
-}
-
-.module-result {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-.question-results {
-    margin-top: 20px;
-}
-
-.question-result {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #E6E9FF; 
-    border-radius: 8px;
-}
-
-.question-text {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.answer-text {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-.selected-answer {
-    color: #3a447b; 
-    font-weight: bold;
-}
-
-
-.button {
-    background-color: #3a447b;
-    color: #D9D9D9;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.all-submit-button {
-    background-color: #4b9b74; 
-}
-
-.re-take-button {
-    background-color: #3a447b; 
 }

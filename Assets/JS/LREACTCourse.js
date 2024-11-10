@@ -13,6 +13,7 @@ const categoryTitle = {
     content8: { icon: 'fas fa-file-code', title: 'Forms in React' },
     content9: { icon: 'fas fa-route', title: 'React Router' },
     content10: { icon: 'fas fa-layer-group', title: 'State Management with Context API' },
+    content11: { icon: 'fas fa-check-circle', title: 'Assessment' },
 };
 
 const categoryContent = {
@@ -319,6 +320,7 @@ content10: `
 </div>
 `,
 
+content11: '<h1>Assessment</h1><p>Click Start assesment to answer all the question regarding this module!</p> <button class="next-module" data-next="assessment">Start Assessment</button>',
 };  
 
 const quizzes = {
@@ -441,7 +443,6 @@ const quizzes = {
         </div>
         <div id="selected-answer-10" class="selected-answer-container"></div>
         <button class="next-module" data-next="content11">Next Module</button>
-          <div id="result-message"></div>
     `
 };
 
@@ -459,6 +460,69 @@ const correctAnswers = {
     10: "A syntax extension that allows writing HTML elements within JavaScript"
 };
 
+
+const assessmentQuestions = [
+    {
+        question: "What is the purpose of React?",
+        choices: ["A) To manage server-side rendering", "B) To build user interfaces for single-page applications with a component-based architecture", "C) To style web applications", "D) To create APIs"],
+        selectedChoice: null,
+        correctAnswer: "B) To build user interfaces for single-page applications with a component-based architecture"
+    },
+    {
+        question: "Explain the difference between functional and class components.",
+        choices: ["A) Functional components are always faster", "B) Functional components do not manage state or lifecycle methods (unless using hooks), while class components can", "C) Class components are simpler", "D) There is no difference"],
+        selectedChoice: null,
+        correctAnswer: "B) Functional components do not manage state or lifecycle methods (unless using hooks), while class components can"
+    },
+    {
+        question: "How can you manage state in a functional component?",
+        choices: ["A) By using `setState`", "B) By using the `useState` hook", "C) By using class properties", "D) By using global state"],
+        selectedChoice: null,
+        correctAnswer: "B) By using the `useState` hook"
+    },
+    {
+        question: "What are synthetic events in React?",
+        choices: ["A) Events created by the user", "B) React’s cross-browser wrapper around native events, ensuring consistent behavior", "C) Events that only work in certain browsers", "D) Native events in React"],
+        selectedChoice: null,
+        correctAnswer: "B) React’s cross-browser wrapper around native events, ensuring consistent behavior"
+    },
+    {
+        question: "Describe how to implement conditional rendering in React.",
+        choices: ["A) By using the `if` statement only", "B) By using state management libraries", "C) By using conditional statements (like ternary operators) to display different components based on a condition", "D) By defining multiple components"],
+        selectedChoice: null,
+        correctAnswer: "C) By using conditional statements (like ternary operators) to display different components based on a condition"
+    },
+    {
+        question: "What is the role of keys in a list in React?",
+        choices: ["A) To style the items in the list", "B) To help React identify which items have changed, added, or removed, improving performance", "C) To sort the items in the list", "D) To validate the items"],
+        selectedChoice: null,
+        correctAnswer: "B) To help React identify which items have changed, added, or removed, improving performance"
+    },
+    {
+        question: "What is a controlled component?",
+        choices: ["A) A component that is read-only", "B) A form element whose value is controlled by React state", "C) A component that cannot be updated", "D) A component that does not render anything"],
+        selectedChoice: null,
+        correctAnswer: "B) A form element whose value is controlled by React state"
+    },
+    {
+        question: "How do you define routes in a React application using React Router?",
+        choices: ["A) By using the `&lt;Link&gt;` component", "B) By using the `&lt;Route&gt;` component to specify the path and component", "C) By using the `&lt;Switch&gt;` component only", "D) By using the `history` object"],
+        selectedChoice: null,
+        correctAnswer: "B) By using the `&lt;Route&gt;` component to specify the path and component"
+    },
+    {
+        question: "What is the Context API used for?",
+        choices: ["A) To create animations", "B) To manage and share state globally across components without passing props", "C) To manage local state only", "D) To enhance performance"],
+        selectedChoice: null,
+        correctAnswer: "B) To manage and share state globally across components without passing props"
+    },
+    {
+        question: "How can you handle form submissions in React?",
+        choices: ["A) By using `formSubmit()`", "B) By adding an `onSubmit` event handler to the form and preventing default behavior", "C) By calling `submit()` directly", "D) By using state management libraries"],
+        selectedChoice: null,
+        correctAnswer: "B) By adding an `onSubmit` event handler to the form and preventing default behavior"
+    }
+];
 
 let score = 0;
 let currentQuestionIndex = 0;
@@ -507,11 +571,75 @@ function displayQuiz(quizKey) {
     nextButton.setAttribute('data-module', quizKey.replace('quiz', '')); 
 }
 
+function displayAssessment() {
+    const mainContent = document.getElementById('main-content');
+    const questionCard = `
+        <div class="assessment-card">
+            <h1>Assessment Question</h1>
+            <p>${assessmentQuestions[currentQuestionIndex].question}</p>
+        </div>`;
+    
+    const choiceCards = `
+        <div class="choices">
+            ${assessmentQuestions[currentQuestionIndex].choices.map(choice => `
+                <div class="card choice-card" onclick="selectChoice('${choice}')">
+                    <p>${choice}</p>
+                </div>
+            `).join('')}
+        </div>`;
+    
+    const isLastQuestion = currentQuestionIndex === assessmentQuestions.length - 1;
+    mainContent.innerHTML = `
+        ${questionCard}
+        ${choiceCards}
+        <div class="button-container">
+            <button class="back-question-button" onclick="prevQuestion()" style="display:${currentQuestionIndex === 0 ? 'none' : 'block'};">Back</button>
+            <button class="next-question-button" onclick="${isLastQuestion ? 'showSummary()' : 'nextQuestion()'}" id="next-button" disabled>
+                ${isLastQuestion ? 'Show Summary' : 'Next Question'}
+            </button>
+        </div>
+        <div id="result-message"></div>`;
+    
+    toggleNextButton();
+}
 
+function selectChoice(choice) {
+    assessmentQuestions[currentQuestionIndex].selectedChoice = choice;
+    const choiceCards = document.querySelectorAll('.choice-card');
+    choiceCards.forEach(card => {
+        card.classList.remove('selected');
+    });
+    const selectedCard = Array.from(choiceCards).find(card => card.textContent.trim() === choice);
+    if (selectedCard) {
+        selectedCard.classList.add('selected');
+    }
+    toggleNextButton();
+}
+
+function toggleNextButton() {
+    const nextButton = document.getElementById('next-button');
+    nextButton.disabled = !assessmentQuestions[currentQuestionIndex].selectedChoice;
+}
+
+function nextQuestion() {
+    selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
+    currentQuestionIndex++;
+    if (currentQuestionIndex < assessmentQuestions.length) {
+        displayAssessment();
+    }
+}
+
+function prevQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        displayAssessment();
+    }
+}
 
 function showSummary() {
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
 
     const resultMessage = document.getElementById('result-message');
 
@@ -519,12 +647,20 @@ function showSummary() {
         `<div class="module-result"><strong>Module ${module}:</strong> Your answer: ${answer}</div>`
     ).join('');
 
+    const resultContent = assessmentQuestions.map((question, index) => `
+        <div >
+            <p ><strong>${question.question}</strong></p>
+            <p class="answer-text">Your answer: <span class="selected-answer">${selectedAnswers[index]}</span></p>
+        </div>
+    `).join('');
 
     resultMessage.innerHTML = `
         <h2>Your Selected Answers:</h2>
         <div class="module-results">${moduleResults}</div>
+        <div class="question-results-c">${resultContent}</div>
         <div class="button-container">
             <button class="all-submit-button button" onclick="submitAssessment()">Submit Answers</button>
+            <button class="re-take-button button" onclick="resetAssessment()">Retake Assessment</button>
         </div>
     `;
 
@@ -536,10 +672,16 @@ function showSummary() {
 
 
 
+function resetAssessment() {
+    currentQuestionIndex = 0;
+    selectedAnswers.length = 0;
+    displayAssessment();
+}
 
 function submitAssessment() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-
+    selectedAnswers[currentQuestionIndex] = assessmentQuestions[currentQuestionIndex].selectedChoice;
+    let totalCorrect = 0; 
     let totalModuleCorrect = 0; // Variable to count correct answers in module quizzes
 
     // Generate the module results content
@@ -558,23 +700,38 @@ function submitAssessment() {
     }).join('');
 
     // Generate the assessment questions results content
+    const resultContent = assessmentQuestions.map((question, index) => {
+        const isCorrect = question.correctAnswer === selectedAnswers[index];
+        if (isCorrect) {
+            totalCorrect++;
+        }
+        return `
+            <div class="question-result ${isCorrect ? 'correct' : 'incorrect'}">
+                <p class="question-text"><strong>Assessment Question ${index + 1}:</strong> ${question.question}</p>
+                <p class="answer-text">Your answer: <span class="${isCorrect ? 'correct-answer' : 'wrong-answer'}">${selectedAnswers[index]}</span></p>
+                <p class="answer-text">Correct answer: <span class="correct-answer">${question.correctAnswer}</span></p>
+            </div>
+        `;
+    }).join('');
 
-
-
+    const scorePercentage = (totalCorrect / assessmentQuestions.length) * 100;
     const moduleScorePercentage = (totalModuleCorrect / Object.keys(moduleQuizAnswers).length) * 100; // Calculate module percentage
 
     // Create chart containers for a horizontal layout
-
+    const resultChartContainer = document.createElement('div');
+    resultChartContainer.className = "chart-canvas-container small-chart";
     const moduleChartContainer = document.createElement('div');
     moduleChartContainer.className = "chart-canvas-container small-chart";
 
     // Create canvas elements for both charts
-
+    const resultCanvas = document.createElement('canvas');
+    resultCanvas.id = "result-chart";
+    resultCanvas.height = 120; // Reduced chart size
     const moduleCanvas = document.createElement('canvas');
     moduleCanvas.id = "module-chart";
     moduleCanvas.height = 120; // Reduced chart size
 
-
+    resultChartContainer.appendChild(resultCanvas);
     moduleChartContainer.appendChild(moduleCanvas);
 
     // Updated result message to include both charts in a horizontal layout
@@ -586,10 +743,17 @@ function submitAssessment() {
                 <p class="score-percentage">${moduleScorePercentage.toFixed(2)}%</p>
                 ${moduleChartContainer.outerHTML} <!-- Append the module chart container -->
             </div>
-         
+            <div class="assessment-results-c">
+                <h2>Assessment Results</h2>
+                <h3>Total Correct Answers: ${totalCorrect}</h3>
+                <p class="score-percentage">${scorePercentage.toFixed(2)}%</p>
+                ${resultChartContainer.outerHTML} <!-- Append the result chart container -->
+            </div>    
         </div>
         ${moduleResults} <!-- Display module quiz answers -->
+        ${resultContent} <!-- Display assessment answers -->
         <div class="buttons">
+            <button class="all-submit-button button learning-path-btn" onclick="goToLearningPath()">Go to Learning Path</button>
             <button class="learn-submit-button button next-course-btn" onclick="continueLearning()">Continue Learning</button>
         </div>`;
 
@@ -597,7 +761,8 @@ function submitAssessment() {
     mainContent.innerHTML = resultMessage;
 
     // Data for both pie charts
-
+    const resultLayout = ["Correct", "Wrong"];
+    const resultScore = [totalCorrect, assessmentQuestions.length - totalCorrect];
     const moduleLayout = ["Correct", "Wrong"];
     const moduleScore = [totalModuleCorrect, Object.keys(moduleQuizAnswers).length - totalModuleCorrect];
     const barColors = ["#4b9b74", "#dd5555"];
@@ -626,11 +791,34 @@ function submitAssessment() {
             }
         }
     });
+    const ctxResult = document.getElementById("result-chart").getContext("2d");
+    new Chart(ctxResult, {
+        type: "pie",
+        data: {
+            labels: resultLayout,
+            datasets: [{
+                label: 'Assessment Results',
+                backgroundColor: barColors,
+                data: resultScore,
+                borderWidth: 0
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            }
+        }
+    });
 
-
+    const learningPathBtn = document.querySelector('.all-submit-button');
     const nextCourseBtn = document.querySelector('.learn-submit-button');
 
-   
+    learningPathBtn.addEventListener("click", function() {
+        alert("Navigating to Learning Path...");
+    });
 
     nextCourseBtn.addEventListener("click", function() {
         alert("Proceeding to the Next Course...");
@@ -691,49 +879,34 @@ function setDefaultContent() {
     mainContent.innerHTML = categoryContent.content1;
     addNextModuleEventListener();
 }
+
 function addNextModuleEventListener() {
     document.querySelectorAll('.next-module').forEach(button => {
         button.addEventListener('click', function () {
-            const mainContent = document.getElementById('main-content');
-            const currentModule = parseInt(this.getAttribute('data-module'));
-            const quizKeys = Object.keys(quizzes); // Get the quiz keys
-            
-            // Check if the current module is the last quiz
-            const isLastQuiz = quizKeys[quizKeys.length - 1] === `quiz${currentModule}`;
-
-            // If this is a quiz next button and answer not selected
-            if (this.classList.contains('quiz-next-button') && !moduleQuizAnswers[currentModule]) {
-                alert("Please pick an answer before proceeding.");
-                return; // Exit if no answer is selected
-            }
-
-            // If this is the last quiz, change the button behavior to show the summary
-            if (isLastQuiz) {
-                this.textContent = "Show Summary"; // Change button text
-                this.removeEventListener('click', arguments.callee); // Remove the old event listener
-                
-                // Create a new event listener to call showSummary
-                this.addEventListener('click', function () {
-                    showSummary(); // Show summary on click
-                });
-                return; // Stop here so it doesn't load the next content
-            }
-
-            // Load the next content (module, quiz, or assessment)
             const nextContent = this.getAttribute('data-next');
+            const mainContent = document.getElementById('main-content');
+
+            if (this.classList.contains('quiz-next-button')) {
+                const currentModule = parseInt(this.getAttribute('data-module'));
+                if (!moduleQuizAnswers[currentModule]) {
+                    alert("Please pick an answer before proceeding to the next module.");
+                    return;
+                }
+            }
+
             if (categoryContent[nextContent]) {
                 mainContent.innerHTML = categoryContent[nextContent];
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                addNextModuleEventListener(); // Reattach event listeners for the new content
-                updateActiveSidebarItem(nextContent);
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
+                addNextModuleEventListener();
+                updateActiveSidebarItem(nextContent); 
             } else if (nextContent === 'assessment') {
                 displayAssessment();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                updateActiveSidebarItem('content11');
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
+                updateActiveSidebarItem('content11'); 
             } else if (quizzes[nextContent]) {
                 displayQuiz(nextContent);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                updateActiveSidebarItem(nextContent);
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scrolls to the top of the page
+                updateActiveSidebarItem(nextContent); 
             }
         });
     });

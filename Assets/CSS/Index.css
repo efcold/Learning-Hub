@@ -20,28 +20,20 @@ body {
     margin-bottom: 0px; 
 }
 
-.heading-create-learning-path {
-    text-align: center; 
-    margin-top: 0px; 
-    margin-bottom: 20px;
-}
 
 .heading-learn-to-code{
     font-family: 'Palaquin Dark', sans-serif; 
-    font-weight: 700; 
+    font-weight: 600; 
     text-align: center; 
 }
-.heading-create-learning-path {
-    font-family: 'Palaquin Dark', sans-serif; 
-    font-weight: 700; 
-    text-align: center; 
-}
+
 
 .card-container-courses {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
-    padding: 20px;
+    padding: 20px;   
+    margin-top: -30px;
 }
 
 .card-course {
@@ -101,4 +93,27 @@ body {
     height: auto; /* Set the desired height */
     object-fit: cover; /* Ensures the image covers the specified dimensions */
     border-radius: 10px; /* Optional: adds rounded corners to the images */
+}
+@keyframes iconAnimation {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(15deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Animation styles */
+.animated-icon {
+    display: inline-block; /* Allows transform to work */
+    animation: iconAnimation 2s infinite; /* Apply animation */
+}
+.link {
+    text-decoration: none; 
+    color: #fff; 
+    margin-bottom: 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 139, 1); /* Solid dark blue shadow */
 }
